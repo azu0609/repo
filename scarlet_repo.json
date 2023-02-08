@@ -3,7 +3,8 @@
         "repoName": "azu0609's repo",
         "repoIcon": "unknown"
     },
-    "Tweaked": [{
+    "Tweaked": [
+        {
         "name": "Enmity",
         "version": "158.0",
         "icon": "https://files.enmity.app/icon-altstore.png",
@@ -16,19 +17,34 @@
             "web": "https://discord.gg/enmity",
             "twitter": "https://twitter.com/enmityapp"
         }
-    }, {
-        "name": "uYou+ (Trusted)",
+    },
+    {
+        "name": "uYou+",
         "version": "18.01.6-2.3.1",
         "down": "https://github.com/qnblackcat/uYouPlus/releases/download/v18.01.6-2.3.1/uYouPlus_18.01.6_2.3.1.ipa",
         "category": "Tweaked Apps",
-        "description": "True ad-less Youtube...",
+        "description": "uYou+ is a modified version of uYou (made by @MiRO92) with additional features and mainly made for non jailbroken users!",
         "bundleID": "com.google.ios.youtube",
         "appstore": "com.google.ios.youtube",
         "contact": {
             "web": "https://github.com/qnblackcat/uYouPlus",
             "twitter": "https://twitter.com/t70438299"
         }
-    }, {
+    },
+    {
+        "name": "uYou",
+        "version": "2.1",
+        "down": "https://miro92.com/repo/depictions/com.miro.uyou/iPA/YouTube_16.42.3_uYou_2.1.ipa",
+        "category": "Tweaked Apps",
+        "description": "The best tweak for the YouTube app",
+        "bundleID": "com.google.ios.youtube",
+        "appstore": "com.google.ios.youtube",
+        "contact": {
+            "web": "https://github.com/qnblackcat/uYouPlus",
+            "twitter": "https://twitter.com/t70438299"
+        }
+    },
+    {
         "name": "Enmity (Dev)",
         "version": "158.0",
         "down": "https://github.com/enmity-mod/tweak/releases/latest/download/enmity.dev.ipa",
@@ -41,15 +57,18 @@
             "web": "https://discord.gg/enmity",
             "twitter": "https://twitter.com/enmityapp"
         }
-    }, {
+    },
+    {
         "name": "Anime Now!",
-        "version":"latest",
+        "version":"1.0.0",
         "down": "https://github.com/AnimeNow-Team/AnimeNow/releases/download/1.0.0-beta.ac2e8f9/Anime.Now.iOS.ipa",
+        "icon": "https://raw.githubusercontent.com/AnimeNow-Team/AnimeNow/dev/Misc/Media/applogo_readme.png",
         "category":"Tweaked Apps",
         "description": "Watch your favorite anime shows anytime, anywhere.",
         "bundleID": "",
         "contact": {
             "web": "https://github.com/AnimeNow-Team/AnimeNow"
         }
-    }]
+    }
+]
 }
