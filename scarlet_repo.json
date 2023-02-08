@@ -1,0 +1,53 @@
+{
+    "META": {
+        "repoName": "azu0609's repo",
+        "repoIcon": "unknown"
+    },
+    "Tweaked": [{
+        "name": "Enmity",
+        "version": "latest",
+        "down": "https://github.com/enmity-mod/tweak/releases/latest/download/enmity.ipa",
+        "category": "Tweaked Apps",
+        "description": "The power of addons, all in your hand.",
+        "bundleID": "com.hammerandchisel.discord",
+        "appstore": "com.hammerandchisel.discord",
+        "contact": {
+            "web": "https://discord.gg/enmity",
+            "twitter": "https://twitter.com/enmityapp"
+        }
+    }, {
+        "name": "uYou+ (Trusted)",
+        "version": "18.01.6-2.3.1",
+        "down": "https://github.com/qnblackcat/uYouPlus/releases/download/v18.01.6-2.3.1/uYouPlus_18.01.6_2.3.1.ipa",
+        "category": "Tweaked Apps",
+        "description": "True ad-less Youtube...",
+        "bundleID": "com.google.ios.youtube",
+        "appstore": "com.google.ios.youtube",
+        "contact": {
+            "web": "https://github.com/qnblackcat/uYouPlus",
+            "twitter": "https://twitter.com/t70438299"
+        }
+    }, {
+        "name": "Enmity (Dev)",
+        "version": "dev",
+        "down": "https://github.com/enmity-mod/tweak/releases/latest/download/enmity.dev.ipa",
+        "category":"Tweaked Apps",
+        "description": "The power of addons, all in your hand.",
+        "bundleID":"com.hammerandchisel.discord",
+        "appstore":"com.hammerandchisel.discord",
+        "contact": {
+            "web": "https://discord.gg/enmity",
+            "twitter": "https://twitter.com/enmityapp"
+        }
+    }, {
+        "name": "Anime Now!",
+        "version":"latest",
+        "down": "https://github.com/AnimeNow-Team/AnimeNow/releases/download/1.0.0-beta.ac2e8f9/Anime.Now.iOS.ipa",
+        "category":"Tweaked Apps",
+        "description": "Watch your favorite anime shows anytime, anywhere.",
+        "bundleID": "",
+        "contact": {
+            "web": "https://github.com/AnimeNow-Team/AnimeNow"
+        }
+    }]
+}
