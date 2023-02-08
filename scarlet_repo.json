@@ -73,7 +73,7 @@
             "down": "https://github.com/AnimeNow-Team/AnimeNow/releases/download/1.0.0-beta.ac2e8f9/Anime.Now.iOS.ipa",
             "dev": "AnimeNow Team",
             "icon": "https://raw.githubusercontent.com/AnimeNow-Team/AnimeNow/dev/Misc/Media/applogo_readme.png",
-            "category":"Tweaked Apps",
+            "category":"Apps",
             "description": "Watch your favorite anime shows anytime, anywhere.",
             "bundleID": "",
             "screenshots": [
@@ -84,6 +84,17 @@
             "contact": {
                 "web": "https://github.com/AnimeNow-Team/AnimeNow"
             }
+        }
+    ],
+    "MacDirtyCow": [
+        {
+            "name": "Cowabunga",
+            "version": "7.0.4",
+            "down": "https://github.com/leminlimez/Cowabunga/releases/download/v7.0.4/Cowabunga.ipa",
+            "dev": "leminlimez",
+            "category": "MacDirtyCow",
+            "description": "IOS 14.0-15.7.1 & 16.0-16.1.2 MacDirtyCow ToolBox",
+            "bundleID": "com.leemin.passthm"
         }
     ]
 }
