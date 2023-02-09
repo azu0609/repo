@@ -3,16 +3,22 @@ import json
 
 class Fetch:
     def __init__(self):
-        self.src = ["https://api.github.com/repos/enmity-mod/tweak/releases/latest"]
+        self.release = ["https://api.github.com/repos/enmity-mod/tweak/releases/latest",
+                    "https://api.github.com/repos/enmity-mod/tweak/releases/latest",
+                    "https://api.github.com/repos/qnblackcat/uYouPlus/releases/latest",
+                    "https://api.github.com/repos/AnimeNow-Team/AnimeNow/releases/latest"]
         self.current_ver = ["2.1.3"]
 
-    def fetch(self, app):
-        index, type = self.app_selector(app)
-        version = requests.get(self.src[index]).json()["name"]
+    def fetch(self, app, current_ver):
+        index, type = self.app_handler(app)
+        if index == 2:
+            version = "v2.1"
+        else:
+            version = requests.get(self.release[index]).json()["name"]
         version = version.strip("v")
-        if version > self.current_ver[index]:
-            print(f"{self.current_ver} >>> {version}")
-            print(f"INFO: app={app}(index={index}), current={self.current_ver}, new={version}")
+        print(f"INFO: app={app}(index={index}), current={current_ver}, new={version}")
+        if version > current_ver[index]:
+            print(f"{current_ver} >>> {version}")
             print("New version found! - Updating...")
             self.rw("/home/azuki/Documents/repo/scarlet_repo.json", version, index, type)
         else:
@@ -23,27 +29,39 @@ class Fetch:
         with open(path, 'r') as file:
             json_data = json.load(file)
             json_data[type][index]["version"] = version
-            print("ci:" + json_data[type][index]["version"])
         with open(path, 'w') as file:
             json.dump(json_data, file, indent=2)
         
-        print(f"current ver: {self.current_ver}, new ver: {version}, index: {index}")
     
-    def app_selector(self, app):
-        if app == "enmity":
+    def app_handler(self, app):
+        if app == "Enmity":
             return 0, "Tweaked"
-        elif app == "enmity_dev":
+        if app == "Enmity (Dev)":
             return 1, "Tweaked"
-        elif app == "uyou":
+        if app == "uYou":
             return 2, "Tweaked"
-        elif app == "uyouplus":
+        if app == "uYou+":
             return 3, "Tweaked"
-        elif app == "anime_now":
+        if app == "Anime Now!":
             return 4, "Sideloaded"
+        if app == "Cowabunga":
+            return 5, "Macdirtycow"
         else:
-            print("unexpected value.")
+            print(f"unexpected value! input: {app}")
             return
-        
+    
+
+    def automate(self):
+        with open("/home/azuki/Documents/repo/scarlet_repo.json", 'r') as file:
+            json_data = json.load(file)
+            for item in json_data:
+                for key in json_data[item]:
+                    try:
+                        print(key["name"])
+                        self.fetch(key["name"], key["version"])
+                    except:
+                        pass
 
 if __name__ == "__main__":
-    Fetch().fetch("enmity")
+    Fetch().automate()
+    # Fetch().fetch("enmity")
