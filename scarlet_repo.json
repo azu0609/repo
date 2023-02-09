@@ -30,7 +30,7 @@
             "bundleID":"com.hammerandchisel.discord",
             "appstore":"com.hammerandchisel.discord",
             "contact": {
-                "web": "https://discord.gg/enmity",
+                "web": "https://enmity.app",
                 "twitter": "https://twitter.com/enmityapp"
             }
         },
@@ -47,7 +47,7 @@
                 "https://user-images.githubusercontent.com/52943116/189822859-8a0952db-9264-4b5b-9cbe-d0a87b2db5a0.PNG"
             ],
             "contact": {
-                "web": "https://github.com/qnblackcat/uYouPlus",
+                "web": "https://github.com/qnblackcat",
                 "twitter": "https://twitter.com/t70438299"
             }
         },
@@ -61,7 +61,7 @@
             "bundleID": "com.google.ios.youtube",
             "appstore": "com.google.ios.youtube",
             "contact": {
-                "web": "https://miro92.com/repo",
+                "web": "https://miro92.com",
                 "twitter": "https://twitter.com/MiRO92"
             }
         }
