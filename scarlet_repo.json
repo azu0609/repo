@@ -6,7 +6,7 @@
     "Tweaked": [
         {
             "name": "Enmity",
-            "version": "158.0",
+            "version": "2.1.4",
             "icon": "https://files.enmity.app/icon-altstore.png",
             "down": "https://github.com/enmity-mod/tweak/releases/latest/download/enmity.ipa",
             "dev": "Enmity Team",
@@ -21,7 +21,7 @@
         },
         {
             "name": "Enmity (Dev)",
-            "version": "158.0",
+            "version": "2.1.4",
             "down": "https://github.com/enmity-mod/tweak/releases/latest/download/enmity.dev.ipa",
             "dev": "Enmity Team",
             "icon":"https://files.enmity.app/icon-altstore.png",
