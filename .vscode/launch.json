@@ -11,7 +11,7 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "cwd": "/home/azuki/Documents/repo/script"
+            "cwd": "/home/azuki/Documents/repo/script/"
         }
     ]
 }
