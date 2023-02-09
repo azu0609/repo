@@ -6,40 +6,44 @@ class Fetch:
         self.src = ["https://api.github.com/repos/enmity-mod/tweak/releases/latest"]
         self.current_ver = ["2.1.3"]
 
-    def fetch(self, index):
+    def fetch(self, app):
+        index, type = self.app_selector(app)
         version = requests.get(self.src[index]).json()["name"]
         version = version.strip("v")
         if version > self.current_ver[index]:
             print(f"{self.current_ver} >>> {version}")
-            print("New version found! - Replacing...")
-            self.read("/home/azuki/Documents/repo/scarlet_repo.json", version, index)
+            print(f"INFO: app={app}(index={index}), current={self.current_ver}, new={version}")
+            print("New version found! - Updating...")
+            self.rw("/home/azuki/Documents/repo/scarlet_repo.json", version, index, type)
         else:
-            print("Latest.")
+            print("Up to date")
 
     
-    def read(self, path, version, index):
-        """
-        print(version)
-        with open(path, "r") as target:
-            data = json.load(target)
-        
-        data["version"] = version
-        with open(path, "w") as w:
-            json.dump(data, w, indent=4)
-        """
-        # with open(path, "r") as file:
-            # json_data = json.load(file)
-            # print("a" + json_data["Tweaked"][0]["version"])
-        # print()
-        
+    def rw(self, path, version, index, type):
         with open(path, 'r') as file:
             json_data = json.load(file)
-            if json_data["Tweaked"][index]["version"] == self.current_ver:
-                json_data["Tweaked"][index]["version"] = version
+            json_data[type][index]["version"] = version
+            print("ci:" + json_data[type][index]["version"])
         with open(path, 'w') as file:
             json.dump(json_data, file, indent=2)
         
+        print(f"current ver: {self.current_ver}, new ver: {version}, index: {index}")
+    
+    def app_selector(self, app):
+        if app == "enmity":
+            return 0, "Tweaked"
+        elif app == "enmity_dev":
+            return 1, "Tweaked"
+        elif app == "uyou":
+            return 2, "Tweaked"
+        elif app == "uyouplus":
+            return 3, "Tweaked"
+        elif app == "anime_now":
+            return 4, "Sideloaded"
+        else:
+            print("unexpected value.")
+            return
         
 
 if __name__ == "__main__":
-    Fetch().fetch(0)
+    Fetch().fetch("enmity")
