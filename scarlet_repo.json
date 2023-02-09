@@ -5,19 +5,34 @@
     },
     "Tweaked": [
         {
-        "name": "Enmity",
-        "version": "158.0",
-        "icon": "https://files.enmity.app/icon-altstore.png",
-        "down": "https://github.com/enmity-mod/tweak/releases/latest/download/enmity.ipa",
-        "dev": "Enmity Team",
-        "category": "Tweaked Apps",
-        "description": "The power of addons, all in your hand.",
-        "bundleID": "com.hammerandchisel.discord",
-        "appstore": "com.hammerandchisel.discord",
-        "contact": {
-            "web": "https://discord.gg/enmity",
-            "twitter": "https://twitter.com/enmityapp"
-        }
+            "name": "Enmity",
+            "version": "158.0",
+            "icon": "https://files.enmity.app/icon-altstore.png",
+            "down": "https://github.com/enmity-mod/tweak/releases/latest/download/enmity.ipa",
+            "dev": "Enmity Team",
+            "category": "Tweaked Apps",
+            "description": "The power of addons, all in your hand.",
+            "bundleID": "com.hammerandchisel.discord",
+            "appstore": "com.hammerandchisel.discord",
+            "contact": {
+                "web": "https://discord.gg/enmity",
+                "twitter": "https://twitter.com/enmityapp"
+            }
+        },
+        {
+            "name": "Enmity (Dev)",
+            "version": "158.0",
+            "down": "https://github.com/enmity-mod/tweak/releases/latest/download/enmity.dev.ipa",
+            "dev": "Enmity Team",
+            "icon":"https://files.enmity.app/icon-altstore.png",
+            "category":"Tweaked Apps",
+            "description": "The power of addons, all in your hand.",
+            "bundleID":"com.hammerandchisel.discord",
+            "appstore":"com.hammerandchisel.discord",
+            "contact": {
+                "web": "https://discord.gg/enmity",
+                "twitter": "https://twitter.com/enmityapp"
+            }
         },
         {
             "name": "uYou+",
@@ -49,40 +64,25 @@
                 "web": "https://miro92.com/repo",
                 "twitter": "https://twitter.com/MiRO92"
             }
-        },
-        {
-            "name": "Enmity (Dev)",
-            "version": "158.0",
-            "down": "https://github.com/enmity-mod/tweak/releases/latest/download/enmity.dev.ipa",
-            "dev": "Enmity Team",
-            "icon":"https://files.enmity.app/icon-altstore.png",
-            "category":"Tweaked Apps",
-            "description": "The power of addons, all in your hand.",
-            "bundleID":"com.hammerandchisel.discord",
-            "appstore":"com.hammerandchisel.discord",
-            "contact": {
-                "web": "https://discord.gg/enmity",
-                "twitter": "https://twitter.com/enmityapp"
-            }
         }
     ],
-    "Apps": [
+    "Sideloaded": [
         {
             "name": "Anime Now!",
             "version":"1.0.0",
             "down": "https://github.com/AnimeNow-Team/AnimeNow/releases/download/1.0.0-beta.ac2e8f9/Anime.Now.iOS.ipa",
             "dev": "AnimeNow Team",
             "icon": "https://raw.githubusercontent.com/AnimeNow-Team/AnimeNow/dev/Misc/Media/applogo_readme.png",
-            "category":"Apps",
+            "category":"Sideloaded",
             "description": "Watch your favorite anime shows anytime, anywhere.",
-            "bundleID": "",
+            "bundleID": "com.errorerrorerror.animenow",
             "screenshots": [
                 "https://raw.githubusercontent.com/AnimeNow-Team/AnimeNow/dev/Misc/Media/iphone_home_screenshot.png",
                 "https://raw.githubusercontent.com/AnimeNow-Team/AnimeNow/dev/Misc/Media/iphone_search_screenshot.png",
                 "https://raw.githubusercontent.com/AnimeNow-Team/AnimeNow/dev/Misc/Media/iphone_anime_details_screenshot.png"
             ],
             "contact": {
-                "web": "https://github.com/AnimeNow-Team/AnimeNow"
+                "web": "https://madebyerikb.com"
             }
         }
     ],
