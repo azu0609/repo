@@ -19,12 +19,21 @@ class Fetch:
     def read(self, path, version):
         with open(path, "r") as target:
             data = json.load(target)
+        
+        data["version"] = version
+        with open(path, "w") as w:
+            json.dump(data, w)
+
+        """
+        with open(path, "r") as target:
+            data = json.load(target)
             for item in data:
                 if item["version"] in [str(self.current_ver[0])]:
                     item["version"] = version
         
         with open(path, "w") as w:
             json.dump(data, w, indent=2)
+        """
 
 if __name__ == "__main__":
     Fetch().fetch(0)
