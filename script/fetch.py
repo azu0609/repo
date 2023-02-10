@@ -16,12 +16,16 @@ class Fetch:
             version = "v2.1"
             print("INFO: uYou detected! using 2.1 instend of latest.")
         else:
-            if app_type == "Macdirtycow":
-                version = requests.get(self.Macdirtycow[index]).json()[0]["name"]
-            elif app_type == "Sideloaded":
-                version = requests.get(self.Sideloaded[index]).json()[0]["name"]
-            elif app_type == "Tweaked":
-                version = requests.get(self.Tweaked[index]).json()[0]["name"]
+            try:
+                if app_type == "Macdirtycow":
+                    version = requests.get(self.Macdirtycow[index]).json()[0]["name"]
+                elif app_type == "Sideloaded":
+                    version = requests.get(self.Sideloaded[index]).json()[0]["name"]
+                elif app_type == "Tweaked":
+                    version = requests.get(self.Tweaked[index]).json()[0]["name"]
+            except KeyError:
+                print("ERROR: rate limited by github. can't use github api for a while.\nERROR: try again later.")
+                exit(1)
         version = version.strip("v")
         print(f"INFO: app: {app}(index: {index}), current: {current_ver}, new: {version}")
         if version > current_ver:
