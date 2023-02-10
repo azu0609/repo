@@ -8,7 +8,7 @@
       "name": "Enmity",
       "version": "2.1.4",
       "icon": "https://files.enmity.app/icon-altstore.png",
-      "down": "https://github.com/enmity-mod/tweak/releases/latest/download/enmity.ipa",
+      "down": "https://github.com/enmity-mod/tweak/releases/download/2.1.4/Enmity.ipa",
       "dev": "Enmity Team",
       "category": "Tweaked Apps",
       "description": "The power of addons, all in your hand.",
@@ -22,7 +22,7 @@
     {
       "name": "Enmity (Dev)",
       "version": "2.1.4",
-      "down": "https://github.com/enmity-mod/tweak/releases/latest/download/enmity.dev.ipa",
+      "down": "https://github.com/enmity-mod/tweak/releases/download/2.1.4/Enmity.Development.ipa",
       "dev": "Enmity Team",
       "icon": "https://files.enmity.app/icon-altstore.png",
       "category": "Tweaked Apps",
