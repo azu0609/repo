@@ -36,7 +36,7 @@
     },
     {
       "name": "uYou+",
-      "version": "18.01.6-2.3.1",
+      "version": "v18.01.6-2.3.1",
       "down": "https://github.com/qnblackcat/uYouPlus/releases/download/v18.01.6-2.3.1/uYouPlus_18.01.6_2.3.1.ipa",
       "dev": "qnblackcat",
       "category": "Tweaked Apps",
@@ -86,13 +86,13 @@
       }
     }
   ],
-  "MacDirtyCow": [
+  "Macdirtycow": [
     {
       "name": "Cowabunga",
       "version": "7.0.4",
       "down": "https://github.com/leminlimez/Cowabunga/releases/download/v7.0.4/Cowabunga.ipa",
       "dev": "leminlimez",
-      "category": "MacDirtyCow",
+      "category": "Macdirtycow",
       "description": "IOS 14.0-15.7.1 & 16.0-16.1.2 MacDirtyCow ToolBox",
       "bundleID": "com.leemin.Cowabunga"
     }
