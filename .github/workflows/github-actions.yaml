@@ -1,0 +1,16 @@
+# A simple script to check update and replace.
+
+name: Automated update
+
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  build:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v3
+    - name: Run python script
+      run: python script/fetch.py
