@@ -1,44 +1,34 @@
-# A simple script to check update and replace.
-
-name: Automated update
-
+name: AutomatedUpdate # Name of action
 
 on:
   schedule:
-    - cron: '0 3 * * *'
-
+    - cron: '0 3 * * *' # schedule
 
 jobs:
   build:
-    # build environment
-    runs-on: ubuntu-latest
-    # Step to run
+    runs-on: ubuntu-latest # Build environment
     steps:
       - uses: actions/checkout@v2
 
-
-      - name: Run python script
-        uses: actions@setup-python@v2
+      - name: Setup python
+        uses: actions/setup-python@v2 # Setup python
         with:
-          python-version: "3.x"
-      
+          python-version: "3.x" # Python version
 
-      - name: Install dependecies
+      - name: Install dependencies # Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install requests
-      
 
-      - name: Run update
+      - name: Update
         run: |
           python script/fetch.py
-      
 
-      - name: Commit and push
+      - name: Commit and Push
         run: |
           git config user.name "azu0609"
           git config user.email "ipadgoogcloud@gmail.com"
-          git add
+          git add .
           git commit -m "Automated update"
           git pull
           git push origin main
