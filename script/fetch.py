@@ -26,40 +26,36 @@ class Fetch:
         print(f"INFO: app: {app}(index: {index}), current: {current_ver}, new: {version}")
         if version > current_ver:
             print(f"{current_ver} >>> {version}")
-            print(f"New version found. updating to: {version}, current: {current_ver}")
-            self.rw("/home/azuki/Documents/repo/scarlet_repo.json", version, index, app_type)
+            print(f"INFO: New version found. updating to: {version}, current: {current_ver}")
+            self.rw("/home/azuki/Documents/repo/scarlet_repo.json", version, index, app_type, current_ver)
         else:
             print("Up to date")
 
     
-    def rw(self, path, version, index, type):
+    def rw(self, path, version, index, app_type, current_ver):
         with open(path, 'r') as file:
             json_data = json.load(file)
-            json_data[type][index]["version"] = version
-            print(f"Writed to: {path} successfully")
+            json_data[app_type][index]["version"] = version
+            json_data[app_type][index]["down"] = json_data[app_type][index]["down"].replace(current_ver, version)
+            print(f"INFO: Writed to: {path} successfully")
         with open(path, 'w') as file:
             json.dump(json_data, file, indent=2)
         return
         
     
     def app_handler(self, app):
+        print(f"INFO: recived {app}")
         if app == "Enmity":
-            print("Enmity detected. passing...")
             return 0, "Tweaked"
         if app == "Enmity (Dev)":
-            print("Enmity (Dev) detected. passing...")
             return 1, "Tweaked"
         if app == "uYou":
-            print("uYou detected. passing...")
             return 3, "Tweaked"
         if app == "uYou+":
-            print("uYou+ detected. passing...")
             return 2, "Tweaked"
         if app == "Anime Now!":
-            print("Anime Now! detected. passing...")
             return 0, "Sideloaded"
         if app == "Cowabunga":
-            print("Cowabugna detected. passing...")
             return 0, "Macdirtycow"
         else:
             print(f"unexpected value! input: {app}")
@@ -74,7 +70,7 @@ class Fetch:
                     try:
                         self.fetch(key["name"], key["version"])
                     except TypeError as e:
-                        print(f"Error! {e}, this seems caused by 'META'.")
+                        print(f"WARNING: {e}, this seems caused by metadata.")
 
 
 if __name__ == "__main__":
