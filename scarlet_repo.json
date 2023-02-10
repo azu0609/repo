@@ -36,7 +36,7 @@
     },
     {
       "name": "uYou+",
-      "version": "v18.01.6-2.3.1",
+      "version": "18.01.6-2.3.1",
       "down": "https://github.com/qnblackcat/uYouPlus/releases/download/v18.01.6-2.3.1/uYouPlus_18.01.6_2.3.1.ipa",
       "dev": "qnblackcat",
       "category": "Tweaked Apps",
@@ -89,7 +89,7 @@
   "Macdirtycow": [
     {
       "name": "Cowabunga",
-      "version": "7.0.4",
+      "version": "7.0.3",
       "down": "https://github.com/leminlimez/Cowabunga/releases/download/v7.0.4/Cowabunga.ipa",
       "dev": "leminlimez",
       "category": "Macdirtycow",

@@ -11,25 +11,23 @@ class Fetch:
         self.Macdirtycow = ["https://api.github.com/repos/leminlimez/Cowabunga/releases/latest"]
 
     def fetch(self, app, current_ver):
-        index, type = self.app_handler(app)
-        print(f"got: {app}({index})")
-        if index == 2:
+        index, app_type = self.app_handler(app)
+        if index == 3:
             version = "v2.1"
-            print("INFO: uYou detected.")
+            print("INFO: uYou detected! using 2.1 instend of latest.")
         else:
-            if type == "Macdirtycow":
+            if app_type == "Macdirtycow":
                 version = requests.get(self.Macdirtycow[index]).json()["name"]
-            elif type == "Sideloaded":
+            elif app_type == "Sideloaded":
                 version = requests.get(self.Sideloaded[index]).json()["name"]
-            elif type == "Tweaked":
+            elif app_type == "Tweaked":
                 version = requests.get(self.Tweaked[index]).json()["name"]
-            print("INFO: Non-uYou detected.")
         version = version.strip("v")
         print(f"INFO: app: {app}(index: {index}), current: {current_ver}, new: {version}")
-        if version > current_ver[index]:
+        if version > current_ver:
             print(f"{current_ver} >>> {version}")
             print(f"New version found. updating to: {version}, current: {current_ver}")
-            self.rw("/home/azuki/Documents/repo/scarlet_repo.json", version, index, type)
+            self.rw("/home/azuki/Documents/repo/scarlet_repo.json", version, index, app_type)
         else:
             print("Up to date")
 
@@ -53,10 +51,10 @@ class Fetch:
             return 1, "Tweaked"
         if app == "uYou":
             print("uYou detected. passing...")
-            return 2, "Tweaked"
+            return 3, "Tweaked"
         if app == "uYou+":
             print("uYou+ detected. passing...")
-            return 3, "Tweaked"
+            return 2, "Tweaked"
         if app == "Anime Now!":
             print("Anime Now! detected. passing...")
             return 0, "Sideloaded"
@@ -75,8 +73,8 @@ class Fetch:
                 for key in json_data[item]:
                     try:
                         self.fetch(key["name"], key["version"])
-                    except Exception as e:
-                        print(e)
+                    except TypeError as e:
+                        print(f"Error! {e}")
 
 
 if __name__ == "__main__":
