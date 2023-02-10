@@ -4,11 +4,11 @@ import json
 class Fetch:
     def __init__(self):
         
-        self.Tweaked = ["https://api.github.com/repos/enmity-mod/tweak/releases/latest",
-                        "https://api.github.com/repos/enmity-mod/tweak/releases/latest",
-                        "https://api.github.com/repos/qnblackcat/uYouPlus/releases/latest"]
-        self.Sideloaded = ["https://api.github.com/repos/AnimeNow-Team/AnimeNow/releases/latest"]
-        self.Macdirtycow = ["https://api.github.com/repos/leminlimez/Cowabunga/releases/latest"]
+        self.Tweaked = ["https://api.github.com/repos/enmity-mod/tweak/releases",
+                        "https://api.github.com/repos/enmity-mod/tweak/releases",
+                        "https://api.github.com/repos/qnblackcat/uYouPlus/releases"]
+        self.Sideloaded = ["https://api.github.com/repos/AnimeNow-Team/AnimeNow/releases"]
+        self.Macdirtycow = ["https://api.github.com/repos/leminlimez/Cowabunga/releases"]
 
     def fetch(self, app, current_ver):
         index, app_type = self.app_handler(app)
@@ -17,11 +17,11 @@ class Fetch:
             print("INFO: uYou detected! using 2.1 instend of latest.")
         else:
             if app_type == "Macdirtycow":
-                version = requests.get(self.Macdirtycow[index]).json()["name"]
+                version = requests.get(self.Macdirtycow[index]).json()[0]["name"]
             elif app_type == "Sideloaded":
-                version = requests.get(self.Sideloaded[index]).json()["name"]
+                version = requests.get(self.Sideloaded[index]).json()[0]["name"]
             elif app_type == "Tweaked":
-                version = requests.get(self.Tweaked[index]).json()["name"]
+                version = requests.get(self.Tweaked[index]).json()[0]["name"]
         version = version.strip("v")
         print(f"INFO: app: {app}(index: {index}), current: {current_ver}, new: {version}")
         if version > current_ver:
@@ -74,7 +74,7 @@ class Fetch:
                     try:
                         self.fetch(key["name"], key["version"])
                     except TypeError as e:
-                        print(f"Error! {e}")
+                        print(f"Error! {e}, this seems caused by 'META'.")
 
 
 if __name__ == "__main__":
