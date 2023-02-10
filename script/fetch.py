@@ -1,5 +1,6 @@
 import requests
 import json
+import sys
 
 class Fetch:
     def __init__(self):
@@ -35,17 +36,22 @@ class Fetch:
             self.rw("/home/azuki/Documents/repo/scarlet_repo.json", version, index, app_type, current_ver)
         else:
             print("Up to date")
+        print("INFO: Successfuly ended.")
 
     
     def rw(self, path, version, index, app_type, current_ver):
         with open(path, 'r') as file:
+            print("INFO: Loading data...")
             json_data = json.load(file)
+            print("INFO: Modifying loaded data...")
             json_data[app_type][index]["version"] = version
             json_data[app_type][index]["down"] = json_data[app_type][index]["down"].replace(current_ver, version)
-            print(f"INFO: Writed to: {path} successfully")
+            if index == 2:
+                json_data[app_type][index]["down"] = json_data[app_type][index]["down"].replace(current_ver.replace("-", "_"), version.replace("-", "_"))
         with open(path, 'w') as file:
             json.dump(json_data, file, indent=2)
-        return
+            print(f"INFO: Writed to: {path} successfully.")
+            
         
     
     def app_handler(self, app):
@@ -64,7 +70,7 @@ class Fetch:
             return 0, "Macdirtycow"
         else:
             print(f"unexpected value! input: {app}")
-            return
+            raise
     
 
     def automate(self):
@@ -76,8 +82,14 @@ class Fetch:
                         self.fetch(key["name"], key["version"])
                     except TypeError as e:
                         print(f"WARNING: {e}, this seems caused by metadata.")
+        print("All done")
 
 
 if __name__ == "__main__":
-    Fetch().automate()
-    # Fetch().fetch("Cowabunga", "7.0.3")
+    if sys.argv[1] == "--production":
+        Fetch().automate()
+    if sys.argv[1] == "--test":
+        try:
+            Fetch().fetch(sys.argv[3], sys.argv[2])
+        except IndexError:
+            print("ERROR: Needed argument not found. example: 2.1.4 Enmity")

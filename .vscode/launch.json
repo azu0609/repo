@@ -11,7 +11,8 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "cwd": "/home/azuki/Documents/repo/script/"
+            "cwd": "/home/azuki/Documents/repo/script/",
+            "args": ["--test", "1.0.0-beta.a86eb9e", "Anime Now!"]
         }
     ]
 }
