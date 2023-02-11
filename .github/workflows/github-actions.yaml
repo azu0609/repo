@@ -22,7 +22,7 @@ jobs:
 
       - name: Update
         run: |
-          python script/fetch.py
+          python script/fetch.py --production
 
       - name: Commit and Push
         run: |
