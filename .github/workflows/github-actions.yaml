@@ -1,6 +1,7 @@
 name: AutomatedUpdate # Name of action
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 3 * * *' # schedule
 

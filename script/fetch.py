@@ -33,7 +33,7 @@ class Fetch:
         if version > current_ver:
             print(f"{current_ver} >>> {version}")
             print(f"INFO: New version found. updating to: {version}, current: {current_ver}")
-            self.rw("/home/azuki/Documents/repo/scarlet_repo.json", version, index, app_type, current_ver)
+            self.rw("../scarlet_repo.json", version, index, app_type, current_ver)
         else:
             print("Up to date")
         print("INFO: Successfuly ended.")
@@ -74,7 +74,7 @@ class Fetch:
     
 
     def automate(self):
-        with open("/home/azuki/Documents/repo/scarlet_repo.json", 'r') as file:
+        with open("../scarlet_repo.json", 'r') as file:
             json_data = json.load(file)
             for item in json_data:
                 for key in json_data[item]:
