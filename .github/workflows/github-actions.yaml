@@ -22,8 +22,9 @@ jobs:
           pip install requests
 
       - name: Update
+        working-directory: ./script
         run: |
-          python script/fetch.py --production
+          python fetch.py --production
 
       - name: Commit and Push
         run: |
