@@ -9,7 +9,8 @@ class Fetch:
                         "https://api.github.com/repos/enmity-mod/tweak/releases",
                         "https://api.github.com/repos/qnblackcat/uYouPlus/releases"]
         self.Sideloaded = ["https://api.github.com/repos/AnimeNow-Team/AnimeNow/releases"]
-        self.Macdirtycow = ["https://api.github.com/repos/leminlimez/Cowabunga/releases"]
+        self.Macdirtycow = ["https://api.github.com/repos/leminlimez/Cowabunga/releases",
+                            "https://api.github.com/repos/haxi0/KillMyOTA/releases"]
 
     def fetch(self, app, current_ver):
         index, app_type = self.app_handler(app)
@@ -32,11 +33,10 @@ class Fetch:
         print(f"INFO: app: {app}(index: {index}), current: {current_ver}, new: {version}")
         if version > current_ver:
             print(f"{current_ver} >>> {version}")
-            print(f"INFO: New version found. updating to: {version}, current: {current_ver}")
+            print(f"INFO: New version available: {version}, updating...")
             self.rw("../scarlet_repo.json", version, index, app_type, current_ver)
         else:
-            print("Up to date")
-        print("INFO: Successfuly ended.")
+            print("INFO: Up to date.")
 
     
     def rw(self, path, version, index, app_type, current_ver):
@@ -68,6 +68,8 @@ class Fetch:
             return 0, "Sideloaded"
         if app == "Cowabunga":
             return 0, "Macdirtycow"
+        if app == "KillMyOTA":
+            return 1, "Macdirtycow"
         else:
             print(f"unexpected value! input: {app}")
             raise
@@ -82,7 +84,7 @@ class Fetch:
                         self.fetch(key["name"], key["version"])
                     except TypeError as e:
                         print(f"WARNING: {e}, this seems caused by metadata.")
-        print("All done")
+        print(f"All done! may take 1~2m(Page build time) to apply.")
 
 
 if __name__ == "__main__":

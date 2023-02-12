@@ -94,7 +94,31 @@
       "dev": "leminlimez",
       "category": "Macdirtycow",
       "description": "IOS 14.0-15.7.1 & 16.0-16.1.2 MacDirtyCow ToolBox",
-      "bundleID": "com.leemin.Cowabunga"
+      "bundleID": "com.leemin.Cowabunga",
+      "screenshots": [
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Home.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Tools.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/SpringboardTools.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Audio_Changer.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Passcode_Editor.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/LS_Footnote.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Misc.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Extra_Tools.PNG"
+      ]
+    },
+    {
+      "name": "KillMyOTA",
+      "version": "1.1",
+      "down": "https://github.com/haxi0/KillMyOTA/releases/download/1.1/KillMyOTA-1.1.ipa",
+      "dev": "haxi0",
+      "icon": "https://raw.githubusercontent.com/haxi0/KillMyOTA/master/KillMyOTA-modified.png",
+      "category": "Macdirtycow",
+      "description": "OTA Killer for iOS 15.0 - 16.1.2",
+      "bundleID": "org.haxi0.KillMyOTA",
+      "contact": {
+        "web": "https://haxi0-dev.com/",
+        "twitter": "https://twitter.com/haxi0sm"
+      }
     }
   ]
 }
