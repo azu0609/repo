@@ -40,17 +40,30 @@ class Fetch:
 
     
     def rw(self, path, version, index, app_type, current_ver):
-        with open(path, 'r') as file:
-            print("INFO: Loading data...")
-            json_data = json.load(file)
-            print("INFO: Modifying loaded data...")
-            json_data[app_type][index]["version"] = version
-            json_data[app_type][index]["down"] = json_data[app_type][index]["down"].replace(current_ver, version)
-            if index == 2:
-                json_data[app_type][index]["down"] = json_data[app_type][index]["down"].replace(current_ver.replace("-", "_"), version.replace("-", "_"))
-        with open(path, 'w') as file:
-            json.dump(json_data, file, indent=2)
-            print(f"INFO: Writed to: {path} successfully.")
+            with open(path, "r") as file:
+                print("INFO: Loading data...")
+                json_data = json.load(file)
+                print("INFO: Modifying loaded data...")
+                json_data[app_type][index]["version"] = version
+                json_data[app_type][index]["down"] = json_data[app_type][index]["down"].replace(current_ver, version)
+                if index == 2:
+                    json_data[app_type][index]["down"] = json_data[app_type][index]["down"].replace(current_ver.replace("-", "_"), version.replace("-", "_"))
+            with open(path, 'w') as file:
+                json.dump(json_data, file, indent=2)
+                print(f"INFO: Writed to: {path} successfully.")
+
+            # Modify readme
+            with open("../README.md", "r") as file:
+                print("INFO: Loading readme.md data...")
+                for line in file:
+                    print(line)
+                    if [app_type][index]["name"] in line and current_ver in line:
+                        print(line)
+                data = file.read()
+                print(data)
+            with open("../README.md", "w") as file:
+                print("INFO: Writing modified data...")
+                file.write(data.replace("1.0", version))
             
         
     
@@ -88,10 +101,13 @@ class Fetch:
 
 
 if __name__ == "__main__":
-    if sys.argv[1] == "--production":
-        Fetch().automate()
-    if sys.argv[1] == "--test":
-        try:
-            Fetch().fetch(sys.argv[3], sys.argv[2])
-        except IndexError:
-            print("ERROR: Needed argument not found. example: 2.1.4 Enmity")
+    try:
+        if sys.argv[1] == "--production":
+            Fetch().automate()
+        if sys.argv[1] == "--test":
+            try:
+                Fetch().fetch(sys.argv[3], sys.argv[2])
+            except IndexError:
+                print("ERROR: Needed argument not found. example: 2.1.4 Enmity")
+    except IndexError:
+        print("ERROR: Needed argument not found. example: --production")
