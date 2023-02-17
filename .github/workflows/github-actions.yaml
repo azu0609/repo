@@ -31,6 +31,6 @@ jobs:
           git config user.name "azu0609"
           git config user.email "ipadgoogcloud@gmail.com"
           git add .
-          git commit -m "Feat: update version - automated"
+          git commit --allow-empty -m "Feat: update version - automated"
           git pull
           git push origin main
