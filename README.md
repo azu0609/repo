@@ -14,6 +14,6 @@
 | Tweaked app | [uYou+](https://github.com/qnblackcat/uYouPlus) | com.google.ios.youtube | 18.01.6 | 2.3.1 | [qnblackcat](https://github.com/qnblackcat) | Yes |
 | Tweaked app | [Enmity](https://enmity.app) | com.hammerandchisel.discord | 158.0 | 2.1.4 | [enmity-mod](https://github.com/enmity-mod) | Yes |
 | Tweaked app | [Enmity (dev)](https://enmity.app) | com.hammerandchisel.discord | 158.0 | 2.1.4 | [enmity-mod](https://github.com/enmity-mod) | Yes |
-| App | [Anime Now!](https://github.com/AnimeNow-Team/AnimeNow) | com.errorerrorerror.animenow | None | 1.0.0 | [errorerrorerror](https://github.com/errorerrorerror) | Yes |
-| Macdirtycow | [Cowabunga](https://github.com/leminlimez/Cowabunga) | com.leemin.Cowabunga | None | 8.0.3 | [leminlimez](https://github.com/leminlimez) | Yes |
+| App | [Anime Now!](https://github.com/AnimeNow-Team/AnimeNow) | com.errorerrorerror.animenow | None | 1.0.0-beta.ac2e8f9 | [errorerrorerror](https://github.com/errorerrorerror) | Yes |
+| Macdirtycow | [Cowabunga](https://github.com/leminlimez/Cowabunga) | com.leemin.Cowabunga | None | 8.0.5 | [leminlimez](https://github.com/leminlimez) | Yes |
 | Macdirtycow | [KillMyOTA](https://github.com/haxi0/KillMyOTA) | org.haxi0.KillMyOTA | None | 1.1 | [haxi0](https://github.com/haxi0) | Yes |

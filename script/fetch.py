@@ -12,11 +12,23 @@ class Fetch:
         self.Macdirtycow = ["https://api.github.com/repos/leminlimez/Cowabunga/releases",
                             "https://api.github.com/repos/haxi0/KillMyOTA/releases"]
 
+
+    def logger(self, type, message):
+        if type == "info":
+            print("INFO: " + message)
+        elif type == "warn":
+            print("WARN: " + message)
+        elif type == "error":
+            print("ERROR: " + message)
+        else:
+            print(message)
+    
+
     def fetch(self, app, current_ver):
         index, app_type = self.app_handler(app)
         if index == 3:
             version = "v2.1"
-            print("INFO: uYou detected! using 2.1 instend of latest.")
+            self.logger("info", "uYou detected! using 2.1 instend of latest.")
         else:
             version = None
             try:
@@ -27,48 +39,49 @@ class Fetch:
                 elif app_type == "Tweaked":
                     version = requests.get(self.Tweaked[index]).json()[0]["name"]
             except KeyError:
-                print("ERROR: rate limited by github. can't use github api for a while.\nERROR: try again later.")
+                self.logger("error", "Rate limited by github. can't use github api for a while.\nERROR: try again later.")
                 raise(KeyError)
         version = version.strip("v")
-        print(f"INFO: app: {app}(index: {index}), current: {current_ver}, new: {version}")
+        self.logger("info", f"app: {app}(index: {index}), current: {current_ver}, new: {version}")
         if version > current_ver:
-            print(f"{current_ver} >>> {version}")
-            print(f"INFO: New version available: {version}, updating...")
+            self.logger("info", f"New version available: {version}, updating...")
             self.rw("../scarlet_repo.json", version, index, app_type, current_ver)
         else:
-            print("INFO: Up to date.")
+            self.logger("info", "Up to date.")
 
     
     def rw(self, path, version, index, app_type, current_ver):
             with open(path, "r") as file:
-                print("INFO: Loading data...")
+                self.logger("info", "Loading data...")
                 json_data = json.load(file)
-                print("INFO: Modifying loaded data...")
+                self.logger("info", "Modifying loaded data...")
                 json_data[app_type][index]["version"] = version
                 json_data[app_type][index]["down"] = json_data[app_type][index]["down"].replace(current_ver, version)
                 if index == 2:
                     json_data[app_type][index]["down"] = json_data[app_type][index]["down"].replace(current_ver.replace("-", "_"), version.replace("-", "_"))
             with open(path, 'w') as file:
                 json.dump(json_data, file, indent=2)
-                print(f"INFO: Writed to: {path} successfully.")
+                self.logger("info", f"Writed to: {path} successfully.")
 
+            """
             # Modify readme
             with open("../README.md", "r") as file:
-                print("INFO: Loading readme.md data...")
-                for line in file:
+                self.logger("info", "Loading readme.md data...")
+                file_data = file.readlines()
+                for line in file_data:
                     print(line)
                     if [app_type][index]["name"] in line and current_ver in line:
                         print(line)
                 data = file.read()
-                print(data)
             with open("../README.md", "w") as file:
-                print("INFO: Writing modified data...")
-                file.write(data.replace("1.0", version))
+                self.logger("info", "Writing modified data...")
+                file.write(data.replace(current_ver, version))
+            """
             
         
     
     def app_handler(self, app):
-        print(f"INFO: recived {app}")
+        self.logger("info", f"Recived: {app}")
         if app == "Enmity":
             return 0, "Tweaked"
         if app == "Enmity (Dev)":
@@ -84,7 +97,7 @@ class Fetch:
         if app == "KillMyOTA":
             return 1, "Macdirtycow"
         else:
-            print(f"unexpected value! input: {app}")
+            self.logger("error", f"Unexpected value: {app}")
             raise
     
 
@@ -96,8 +109,8 @@ class Fetch:
                     try:
                         self.fetch(key["name"], key["version"])
                     except TypeError as e:
-                        print(f"WARNING: {e}, this seems caused by metadata.")
-        print(f"All done! may take 1~2m(Page build time) to apply.")
+                        self.logger("warn", f"{e}, this seems caused by metadata.")
+        self.logger("info", f"All done! may take 1~2m(Page build time) to apply.")
 
 
 if __name__ == "__main__":
