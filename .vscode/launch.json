@@ -5,14 +5,30 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Current File",
+            "name": "Python: Repo - Production debug",
             "type": "python",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": true,
             "cwd": "/home/azuki/Documents/repo/script/",
-            "args": ["--test", "1.0", "KillMyOTA"]
+            "args": [
+                "--production"
+            ]
+        },
+        {
+            "name": "Python: Repo - For testing",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "/home/azuki/Documents/repo/script/",
+            "args": [
+                "--test",
+                "163",
+                "0"
+            ]
         }
     ]
 }

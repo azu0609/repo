@@ -26,8 +26,7 @@ class Fetch:
             print(message)
     
 
-    def fetch(self, app, current_ver):
-        index, app_type = self.app_parser(app)
+    def fetch(self, index, app_type, current_ver):
         if index == 3:
             version = "v2.1"
             self.logger("info", "uYou detected! using 2.1 instend of latest.")
@@ -35,25 +34,25 @@ class Fetch:
             version = None
             changelog = None
             released_date = None
-            try:
-                if app_type == "Macdirtycow":
-                    version = requests.get(self.Macdirtycow[index]).json()[0]["name"]
-                    changelog = requests.get(self.Macdirtycow[index]).json()[0]["body"]
-                    released_date = requests.get(self.Macdirtycow[index]).json()[0]["assets"][0]["created_at"]
-                elif app_type == "Sideloaded":
-                    version = requests.get(self.Sideloaded[index]).json()[0]["name"]
-                    changelog = requests.get(self.Sideloaded[index]).json()[0]["body"]
-                    released_date = requests.get(self.Sideloaded[index]).json()[0]["assets"][0]["created_at"]
-                elif app_type == "Tweaked":
-                    version = requests.get(self.Tweaked[index]).json()[0]["name"]
-                    changelog = requests.get(self.Tweaked[index]).json()[0]["body"]
-                    released_date = requests.get(self.Tweaked[index]).json()[0]["assets"][0]["created_at"]
-            except KeyError:
-                self.logger("error", "Rate limited by github. can't use github api for a while.\nERROR: try again later.")
-                raise(KeyError)
-        version = version.strip("v")
-        released_date = released_date.find("T")[:released_date]
-        self.logger("debug", f"app: {app}(index: {index}), current: {current_ver}, new: {version}")
+            if app_type == "Macdirtycow":
+                version = requests.get(self.Macdirtycow[index]).json()[0]["name"]
+                changelog = requests.get(self.Macdirtycow[index]).json()[0]["body"]
+                released_date = requests.get(self.Macdirtycow[index]).json()[0]["assets"][0]["created_at"]
+            elif app_type == "Sideloaded":
+                version = requests.get(self.Sideloaded[index]).json()[0]["name"]
+                changelog = requests.get(self.Sideloaded[index]).json()[0]["body"]
+                released_date = requests.get(self.Sideloaded[index]).json()[0]["assets"][0]["created_at"]
+            elif app_type == "Tweaked":
+                version = requests.get(self.Tweaked[index]).json()[0]["name"]
+                changelog = requests.get(self.Tweaked[index]).json()[0]["body"]
+                released_date = requests.get(self.Tweaked[index]).json()[0]["assets"][0]["created_at"]
+        try:
+            version = version.strip("v")
+        except AttributeError:
+            self.logger("error", "Rate limited by Github. can't use github api for a while")
+            raise()
+        # released_date = released_date.find("T")[:released_date] # Disabled due to error. available in soon
+        self.logger("debug", f"index: {index}, current: {current_ver}, new: {version}") # Disabled due to error
         if version > current_ver:
             self.logger("info", f"New version available: {version}, updating...")
             self.rw("altstore", "../altstore_repo.json", "../scarlet_repo.json", version, index, app_type, current_ver, changelog, released_date)
@@ -106,50 +105,31 @@ class Fetch:
                 self.logger("info", "Writing modified data...")
                 file.write(data.replace(current_ver, version))
             """
-            
-        
-    
-    def app_parser(self, app):
-        self.logger("info", f"Recived: {app}")
-        if app == "Enmity":
-            return 0, "Tweaked"
-        if app == "Enmity (Dev)":
-            return 1, "Tweaked"
-        if app == "uYou":
-            return 3, "Tweaked"
-        if app == "uYou+":
-            return 2, "Tweaked"
-        if app == "Anime Now!":
-            return 0, "Sideloaded"
-        if app == "Cowabunga":
-            return 0, "Macdirtycow"
-        if app == "KillMyOTA":
-            return 1, "Macdirtycow"
-        else:
-            self.logger("error", f"Unexpected value: {app}")
-            raise
     
 
-    def automate(self, path):
-        with open("../scarlet_repo.json", 'r') as file:
+    def automate(self, path: str):
+        with open(path, 'r') as file:
             json_data = json.load(file)
             for item in json_data:
-                for key in json_data[item]:
+                for i, key in enumerate(json_data[item]):
                     try:
-                        self.fetch(key["name"], key["version"])
+                        self.fetch(i, item, key["version"])
                     except TypeError as e:
-                        self.logger("warn", f"{e}, this seems caused by metadata.")
+                        if str(e) == "string indices must be integers":
+                            self.logger("warn", f"{e}, this seems caused by metadata.")
+                        else:
+                            raise(e)
         self.logger("info", f"All done! may take 1~2m(Page build time) to apply.")
 
 
 if __name__ == "__main__":
     try:
         if sys.argv[1] == "--production":
-            Fetch().automate("scarlet")
+            Fetch().automate("../altstore_repo.json")
         if sys.argv[1] == "--test":
-            try:
-                Fetch().fetch(sys.argv[3], sys.argv[2])
-            except IndexError:
-                print("ERROR: Needed argument not found. example: 2.1.4 Enmity")
+            # try:
+            Fetch().fetch(sys.argv[3], "apps", sys.argv[2])
+            # except IndexError:
+                # print("ERROR: Needed argument not found. example: 2.1.4 Enmity")
     except IndexError:
         print("ERROR: Needed argument not found. example: --production")
