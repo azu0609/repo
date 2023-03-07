@@ -89,8 +89,8 @@
   "Macdirtycow": [
     {
       "name": "Cowabunga",
-      "version": "8.1.1",
-      "down": "https://github.com/leminlimez/Cowabunga/releases/download/v8.1.1/Cowabunga.ipa",
+      "version": "8.1.2",
+      "down": "https://github.com/leminlimez/Cowabunga/releases/download/v8.1.2/Cowabunga.ipa",
       "dev": "leminlimez",
       "category": "Macdirtycow",
       "description": "IOS 14.0-15.7.1 & 16.0-16.1.2 MacDirtyCow ToolBox",
