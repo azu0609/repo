@@ -5,6 +5,23 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python: Repo - Test - Altstore",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "/home/azuki/Documents/repo/script/",
+            "args": [
+                "--test",
+                "altstore",
+                "1",
+                "apps",
+                "2.1.3",
+                "https://github.com/enmity-mod/tweak/releases"
+            ]
+        },
+        {
             "name": "Python: Repo - Production debug",
             "type": "python",
             "request": "launch",
@@ -17,7 +34,7 @@
             ]
         },
         {
-            "name": "Python: Repo - For testing",
+            "name": "Python: Repo - Test - Scarlet",
             "type": "python",
             "request": "launch",
             "program": "${file}",
@@ -26,8 +43,11 @@
             "cwd": "/home/azuki/Documents/repo/script/",
             "args": [
                 "--test",
+                "scarlet",
+                "0",
+                "Tweaked",
                 "2.1.3",
-                "1"
+                "https://github.com/enmity-mod/tweak/releases"
             ]
         }
     ]

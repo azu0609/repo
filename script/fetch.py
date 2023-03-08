@@ -10,12 +10,6 @@ class Fetch:
                                "https://api.github.com/repos/AnimeNow-Team/AnimeNow/releases",
                                "https://api.github.com/repos/leminlimez/Cowabunga/releases",
                                "https://api.github.com/repos/haxi0/KillMyOTA/releases"]
-        self.Tweaked = ["https://api.github.com/repos/enmity-mod/tweak/releases",
-                        "https://api.github.com/repos/enmity-mod/tweak/releases",
-                        "https://api.github.com/repos/qnblackcat/uYouPlus/releases"]
-        self.Sideloaded = ["https://api.github.com/repos/AnimeNow-Team/AnimeNow/releases"]
-        self.Macdirtycow = ["https://api.github.com/repos/leminlimez/Cowabunga/releases",
-                            "https://api.github.com/repos/haxi0/KillMyOTA/releases"]
 
 
     def logger(self, type: int, message):
@@ -32,13 +26,13 @@ class Fetch:
     
 
     def fetch(self, repo, index, app_type, current_ver, download_url):
+        version = None
+        changelog = None
+        released_date = None
         if index == 3:
             version = "v2.1"
             self.logger(2, "uYou detected! using 2.1 instend of latest.")
         else:
-            version = None
-            changelog = None
-            released_date = None
             for i, releases in enumerate(self.release_source):
                 if releases.replace("api.", "").replace("repos/", "") in download_url:
                     self.logger(0, "Found url.")
@@ -48,26 +42,12 @@ class Fetch:
                         released_date = requests.get(self.release_source[i]).json()[0]["assets"][0]["created_at"]
                     except KeyError:
                         raise("Rate limited")
-            """
-            if app_type == "Macdirtycow":
-                version = requests.get(self.Macdirtycow[index]).json()[0]["name"]
-                changelog = requests.get(self.Macdirtycow[index]).json()[0]["body"]
-                released_date = requests.get(self.Macdirtycow[index]).json()[0]["assets"][0]["created_at"]
-            elif app_type == "Sideloaded":
-                version = requests.get(self.Sideloaded[index]).json()[0]["name"]
-                changelog = requests.get(self.Sideloaded[index]).json()[0]["body"]
-                released_date = requests.get(self.Sideloaded[index]).json()[0]["assets"][0]["created_at"]
-            elif app_type == "Tweaked":
-                version = requests.get(self.Tweaked[index]).json()[0]["name"]
-                changelog = requests.get(self.Tweaked[index]).json()[0]["body"]
-                released_date = requests.get(self.Tweaked[index]).json()[0]["assets"][0]["created_at"]
-            """
         version = version.strip("v")
-        # released_date = released_date.find("T")[:released_date] # Disabled due to error. available in soon
+        released_date = ''.join(released_date.split('T')[:-1])
         self.logger(1, f"index: {index}, current: {current_ver}, new: {version}") # Disabled due to error
         if version > current_ver:
             self.logger(0, f"New version available: {version}, updating...")
-            self.rw(repo, "../altstore_repo.json", "../scarlet_repo.json", version, index, app_type, current_ver, changelog, released_date)
+            self.rw(repo, "../altstore_repo.json", "../scarlet_repo.json", version, int(index), app_type, current_ver, changelog, released_date)
         else:
             self.logger(0, "Up to date.")
 
@@ -91,22 +71,19 @@ class Fetch:
                     self.logger(0, "Loading json manifest... this may take a while")
                     json_data = json.load(altstore_repo)
                     self.logger(0, "Modifying loaded data...")
-                    print(type(index))
-                    print(type(app_type))
-                    print(type(version))
                     json_data[app_type][index]["version"] = version
-                    json_data[app_type][index]["down"] = json_data[app_type][index]["down"].replace(current_ver, version)
+                    json_data[app_type][index]["downloadURL"] = json_data[app_type][index]["downloadURL"].replace(current_ver, version)
                     json_data[app_type][index]["versionDescription"] = version_description
                     json_data[app_type][index]["versionDate"] = release_date
                     if index == 2:
-                        json_data[app_type][index]["down"] = json_data[app_type][index]["down"].replace(current_ver.replace("-", "_"), version.replace("-", "_"))
+                        json_data[app_type][index]["downloadURL"] = json_data[app_type][index]["downloadURL"].replace(current_ver.replace("-", "_"), version.replace("-", "_"))
                 with open(altstore_path, "w") as altstore_repo:
                     json.dump(json_data, altstore_repo, indent=2)
                     self.logger(0, f"Writed to: {altstore_path} successfully.")
             
             else:
                 raise("Unexpected mode")
-            """
+            """ - # Disabled due to error
             # Modify readme
             with open("../README.md", "r") as file:
                 self.logger(0, "Loading readme.md data...")
@@ -147,9 +124,6 @@ if __name__ == "__main__":
         if sys.argv[1] == "--production":
             Fetch().automate("../scarlet_repo.json")
         if sys.argv[1] == "--test":
-            # try:
-            Fetch().fetch("altstore", sys.argv[3], "apps", sys.argv[2], "https://github.com/enmity-mod/tweak/releases")
-            # except IndexError:
-                # print("ERROR: Needed argument not found. example: 2.1.4 Enmity")
+            Fetch().fetch(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6])
     except IndexError:
         print("ERROR: Needed argument not found. example: --production")
