@@ -31,6 +31,8 @@ class Fetch:
         released_date = None
         if index == 3:
             version = "v2.1"
+            released_date = "2021-10-28"
+            changelog = "Unknown - Ask to developer"
             self.logger(2, "uYou detected! using 2.1 instead of latest.")
         else:
             for i, releases in enumerate(self.release_source):
@@ -41,8 +43,11 @@ class Fetch:
                         released_date = requests.get(self.release_source[i]).json()[0]["assets"][0]["created_at"]
                     except KeyError:
                         raise("Rate limited")
-        version = version.strip("v")
-        released_date = ''.join(released_date.split('T')[:-1])
+        try:
+            version = version.strip("v")
+            released_date = ''.join(released_date.split('T')[:-1])
+        except AttributeError:
+            raise("Something went wrong, please ask to developer.")
         self.logger(1, f"index: {index}, current: {current_ver}, new: {version}")
         if version > current_ver:
             self.logger(0, f"New version available: {version}, updating...")
@@ -111,7 +116,7 @@ class Fetch:
                         else:
                             raise("Unexpected repo!")
                     except TypeError as e:
-                        if str(e) == "string indices must be integers":
+                        if str(e) == "string indices must be integers, not 'str'" or "string indices must be integers":
                             self.logger(2, f"{e}, this seems caused by metadata.")
                         else:
                             raise(e)
