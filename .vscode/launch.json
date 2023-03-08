@@ -15,10 +15,11 @@
             "args": [
                 "--test",
                 "altstore",
-                "1",
+                "Rosiecord",
+                "0",
                 "apps",
-                "163",
-                "https://github.com/acquitelol/rosiecord"
+                "v163",
+                "https://github.com/acquitelol/rosiecord/releases"
             ]
         },
         {

@@ -12,45 +12,45 @@ class Fetch:
                                "https://api.github.com/repos/haxi0/KillMyOTA/releases"]
 
 
-    def logger(self, type: int, message):
+    def logger(self, type: int, message: str):
         if type == 0:
-            print("INFO: " + message)
+            print('\033[92m' + "INFO: " + message)
         elif type == 1:
-            print("DEBUG: " + message)
+            print('\033[96m' + "DEBUG: " + message)
         elif type == 2:
-            print("WARN: " + message)
+            print('\033[93m' + "WARN: " + message)
         elif type == 3:
-            print("ERROR: " + message)
+            print('\033[91m' + "ERROR: " + message)
         else:
             print(message)
     
 
-    def fetch(self, repo, index, app_type, current_ver, download_url):
+    def fetch(self, repo, app_name, index, app_type, current_ver, download_url):
         version = None
         changelog = None
         released_date = None
+        # FIXME: Handle uYou and rosiecord without any extra code
         if index == 3:
             version = "v2.1"
             released_date = "2021-10-28"
             changelog = "Unknown - Ask to developer"
             self.logger(2, "uYou detected! using 2.1 instead of latest.")
-        # FIXME: Handle rosiecord without any extra code
-        if index == 0 and repo == "altstore":
-            self.logger(2, "Rosiecord detected. Rosiecord uses K2Gemity version as default, so updating is not supported.")
-            version = "v164"
-            released_date = "2023-03-25"
-            changelog = "## Commits\n- 4faa9f9: ensure coreutils are installed (Acquite)"
         else:
             for i, releases in enumerate(self.release_source):
                 if releases.replace("api.", "").replace("repos/", "") in download_url:
                     try:
-                        version = requests.get(self.release_source[i]).json()[0]["name"]
-                        changelog = requests.get(self.release_source[i]).json()[0]["body"]
-                        released_date = requests.get(self.release_source[i]).json()[0]["assets"][0]["created_at"]
+                        if index == 0:
+                            version = requests.get(self.release_source[i]).json()[1]["name"]
+                            changelog = requests.get(self.release_source[i]).json()[0]["body"]
+                            released_date = requests.get(self.release_source[i]).json()[0]["assets"][0]["created_at"]
+                        else:
+                            version = requests.get(self.release_source[i]).json()[0]["name"]
+                            changelog = requests.get(self.release_source[i]).json()[0]["body"]
+                            released_date = requests.get(self.release_source[i]).json()[0]["assets"][0]["created_at"]
                     except KeyError:
                         raise("Rate limited")
         try:
-            version = version.strip("v")
+            version = version.strip(app_name).strip("v").strip()
             released_date = ''.join(released_date.split('T')[:-1])
         except AttributeError:
             raise("Something went wrong, please ask to developer.")
@@ -68,7 +68,7 @@ class Fetch:
                     self.logger(0, "Loading data...")
                     json_data = json.load(scarlet_repo)
                     self.logger(0, "Modifying loaded data...")
-                    json_data[app_type][index]["version"] = version
+                    json_data[app_type][index]["version"] = version.strip(" " + json_data[app_type][index]["name"])
                     json_data[app_type][index]["down"] = json_data[app_type][index]["down"].replace(current_ver, version)
                     if index == 2:
                         json_data[app_type][index]["down"] = json_data[app_type][index]["down"].replace(current_ver.replace("-", "_"), version.replace("-", "_"))
@@ -81,7 +81,7 @@ class Fetch:
                     self.logger(0, "Loading json manifest... this may take a while")
                     json_data = json.load(altstore_repo)
                     self.logger(0, "Modifying loaded data...")
-                    json_data[app_type][index]["version"] = version.strip(json_data[app_type][index]["name"])
+                    json_data[app_type][index]["version"] = version.strip(" " + json_data[app_type][index]["name"])
                     json_data[app_type][index]["downloadURL"] = json_data[app_type][index]["downloadURL"].replace(current_ver, version)
                     json_data[app_type][index]["versionDescription"] = version_description
                     json_data[app_type][index]["versionDate"] = release_date
@@ -116,9 +116,9 @@ class Fetch:
                 for i, key in enumerate(json_data[item]):
                     try:
                         if path == "../altstore_repo.json":
-                            self.fetch("altstore", i, item, key["version"], key["downloadURL"])
+                            self.fetch("altstore", key["name"], i, item, key["version"], key["downloadURL"])
                         elif path == "../scarlet_repo.json":
-                            self.fetch("scarlet", i, item, key["version"], key["down"])
+                            self.fetch("scarlet", key["name"], i, item, key["version"], key["down"])
                         else:
                             raise("Unexpected repo!")
                     except TypeError as e:
@@ -135,6 +135,6 @@ if __name__ == "__main__":
             Fetch().automate("../scarlet_repo.json")
             Fetch().automate("../altstore_repo.json")
         if sys.argv[1] == "--test":
-            Fetch().fetch(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6])
+            Fetch().fetch(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7])
     except IndexError:
         print("ERROR: Needed argument not found. example: --production")

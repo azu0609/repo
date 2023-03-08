@@ -5,24 +5,24 @@
   },
   "Tweaked": [
     {
-      "name": "Enmity",
-      "version": "2.1.4",
+      "name": "Rosiecord",
+      "version": "164",
       "icon": "https://files.enmity.app/icon-altstore.png",
-      "down": "https://github.com/enmity-mod/tweak/releases/download/v2.1.4/Enmity.ipa",
-      "dev": "Enmity Team",
+      "down": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_Rosiecord/Rosiecord-164_GGSans-Font+Plumpy_Icons.ipa",
+      "dev": "acquitelol",
       "category": "Tweaked Apps",
-      "description": "The power of addons, all in your hand.",
+      "description": "Enmity, but with custom icons",
       "bundleID": "com.hammerandchisel.discord",
       "appstore": "com.hammerandchisel.discord",
-      "contact": {
-        "web": "https://enmity.app",
-        "twitter": "https://twitter.com/enmityapp"
-      }
+      "screenshots": [
+        "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Rosiecord_Mocks/Plumpy.png",
+        "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Rosiecord_Mocks/Plumpy_Flowercord.png"
+      ]
     },
     {
-      "name": "Enmity (Dev)",
+      "name": "Enmity",
       "version": "2.1.4",
-      "down": "https://github.com/enmity-mod/tweak/releases/download/v2.1.4/Enmity.Development.ipa",
+      "down": "https://github.com/enmity-mod/tweak/releases/download/v2.1.4/Enmity.ipa",
       "dev": "Enmity Team",
       "icon": "https://files.enmity.app/icon-altstore.png",
       "category": "Tweaked Apps",
