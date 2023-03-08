@@ -34,6 +34,7 @@ class Fetch:
             released_date = "2021-10-28"
             changelog = "Unknown - Ask to developer"
             self.logger(2, "uYou detected! using 2.1 instead of latest.")
+        # FIXME: Handle rosiecord without any extra code
         if index == 0 and repo == "altstore":
             self.logger(2, "Rosiecord detected. Rosiecord uses K2Gemity version as default, so updating is not supported.")
             version = "v164"
@@ -80,7 +81,7 @@ class Fetch:
                     self.logger(0, "Loading json manifest... this may take a while")
                     json_data = json.load(altstore_repo)
                     self.logger(0, "Modifying loaded data...")
-                    json_data[app_type][index]["version"] = version
+                    json_data[app_type][index]["version"] = version.strip(json_data[app_type][index]["name"])
                     json_data[app_type][index]["downloadURL"] = json_data[app_type][index]["downloadURL"].replace(current_ver, version)
                     json_data[app_type][index]["versionDescription"] = version_description
                     json_data[app_type][index]["versionDate"] = release_date
@@ -92,12 +93,12 @@ class Fetch:
             
             else:
                 raise("Unexpected mode")
-            """ - # Disabled due to error
-            # Modify readme
+            
+            """
+            FIXME: Edit readme
             with open("../README.md", "r") as file:
                 self.logger(0, "Loading readme.md data...")
-                file_data = file.readlines()
-                for line in file_data:
+                for line in file.readlines():
                     print(line)
                     if [app_type][index]["name"] in line and current_ver in line:
                         print(line)
