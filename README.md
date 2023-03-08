@@ -3,7 +3,7 @@
     <h1>azu0609's repo</h1>
     <p>Personalized repo for me. hosted in github pages</p>
     <hr />
-    <a href="https://github.com/azu0609/repo/actions/workflows/github-actions.yaml"><img src="https://github.com/azu0609/repo/actions/workflows/github-actions.yaml/badge.svg" /> </a>
+    <a href="https://github.com/azu0609/repo/actions/workflows/Update.yaml"><img src="https://github.com/azu0609/repo/actions/workflows/Update.yaml/badge.svg" /> </a>
 </div>
 
 
