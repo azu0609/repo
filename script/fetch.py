@@ -34,6 +34,11 @@ class Fetch:
             released_date = "2021-10-28"
             changelog = "Unknown - Ask to developer"
             self.logger(2, "uYou detected! using 2.1 instead of latest.")
+        if index == 0 and repo == "altstore":
+            self.logger(2, "Rosiecord detected. Rosiecord uses K2Gemity version as default, so updating is not supported.")
+            version = "v164"
+            released_date = "2023-03-25"
+            changelog = "## Commits\n- 4faa9f9: ensure coreutils are installed (Acquite)"
         else:
             for i, releases in enumerate(self.release_source):
                 if releases.replace("api.", "").replace("repos/", "") in download_url:
