@@ -31,11 +31,10 @@ class Fetch:
         released_date = None
         if index == 3:
             version = "v2.1"
-            self.logger(2, "uYou detected! using 2.1 instend of latest.")
+            self.logger(2, "uYou detected! using 2.1 instead of latest.")
         else:
             for i, releases in enumerate(self.release_source):
                 if releases.replace("api.", "").replace("repos/", "") in download_url:
-                    self.logger(0, "Found url.")
                     try:
                         version = requests.get(self.release_source[i]).json()[0]["name"]
                         changelog = requests.get(self.release_source[i]).json()[0]["body"]
@@ -44,7 +43,7 @@ class Fetch:
                         raise("Rate limited")
         version = version.strip("v")
         released_date = ''.join(released_date.split('T')[:-1])
-        self.logger(1, f"index: {index}, current: {current_ver}, new: {version}") # Disabled due to error
+        self.logger(1, f"index: {index}, current: {current_ver}, new: {version}")
         if version > current_ver:
             self.logger(0, f"New version available: {version}, updating...")
             self.rw(repo, "../altstore_repo.json", "../scarlet_repo.json", version, int(index), app_type, current_ver, changelog, released_date)
@@ -123,6 +122,7 @@ if __name__ == "__main__":
     try:
         if sys.argv[1] == "--production":
             Fetch().automate("../scarlet_repo.json")
+            Fetch().automate("../altstore_repo.json")
         if sys.argv[1] == "--test":
             Fetch().fetch(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6])
     except IndexError:
