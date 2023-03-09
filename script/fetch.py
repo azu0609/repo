@@ -25,7 +25,7 @@ class Fetch:
             print(message)
     
 
-    def fetch(self, repo, app_name, index, app_type, current_ver, download_url):
+    def fetch(self, repo, app_name, index, app_type, current_ver, download_url: str):
         version = None
         changelog = None
         released_date = None
@@ -40,6 +40,14 @@ class Fetch:
                 if releases.replace("api.", "").replace("repos/", "") in download_url:
                     try:
                         req = requests.get(self.release_source[i]).json()
+                        for release_index, release_target in enumerate(req):   
+                            for assets_index, assets in enumerate(req[release_index]["assets"]):
+                                print(assets["browser_download_url"])
+                                if req[release_index]["assets"][assets_index]["name"] == download_url.find(""):
+                                    print("")
+                            
+                            if req[release_index]["name"] == app_name:
+                                print("Found new version of same file: " + release_target["name"])
                         if index == 0 and app_type == "Tweaked" or index == 0 and app_type == "apps":
                             version = req[1]["name"]
                             changelog = req[0]["body"]
@@ -49,12 +57,12 @@ class Fetch:
                             changelog = req[0]["body"]
                             released_date = req[0]["assets"][0]["created_at"]
                     except KeyError:
-                        raise("Rate limited")
+                        raise Exception("Rate limited")
         try:
             version = version.strip(app_name).strip("v").strip()
             released_date = ''.join(released_date.split('T')[:-1])
         except AttributeError:
-            raise("Something went wrong, please ask to developer.")
+            raise Exception("Something went wrong, please ask to developer.")
         self.logger(1, f"index: {index}, current: {current_ver}, new: {version}")
         if version > current_ver:
             self.logger(0, f"New version available: {version}, updating...")
@@ -86,6 +94,15 @@ class Fetch:
                     json_data[app_type][index]["downloadURL"] = json_data[app_type][index]["downloadURL"].replace(current_ver, version)
                     json_data[app_type][index]["versionDescription"] = version_description
                     json_data[app_type][index]["versionDate"] = release_date
+                    json_data[app_type][index]["versions"][""] = {
+                        "version": version,
+                        "date": release_date,
+                        "localizedDescription": version_description,
+                        "downloadURL": json_data[""],
+                        "size": 127146248
+                    }
+                    for versions in json_data[app_type][index]["versions"]:
+                        print(versions["version"])
                     if index == 2:
                         json_data[app_type][index]["downloadURL"] = json_data[app_type][index]["downloadURL"].replace(current_ver.replace("-", "_"), version.replace("-", "_"))
                 with open(altstore_path, "w") as altstore_repo:
@@ -93,7 +110,7 @@ class Fetch:
                     self.logger(0, f"Writed to: {altstore_path} successfully.")
             
             else:
-                raise("Unexpected mode")
+                raise Exception("Unexpected mode")
             
             """
             FIXME: Edit readme
@@ -121,12 +138,12 @@ class Fetch:
                         elif path == "../scarlet_repo.json":
                             self.fetch("scarlet", key["name"], i, item, key["version"], key["down"])
                         else:
-                            raise("Unexpected repo!")
+                            raise Exception("Unexpected repo!")
                     except TypeError as e:
                         if str(e) == "string indices must be integers, not 'str'" or "string indices must be integers":
                             pass
                         else:
-                            raise(e)
+                            raise Exception(e)
         self.logger(0, f"All done! may take 1~2m(Page build time) to apply.")
 
 
