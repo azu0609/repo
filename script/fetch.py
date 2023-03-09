@@ -39,14 +39,15 @@ class Fetch:
             for i, releases in enumerate(self.release_source):
                 if releases.replace("api.", "").replace("repos/", "") in download_url:
                     try:
+                        req = requests.get(self.release_source[i]).json()
                         if index == 0:
-                            version = requests.get(self.release_source[i]).json()[1]["name"]
-                            changelog = requests.get(self.release_source[i]).json()[0]["body"]
-                            released_date = requests.get(self.release_source[i]).json()[0]["assets"][0]["created_at"]
+                            version = req[1]["name"]
+                            changelog = req[0]["body"]
+                            released_date = req[0]["assets"][0]["created_at"]
                         else:
-                            version = requests.get(self.release_source[i]).json()[0]["name"]
-                            changelog = requests.get(self.release_source[i]).json()[0]["body"]
-                            released_date = requests.get(self.release_source[i]).json()[0]["assets"][0]["created_at"]
+                            version = req[0]["name"]
+                            changelog = req[0]["body"]
+                            released_date = req[0]["assets"][0]["created_at"]
                     except KeyError:
                         raise("Rate limited")
         try:
@@ -123,7 +124,7 @@ class Fetch:
                             raise("Unexpected repo!")
                     except TypeError as e:
                         if str(e) == "string indices must be integers, not 'str'" or "string indices must be integers":
-                            self.logger(2, f"{e}, this seems caused by metadata.")
+                            pass
                         else:
                             raise(e)
         self.logger(0, f"All done! may take 1~2m(Page build time) to apply.")

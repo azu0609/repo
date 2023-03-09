@@ -69,8 +69,8 @@
   "Sideloaded": [
     {
       "name": "Anime Now!",
-      "version": "1.0.0-beta.ac2e8f9",
-      "down": "https://github.com/AnimeNow-Team/AnimeNow/releases/download/1.0.0-beta.ac2e8f9/Anime.Now.iOS.ipa",
+      "version": "1.0.0-beta.2",
+      "down": "https://github.com/AnimeNow-Team/AnimeNow/releases/download/1.0.0-beta.2/Anime.Now.iOS.ipa",
       "dev": "AnimeNow Team",
       "icon": "https://raw.githubusercontent.com/AnimeNow-Team/AnimeNow/dev/Misc/Media/applogo_readme.png",
       "category": "Sideloaded",
