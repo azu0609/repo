@@ -7,11 +7,18 @@
       "bundleIdentifier": "com.hammerandchisel.discord",
       "developerName": "acquitelol",
       "subtitle": "Enmity, but with custom icons",
-      "version": "164",
+      "version": "164 (K2Genmit",
       "versionDate": "2023-03-05",
       "versionDescription": "## Commits\n- 4faa9f9: ensure coreutils are installed (Acquite)",
-      "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_164/Rosiecord-164_GGSans-Font+Plumpy_Icons.ipa",
+      "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_164 (K2Genmit/Rosiecord-164 (K2Genmit_GGSans-Font+Plumpy_Icons.ipa",
       "versions": [
+        {
+          "version": "165",
+          "date": "2023-03-05",
+          "localizedDescription": "## Commits\n- 4faa9f9: ensure coreutils are installed (Acquite)",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_164 (K2Genmit (K2Genmit/Rosiecord-164 (K2Genmit (K2Genmit_GGSans-Font+Plumpy_Icons.ipa",
+          "size": 124087301
+        },
         {
           "version": "164",
           "date": "2023-03-05",
