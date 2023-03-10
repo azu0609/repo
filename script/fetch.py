@@ -1,6 +1,7 @@
 import requests
 import json
 import sys
+import re
 
 class Fetch:
     def __init__(self):
@@ -40,14 +41,9 @@ class Fetch:
                 if releases.replace("api.", "").replace("repos/", "") in download_url:
                     try:
                         req = requests.get(self.release_source[i]).json()
-                        for release_index, release_target in enumerate(req):   
-                            for assets_index, assets in enumerate(req[release_index]["assets"]):
-                                print(assets["browser_download_url"])
-                                if req[release_index]["assets"][assets_index]["name"] == download_url.find(""):
-                                    print("")
-                            
-                            if req[release_index]["name"] == app_name:
-                                print("Found new version of same file: " + release_target["name"])
+                        match = re.search(fr"{app_name.lower()}_(\d+)", download_url)
+                        if match:
+                            print("OMG fouund version!" + match.group(1))
                         if index == 0 and app_type == "Tweaked" or index == 0 and app_type == "apps":
                             version = req[1]["name"]
                             changelog = req[0]["body"]
@@ -94,13 +90,7 @@ class Fetch:
                     json_data[app_type][index]["downloadURL"] = json_data[app_type][index]["downloadURL"].replace(current_ver, version)
                     json_data[app_type][index]["versionDescription"] = version_description
                     json_data[app_type][index]["versionDate"] = release_date
-                    json_data[app_type][index]["versions"][""] = {
-                        "version": version,
-                        "date": release_date,
-                        "localizedDescription": version_description,
-                        "downloadURL": json_data[""],
-                        "size": 127146248
-                    }
+                    json_data[app_type][index]["versions"].append({"version": version, "date": release_date, "localizedDescription": version_description, "downloadURL": "", "size": 127146248})
                     for versions in json_data[app_type][index]["versions"]:
                         print(versions["version"])
                     if index == 2:
