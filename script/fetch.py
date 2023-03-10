@@ -41,9 +41,17 @@ class Fetch:
                 if releases.replace("api.", "").replace("repos/", "") in download_url:
                     try:
                         req = requests.get(self.release_source[i]).json()
-                        match = re.search(fr"{app_name.lower()}_(\d+)", download_url)
-                        if match:
-                            print("OMG fouund version!" + match.group(1))
+                        for release_index, release in enumerate(req):
+                            target_release = req[release_index]["name"]
+                            if not re.match(fr"^{app_name} (\d+)[\s()]+.*$", target_release):
+                                current_filename = re.search(r"(?<=/)[^/]+$", download_url)
+                                pattern = re.compile('^' + re.escape(current_filename.group()).replace('\\+', '+') + '$')
+                                for asset_index, asset in enumerate(release["assets"]):
+                                    file_match = pattern.search(asset["name"])
+                                    print(current_filename.group())
+                                    if file_match:
+                                        print("found" + file_match.group())
+                                    print(asset["name"])
                         if index == 0 and app_type == "Tweaked" or index == 0 and app_type == "apps":
                             version = req[1]["name"]
                             changelog = req[1]["body"]
