@@ -49,7 +49,7 @@ class Fetch:
                             version = req[0]["name"]
                             changelog = req[0]["body"]
                             released_date = req[0]["assets"][0]["created_at"]
-                            size = req[1]["assets"][10]["size"]
+                            size = req[0]["assets"][0]["size"]
                     except KeyError:
                         raise("Rate limited")
         try:
