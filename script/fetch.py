@@ -45,13 +45,11 @@ class Fetch:
                             target_release = req[release_index]["name"]
                             if not re.match(fr"^{app_name} (\d+)[\s()]+.*$", target_release):
                                 current_filename = re.search(r"(?<=/)[^/]+$", download_url)
-                                pattern = re.compile('^' + re.escape(current_filename.group()).replace('\\+', '+') + '$')
+                                pattern = re.compile('^' + re.escape(current_filename.group()) + '$')
                                 for asset_index, asset in enumerate(release["assets"]):
                                     file_match = pattern.search(asset["name"])
-                                    print(current_filename.group())
                                     if file_match:
-                                        print("found" + file_match.group())
-                                    print(asset["name"])
+                                        self.logger(1, f"Found matching: {file_match.group()}!")
                         if index == 0 and app_type == "Tweaked" or index == 0 and app_type == "apps":
                             version = req[1]["name"]
                             changelog = req[1]["body"]
