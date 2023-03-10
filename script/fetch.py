@@ -40,7 +40,7 @@ class Fetch:
                 if releases.replace("api.", "").replace("repos/", "") in download_url:
                     try:
                         req = requests.get(self.release_source[i]).json()
-                        if index == "0" and app_type == "Tweaked" or index == "0" and app_type == "apps":
+                        if index == 0 and app_type == "Tweaked" or index == 0 and app_type == "apps":
                             version = req[1]["name"]
                             changelog = req[1]["body"]
                             released_date = req[1]["assets"][10]["created_at"]
