@@ -40,14 +40,16 @@ class Fetch:
                 if releases.replace("api.", "").replace("repos/", "") in download_url:
                     try:
                         req = requests.get(self.release_source[i]).json()
-                        if index == 0 and app_type == "Tweaked" or index == 0 and app_type == "apps":
+                        if index == "0" and app_type == "Tweaked" or index == "0" and app_type == "apps":
                             version = req[1]["name"]
-                            changelog = req[0]["body"]
-                            released_date = req[0]["assets"][0]["created_at"]
+                            changelog = req[1]["body"]
+                            released_date = req[1]["assets"][10]["created_at"]
+                            size = req[1]["assets"][10]["size"]
                         else:
                             version = req[0]["name"]
                             changelog = req[0]["body"]
                             released_date = req[0]["assets"][0]["created_at"]
+                            size = req[1]["assets"][10]["size"]
                     except KeyError:
                         raise("Rate limited")
         try:
@@ -58,12 +60,12 @@ class Fetch:
         self.logger(1, f"index: {index}, current: {current_ver}, new: {version}")
         if version > current_ver:
             self.logger(0, f"New version available: {version}, updating...")
-            self.rw(repo, "../altstore_repo.json", "../scarlet_repo.json", version, int(index), app_type, current_ver, changelog, released_date)
+            self.rw(repo, "../altstore_repo.json", "../scarlet_repo.json", version, int(index), app_type, current_ver, changelog, released_date, size)
         else:
             self.logger(0, "Up to date.")
 
     
-    def rw(self, repo_type, altstore_path, scarlet_path, version, index, app_type, current_ver, version_description, release_date):
+    def rw(self, repo_type, altstore_path, scarlet_path, version, index, app_type, current_ver, version_description, release_date, size):
             if repo_type == "scarlet":
                 with open(scarlet_path, "r") as scarlet_repo:
                     self.logger(0, "Loading data...")
@@ -86,6 +88,11 @@ class Fetch:
                     json_data[app_type][index]["downloadURL"] = json_data[app_type][index]["downloadURL"].replace(current_ver, version)
                     json_data[app_type][index]["versionDescription"] = version_description
                     json_data[app_type][index]["versionDate"] = release_date
+                    json_data[app_type][index]["versions"].insert(0, {"version": "165",
+                                                                      "date": release_date,
+                                                                      "localizedDescription": version_description,
+                                                                      "downloadURL": json_data[app_type][index]["downloadURL"].replace(current_ver, version),
+                                                                      "size": size})
                     if index == 2:
                         json_data[app_type][index]["downloadURL"] = json_data[app_type][index]["downloadURL"].replace(current_ver.replace("-", "_"), version.replace("-", "_"))
                 with open(altstore_path, "w") as altstore_repo:
