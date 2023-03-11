@@ -49,13 +49,16 @@ class Fetch:
                                 asset["name"] = Rosiecord-170_GGSans-Font+Plumpy_Icons.ipa
                                 """
                                 current_filename = re.search(r"(?<=/)[^/]+$", download_url)
-                                pattern = re.compile('^' + re.escape(current_filename.group().replace(current_ver, "(\\d+)")).replace('\\+', '+').replace('\\d+', '(\\\\d+)') + '$')
-                                print(current_filename.group())
-                                print(pattern.pattern)
+                                pattern = re.compile(r"^(.+?)[\-_\.]\d+[\-_\.](.+)\.([^.]+)$")
                                 for asset_index, asset in enumerate(release["assets"]):
-                                    file_match = pattern.search(asset["name"])
-                                    if file_match:
-                                        self.logger(1, f"Found matching: {file_match.group()}!")
+                                    asset_name_match = pattern.match(asset["name"]) # asset_name_match = pattern.match(asset["name"])
+                                    current_name_match = pattern.match(current_filename.group()) # current_name_match = pattern.match(current_filename.group())
+                                    asset_name_no_version = asset_name_match.group(1) + "-" + asset_name_match.group(2) + "." + asset_name_match.group(3)
+                                    current_name_no_version = current_name_match.group(1) + "-" + current_name_match.group(2) + "." + current_name_match.group(3)
+                                    if asset_name_match and current_name_match:
+                                        print("New: " + asset_name_no_version + " Current: " + current_name_no_version)
+                                        if asset_name_no_version == current_name_no_version:
+                                            print(f"found matching! : {asset['name']}")
                         if index == 0 and app_type == "Tweaked" or index == 0 and app_type == "apps":
                             version = req[1]["name"]
                             changelog = req[1]["body"]
