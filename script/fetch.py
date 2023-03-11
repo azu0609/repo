@@ -88,7 +88,7 @@ class Fetch:
                     json_data[app_type][index]["downloadURL"] = json_data[app_type][index]["downloadURL"].replace(current_ver, version)
                     json_data[app_type][index]["versionDescription"] = version_description
                     json_data[app_type][index]["versionDate"] = release_date
-                    json_data[app_type][index]["versions"].insert(0, {"version": "165",
+                    json_data[app_type][index]["versions"].insert(0, {"version": version.strip(" " + json_data[app_type][index]["name"]),
                                                                       "date": release_date,
                                                                       "localizedDescription": version_description,
                                                                       "downloadURL": json_data[app_type][index]["downloadURL"].replace(current_ver, version),
