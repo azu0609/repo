@@ -7,11 +7,18 @@
       "bundleIdentifier": "com.hammerandchisel.discord",
       "developerName": "acquitelol",
       "subtitle": "Enmity, but with custom icons",
-      "version": "164",
-      "versionDate": "2023-03-05",
-      "versionDescription": "## Commits\n- 4faa9f9: ensure coreutils are installed (Acquite)",
-      "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_164/Rosiecord-164_GGSans-Font+Plumpy_Icons.ipa",
+      "version": "170",
+      "versionDate": "2023-03-10",
+      "versionDescription": "",
+      "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_170/Rosiecord-170_GGSans-Font+Plumpy_Icons.ipa",
       "versions": [
+        {
+          "version": "170",
+          "date": "2023-03-10",
+          "localizedDescription": "",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_170/Rosiecord-170_GGSans-Font+Plumpy_Icons.ipa",
+          "size": 80434783
+        },
         {
           "version": "164",
           "date": "2023-03-05",
@@ -172,7 +179,7 @@
           "size": 6691352
         }
       ],
-      "localizedDescription": "Watch your favorite anime shows anytime, anywhere.",
+      "localizedDescription": "Track your favorite anime shows anywhere! Built with SwiftUI and TCA.",
       "iconURL": "https://raw.githubusercontent.com/AnimeNow-Team/AnimeNow/dev/Misc/Media/applogo_readme.png",
       "tintColor": "d24a59",
       "screenshotURLs": [
@@ -182,6 +189,242 @@
       ],
       "size": 7138569,
       "beta": true
+    },
+    {
+      "name": "Cowabunga",
+      "bundleIdentifier": "com.leemin.Cowabunga",
+      "developerName": "leminlimez",
+      "subtitle": "iOS 14.0-15.7.1 & 16.0-16.1.2 MacDirtyCow ToolBox",
+      "version": "8.1.2",
+      "versionDate": "2023-03-06",
+      "versionDescription": "- Cross compatibility between [FileSwitcherPro](https://github.com/straight-tamago/FileSwitcherPro) and Cowabunga custom operations (importing .fsp files)\r\n- Safety implementations to importing custom operations:\r\n     - Imported operations are now disabled by default\r\n     - Added warning for if an imported operation edits /var\r\n- Fixed resetting icon cache stuck on scheduling - Cross compatibility between [FileSwitcherPro](https://github.com/straight-tamago/FileSwitcherPro) and Cowabunga custom operations (importing .fsp files)\r\n- Safety implementations to importing custom operations:\r\n     - Imported operations are now disabled by default\r\n     - Added warning for if an imported operation edits /var\r\n- Fixed resetting icon cache stuck on scheduling",
+      "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v8.1.2/Cowabunga.ipa",
+      "versions": [
+        {
+          "version": "8.1.2",
+          "date": "2023-03-06",
+          "localizedDescription": "- Cross compatibility between [FileSwitcherPro](https://github.com/straight-tamago/FileSwitcherPro) and Cowabunga custom operations (importing .fsp files)\r\n- Safety implementations to importing custom operations:\r\n     - Imported operations are now disabled by default\r\n     - Added warning for if an imported operation edits /var\r\n- Fixed resetting icon cache stuck on scheduling - Cross compatibility between [FileSwitcherPro](https://github.com/straight-tamago/FileSwitcherPro) and Cowabunga custom operations (importing .fsp files)\r\n- Safety implementations to importing custom operations:\r\n     - Imported operations are now disabled by default\r\n     - Added warning for if an imported operation edits /var\r\n- Fixed resetting icon cache stuck on scheduling",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v8.1.2/Cowabunga.ipa",
+          "size": 21849343
+        },
+        {
+          "version": "8.1.1",
+          "date": "2023-02-28",
+          "localizedDescription": "- Added creating operations\r\n- Fixed crash when a custom operation corrupts - hopefully will figure out cause for corruption\r\n- **Fixed bootloop with regard to resetting icon cache**\r\n\r\n**Please update, this is an important fix.** Not only does it stop a bootloop, but it should hopefully increase reliability of applying.",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v8.1.1/Cowabunga.ipa",
+          "size": 21849921
+        },
+        {
+          "version": "8.1.0",
+          "date": "2023-02-26",
+          "localizedDescription": "- Custom fonts are now here! Create your font pack and import .ttf, .ttc, and .otf files to them.\r\n    - Info: Font files must be named the same as what they replace when you import them (ie. SFUI.ttf for the default font)\r\n- Updates to custom operations\r\n    - Importing and exporting .cowperation files\r\n    - Color operations\r\n    - Deleting plist keys in custom operations\r\n- You can now import icon themes from .theme files from the share menu on iOS 15\r\n- Searching and filtering explore page\r\n- Disable screentime now removes from icloud-managed as well\r\n- Cowabunga's app icon previews now in HD\r\n- Custom locks now work on some compatible iPads\r\n\r\nSupport us on [Patreon](https://patreon.com/Cowabunga_iOS) to get your name featured on the home page and to get access to private beta builds!\r\n\r\nInfo about icon update: The new icon theming method has been delayed due to bootloops. Sorry for the inconvenience.",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v8.1.0/Cowabunga.ipa",
+          "size": 21796707
+        },
+        {
+          "version": "8.0.5",
+          "date": "2023-02-20",
+          "localizedDescription": "- Added screentime remover\r\n- Fixed status bar issue regarding DND\r\n- Removed screen resolution changer due to many issues\r\n- Some other minor fixes",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v8.0.5/Cowabunga.ipa",
+          "size": 20553183
+        },
+        {
+          "version": "8.0.4",
+          "date": "2023-02-19",
+          "localizedDescription": "- You can now change Cowabunga's app icon!\r\n- Added CC Module colors\r\n- Now saves springboard color choices\r\n- Added info buttons and icons in titles\r\n- Improved reliability of applying custom app icon themes\r\n- Added whitelist features for anti revoke\r\n- Fixed crash with custom operations\r\n- Fixed lock not applying\r\n- Fixed a crash when applying icon themes\r\n\r\nA fix to blurry icons is coming soon, stay tuned!",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v8.0.4/Cowabunga.ipa",
+          "size": 20564509
+        },
+        {
+          "version": "8.0.3",
+          "date": "2023-02-14",
+          "localizedDescription": "- Fixed crash when opening app with wifi\r\n\r\nI made an update to the serverside for included audio but it broke previous versions.",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v8.0.3/Cowabunga.ipa",
+          "size": 13709675
+        },
+        {
+          "version": "8.0.2",
+          "date": "2023-02-13",
+          "localizedDescription": "- Ability to change and apply dialer keys\r\n- You can now import .passthm files and .zip files of app icons from the share menu (should hopefully help users who couldn't select themes from the file manager)\r\n- Various minor improvements\r\n- Locks no longer show on unsupported devices\r\n- Fixed not being able to delete locks with spaces in the name\r\n- Various other bug and crash fixes\r\n\r\nIf you are unable to import files or themes from the file picker, please use another signing service like AltStore or Sideloadly. Do not use esign, as it improperly signs entitlements. This is not an issue I can fix, it is esign's fault.",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v8.0.2/Cowabunga.ipa",
+          "size": 13707992
+        },
+        {
+          "version": "8.0.1",
+          "date": "2023-02-12",
+          "localizedDescription": "- Fixed saved passcodes not being able to be imported\r\n- Fixed error with locks not being able to be downloaded",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v8.0.1/Cowabunga.ipa",
+          "size": 12238315
+        },
+        {
+          "version": "8.0.0",
+          "date": "2023-02-12",
+          "localizedDescription": "**Update features:**\r\n- Custom app icon themes!\r\n- Custom operations! (for advanced users)\r\n- Custom lock icons!\r\n- Explore page for passcode, lock, and icon themes!\r\n- Disabling shortcut banner (works on iOS 15, persistent after reboot)\r\n- Make shortcuts into app clips\r\n- Resolution setter\r\n- Notification badge changer (iOS 14-15 only)\r\n- Custom colors of springboard elements\r\n- Disabling CC modules background\r\n- Localization to other languages! Languages include: French, Russian, Polish, German, Portuguese, Chinese, Vietnamese, Turkish, Hebrew, and Korean. More will come in the future! Some translations may be incomplete.\r\n\r\n**About App Themes**\r\nWebClips are a thing of the past! You can now customize both regular app icons and system icons while keeping notification badges! Unfortunately, compression is needed in order to keep the file sizes below the original (this is a macdirtycow limitation). This means that for some simpler icons, especially for YouTube and Snapchat, they will look very blurry or pixelated. If this happens, just use shortcuts instead for the time being.\r\n\r\n**About Custom Operations**\r\nCustom operations allow you to change files from a custom file path, with the ability to run in the background so they stay applied! You can swap plist values, replace files, or corrupt/disable files. It works best with a file manager so that you can find file paths to change. It will also tell you if replacing the file normally works, otherwise it will revert back to MacDirtyCow, where you will need to have a file less than or equal to the original size. This is intended for more advanced users. BE CAREFUL, I am not responsible for bootloops or any damage to your device. More features will come to this in the future.\r\n\r\n**About Custom Locks**\r\nAny TrollLock theme should work with Cowabunga. For more info on custom themes and custom animation times, see ReadMe.md on GitHub.",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v8.0.0/Cowabunga.ipa",
+          "size": 12238281
+        },
+        {
+          "version": "7.0.4",
+          "date": "2023-02-02",
+          "localizedDescription": "- Fixed audio tab being greyed out",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v7.0.4/Cowabunga.ipa",
+          "size": 10796661
+        },
+        {
+          "version": "7.0.3",
+          "date": "2023-02-02",
+          "localizedDescription": "- Updated Zhuowei's code for higher success rate of no sandbox\r\n- Improved respring code (faster and more reliable)",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v7.0.3/Cowabunga.ipa",
+          "size": 10795562
+        },
+        {
+          "version": "7.0.2",
+          "date": "2023-01-28",
+          "localizedDescription": "- Fixed exploit on iOS 14.0-15.3.1\r\n- Moved Audio tab back to bottom\r\n- Fixed carrier changer crash\r\n- Fixed TrollStore entitlements\r\n- Extra settings show in phone for iOS 16 and photos for iOS 15",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v7.0.2/Cowabunga.ipa",
+          "size": 10793528
+        },
+        {
+          "version": "7.0.1",
+          "date": "2023-01-28",
+          "localizedDescription": "- Attempt to fix crash for Extra Tools (Moved to Phone)\r\n- Moved Supervision to Misc\r\n- Minor other fixes\r\n\r\nI am looking into what is causing the main crash, but if you are crashing on startup, redownload the app (or refresh icon cache on TrollStore to reset permissions) and hit Don't allow when it asks to enable sandbox escape. You won't be able to use some of the new features for the time being but it will at least stop the crash.",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v7.0.1/Cowabunga.ipa",
+          "size": 10790553
+        },
+        {
+          "version": "7.0.0",
+          "date": "2023-01-27",
+          "localizedDescription": "- Custom passcode keys\r\n- Importing Passcode themes (.passthm) from TrollTools\r\n- Extra tools: Supervision, Lock After Respring, Numeric Wi-Fi/Cellular Strength, and more!\r\n\t- Replaces the Photos tab in Settings app when enabled\r\n- Lock screen Footnote\r\n- Increased exploit reliability",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v7.0.0/Cowabunga.ipa",
+          "size": 10792784
+        },
+        {
+          "version": "6.1.4",
+          "date": "2023-01-26",
+          "localizedDescription": "- Vastly increased reliability of applying\r\n- Improvements to carrier changer\r\n- Improved some error messages\r\n\r\nLast minor update of v6.1.x, updates soon with more to come.",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v6.1.4/Cowabunga.ipa",
+          "size": 9773062
+        },
+        {
+          "version": "6.1.3",
+          "date": "2023-01-25",
+          "localizedDescription": "- Ability to reset the default device subtype\r\n- Added more audio types to background activity\r\n- Fixed begin and end recording sounds\r\n- Fixed errors regarding selecting and importing sounds",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v6.1.3/Cowabunga.ipa",
+          "size": 9786344
+        },
+        {
+          "version": "6.1.2",
+          "date": "2023-01-24",
+          "localizedDescription": "- Fixed importing entitlements for TrollStore users\r\n- Fixed crash on audio with no included audio\r\n- Fixed error with audio importing size saying file is too big when it is not",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v6.1.2/Cowabunga.ipa",
+          "size": 9780903
+        },
+        {
+          "version": "6.1.1",
+          "date": "2023-01-24",
+          "localizedDescription": "- Notifies when a new app update is available",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v6.1.1/Cowabunga.ipa",
+          "size": 9762101
+        },
+        {
+          "version": "6.1.0",
+          "date": "2023-01-24",
+          "localizedDescription": "- Implemented Ian Beer's new exploit code\r\n- Carrier changer\r\n- Included audio sound effects now update automatically (wifi required)\r\n- Audio categories\r\n- Added many more sounds that can be changed\r\n- Custom audio limit is now 75 kb\r\n- Nearly any audio file types are now supported\r\n- Removed region restrictions option (may come back later)\r\n- Some sounds now apply in the background to stay applied",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v6.1.0/Cowabunga.ipa",
+          "size": 9759214
+        },
+        {
+          "version": "6.0.0",
+          "date": "2023-01-20",
+          "localizedDescription": "Big update!\r\n- UI Overhaul\r\n- Custom sound effects\r\n- Running in background to keep dock hidden\r\n- Remove regional restrictions\r\n- Stability improvements\r\n\r\n**Please set your device subtype back to default before updating, as preferences will be reset**",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v6.0.0/Cowabunga.ipa",
+          "size": 10583267
+        },
+        {
+          "version": "5.2.1",
+          "date": "2023-01-13",
+          "localizedDescription": "PLEASE SET YOUR DEVICE SUBTYPE BACK TO DEFAULT BEFORE UPDATING (only if you changed it to something else)\r\n- Fixed possible bootloop with regard to Device SubType changer\r\n\r\nI recommend avoiding DynamicCow as it also has bootloops for the same reason",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v5.2.1/Cowabunga.ipa",
+          "size": 7339759
+        },
+        {
+          "version": "5.2.0",
+          "date": "2023-01-12",
+          "localizedDescription": "- iPhone X Gestures on non-compatible devices\r\n- Dynamic Island on non-compatible devices (iOS 16+)\r\n- System version changer no longer shows on iOS 14\r\n- Improved backend\r\n- Slightly improved success rate",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v5.2.0/Cowabunga.ipa",
+          "size": 7339641
+        },
+        {
+          "version": "5.1.0",
+          "date": "2023-01-08",
+          "localizedDescription": "- AirPower charging sound enabler\r\n- Minor safeguard against applying blank system version",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v5.1.0/Cowabunga.ipa",
+          "size": 6804346
+        },
+        {
+          "version": "5.0.0",
+          "date": "2023-01-07",
+          "localizedDescription": "* App is now rebranded to Cowabunga!\r\n* **Beautiful** new app icon\r\n* New UI\r\n* Option to disable app switcher blur\r\n* Option to disable shortcut banner\r\n* Option to modify system version (shows in settings app)\r\n* Cleaner and hopefully more stable code",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v5.0.0/Cowabunga.ipa",
+          "size": 6786817
+        },
+        {
+          "version": "4.0.1",
+          "date": "2023-01-06",
+          "localizedDescription": "- Option to apply tweaks without respring\r\n- Respring button\r\n\r\n**Planned:** run app in the background (using a method similar to Evyrest) to continue applying tweaks and make the changes more consistent.",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v4.0.1/DockHider.ipa",
+          "size": 1311518
+        },
+        {
+          "version": "4.0.0",
+          "date": "2023-01-06",
+          "localizedDescription": "- Added option to hide folder background\r\n- Added option to disable folder blur\r\n- Minor backend reworking\r\n\r\nI am planning on turning this into an overall dirtycow app, so if you would like to see me add a feature, please suggest!",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v4.0.0/DockHider.ipa",
+          "size": 1311481
+        },
+        {
+          "version": "3.0.0",
+          "date": "2023-01-04",
+          "localizedDescription": "- Changed exploit method (it applies instantly now!)\r\n- More stability and less likely to fail\r\n- New app icon courtesy of [dayanch96](https://www.reddit.com/user/dayanch96/)",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v3.0.0/DockHider.ipa",
+          "size": 1310846
+        },
+        {
+          "version": "2.0.2",
+          "date": "2023-01-04",
+          "localizedDescription": "- Doubled time required to timeout",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v2.0.2/DockHider.ipa",
+          "size": 2706553
+        },
+        {
+          "version": "2.0.1",
+          "date": "2023-01-04",
+          "localizedDescription": "- Optimizations to applying (faster applying speed)\r\n- Saves user settings\r\n- Matched the options",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v2.0.1/DockHider.ipa",
+          "size": 2706556
+        },
+        {
+          "version": "2.0.0",
+          "date": "2023-01-04",
+          "localizedDescription": "- Option to hide the home bar!\r\n- Shortened timeout slightly\r\n- Swapped around UI",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v2.0.0/DockHider.ipa",
+          "size": 2703200
+        }
+      ],
+      "localizedDescription": "iOS 14.0-15.7.1 & 16.0-16.1.2 MacDirtyCow ToolBox",
+      "iconURL": "https://user-images.githubusercontent.com/52459150/215552092-9dc1e029-da35-43da-867f-17279e3dc180.png",
+      "screenshotURLs": [
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Home.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Tools.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/SpringboardTools.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Audio_Changer.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Passcode_Editor.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/LS_Footnote.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Misc.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Extra_Tools.PNG"
+      ],
+      "size": 21849343,
+      "beta": false
     }
   ],
   "userInfo": {}
