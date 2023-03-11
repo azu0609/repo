@@ -44,8 +44,14 @@ class Fetch:
                         for release_index, release in enumerate(req):
                             target_release = req[release_index]["name"]
                             if not re.match(fr"^{app_name} (\d+)[\s()]+.*$", target_release):
+                                """
+                                current_filename = Rosiecord-163_GGSans-Font+Plumpy_Icons.ipa
+                                asset["name"] = Rosiecord-170_GGSans-Font+Plumpy_Icons.ipa
+                                """
                                 current_filename = re.search(r"(?<=/)[^/]+$", download_url)
-                                pattern = re.compile('^' + re.escape(current_filename.group()) + '$')
+                                pattern = re.compile('^' + re.escape(current_filename.group().replace(current_ver, "(\\d+)")).replace('\\+', '+').replace('\\d+', '(\\\\d+)') + '$')
+                                print(current_filename.group())
+                                print(pattern.pattern)
                                 for asset_index, asset in enumerate(release["assets"]):
                                     file_match = pattern.search(asset["name"])
                                     if file_match:
