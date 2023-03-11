@@ -410,7 +410,21 @@
           "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v2.0.0/DockHider.ipa",
           "size": 2703200
         }
-      ]
+      ],
+      "localizedDescription": "iOS 14.0-15.7.1 & 16.0-16.1.2 MacDirtyCow ToolBox",
+      "iconURL": "https://user-images.githubusercontent.com/52459150/215552092-9dc1e029-da35-43da-867f-17279e3dc180.png",
+      "screenshotURLs": [
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Home.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Tools.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/SpringboardTools.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Audio_Changer.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Passcode_Editor.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/LS_Footnote.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Misc.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Extra_Tools.PNG"
+      ],
+      "size": 21849343,
+      "beta": false
     }
   ],
   "userInfo": {}
