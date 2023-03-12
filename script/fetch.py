@@ -1,6 +1,7 @@
 import requests
 import json
 import sys
+import re
 
 class Fetch:
     def __init__(self):
@@ -25,56 +26,65 @@ class Fetch:
             print(message)
     
 
-    def fetch(self, repo, app_name, index, app_type, current_ver, download_url):
+    def fetch(self, repo, app_name, index, app_type, current_ver, current_download_url: str):
         version = None
         changelog = None
         released_date = None
+        size = None
+        download_url = None
         # FIXME: Handle uYou and rosiecord without any extra code
         if index == 3:
-            version = "v2.1"
+            version = "2.1"
             released_date = "2021-10-28"
             changelog = "Unknown - Ask to developer"
             self.logger(2, "uYou detected! using 2.1 instead of latest.")
         else:
             for i, releases in enumerate(self.release_source):
-                if releases.replace("api.", "").replace("repos/", "") in download_url:
+                if releases.replace("api.", "").replace("repos/", "") in current_download_url:
                     try:
                         req = requests.get(self.release_source[i]).json()
-                        if index == 0 and app_type == "Tweaked" or index == 0 and app_type == "apps":
-                            version = req[1]["name"]
-                            changelog = req[1]["body"]
-                            released_date = req[1]["assets"][10]["created_at"]
-                            size = req[1]["assets"][10]["size"]
-                        else:
-                            version = req[0]["name"]
-                            changelog = req[0]["body"]
-                            released_date = req[0]["assets"][0]["created_at"]
-                            size = req[0]["assets"][0]["size"]
+                        for release in req:
+                            target_release = release["name"]
+                            if not re.match(fr"^{app_name} (\d+)[\s()]+.*$", target_release):
+                                current_filename = re.search(r"(?<=/)[^/]+$", current_download_url)
+                                pattern = re.compile(r"^(.+?)[\-_\.]\d+[\-_\.](.+)\.([^.]+)$")
+                                release_name_match = re.match(r"(.+)\s\(\w+\)$", target_release).group(1)
+                                print(release_name_match)
+                                if release_name_match is not None:
+                                    self.logger(1, "Detected additonal/modified release.")
+                                for asset in release["assets"]:
+                                    asset_name_match = pattern.match(asset["name"])
+                                    current_name_match = pattern.match(current_filename.group())
+                                    asset_name_no_version = asset_name_match.group(1) + "-" + asset_name_match.group(2) + "." + asset_name_match.group(3)
+                                    current_name_no_version = current_name_match.group(1) + "-" + current_name_match.group(2) + "." + current_name_match.group(3)
+                                    if asset_name_match and current_name_match:
+                                        if asset_name_no_version == current_name_no_version:
+                                            if version is None: version = release["name"].strip(app_name).strip("v").strip()
+                                            if changelog is None: changelog = release["body"]
+                                            if released_date is None: released_date = ''.join(asset["created_at"].split('T')[:-1])
+                                            if size is None: size = asset["size"]
+                                            if download_url is None: download_url = asset["browser_download_url"]
+                            else:
+                                self.logger(3, "Something went wrong. please create a issue.")
+                
                     except KeyError:
-                        raise("Rate limited")
-        try:
-            version = version.strip(app_name).strip("v").strip()
-            released_date = ''.join(released_date.split('T')[:-1])
-        except AttributeError:
-            raise("Something went wrong, please ask to developer.")
+                        raise Exception("Rate limited")
         self.logger(1, f"index: {index}, current: {current_ver}, new: {version}")
         if version > current_ver:
             self.logger(0, f"New version available: {version}, updating...")
-            self.rw(repo, "../altstore_repo.json", "../scarlet_repo.json", version, int(index), app_type, current_ver, changelog, released_date, size)
+            self.rw(repo, "../altstore_repo.json", "../scarlet_repo.json", version, download_url, int(index), app_type, current_ver, changelog, released_date, size)
         else:
             self.logger(0, "Up to date.")
 
     
-    def rw(self, repo_type, altstore_path, scarlet_path, version, index, app_type, current_ver, version_description, release_date, size):
+    def rw(self, repo_type, altstore_path, scarlet_path, version, download_url: str, index, app_type, current_ver, version_description, release_date, size):
             if repo_type == "scarlet":
                 with open(scarlet_path, "r") as scarlet_repo:
                     self.logger(0, "Loading data...")
                     json_data = json.load(scarlet_repo)
                     self.logger(0, "Modifying loaded data...")
                     json_data[app_type][index]["version"] = version.strip(" " + json_data[app_type][index]["name"])
-                    json_data[app_type][index]["down"] = json_data[app_type][index]["down"].replace(current_ver, version)
-                    if index == 2:
-                        json_data[app_type][index]["down"] = json_data[app_type][index]["down"].replace(current_ver.replace("-", "_"), version.replace("-", "_"))
+                    json_data[app_type][index]["down"] = download_url
                 with open(scarlet_path, 'w') as scarlet_repo:
                     json.dump(json_data, scarlet_repo, indent=2)
                     self.logger(0, f"Writed to: {scarlet_path} successfully.")
@@ -85,22 +95,20 @@ class Fetch:
                     json_data = json.load(altstore_repo)
                     self.logger(0, "Modifying loaded data...")
                     json_data[app_type][index]["version"] = version.strip(" " + json_data[app_type][index]["name"])
-                    json_data[app_type][index]["downloadURL"] = json_data[app_type][index]["downloadURL"].replace(current_ver, version)
+                    json_data[app_type][index]["downloadURL"] = download_url
                     json_data[app_type][index]["versionDescription"] = version_description
                     json_data[app_type][index]["versionDate"] = release_date
                     json_data[app_type][index]["versions"].insert(0, {"version": version.strip(" " + json_data[app_type][index]["name"]),
                                                                       "date": release_date,
                                                                       "localizedDescription": version_description,
-                                                                      "downloadURL": json_data[app_type][index]["downloadURL"].replace(current_ver, version),
+                                                                      "downloadURL": download_url,
                                                                       "size": size})
-                    if index == 2:
-                        json_data[app_type][index]["downloadURL"] = json_data[app_type][index]["downloadURL"].replace(current_ver.replace("-", "_"), version.replace("-", "_"))
                 with open(altstore_path, "w") as altstore_repo:
                     json.dump(json_data, altstore_repo, indent=2)
                     self.logger(0, f"Writed to: {altstore_path} successfully.")
             
             else:
-                raise("Unexpected mode")
+                raise Exception("Unexpected mode")
             
             """
             FIXME: Edit readme
@@ -128,12 +136,12 @@ class Fetch:
                         elif path == "../scarlet_repo.json":
                             self.fetch("scarlet", key["name"], i, item, key["version"], key["down"])
                         else:
-                            raise("Unexpected repo!")
+                            raise Exception("Unexpected repo!")
                     except TypeError as e:
                         if str(e) == "string indices must be integers, not 'str'" or "string indices must be integers":
                             pass
                         else:
-                            raise(e)
+                            raise Exception(e)
         self.logger(0, f"All done! may take 1~2m(Page build time) to apply.")
 
 

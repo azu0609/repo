@@ -3,8 +3,7 @@
     <h1>azu0609's repo</h1>
     <p>Personalized repo for me. hosted in github pages</p>
     <hr />
-    <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
-    <img src="https://forthebadge.com/images/badges/made-with-python.svg" />
+    <a href="#"><img src="https://img.shields.io/badge/actions-actions.svg?label=Github&logo=github&style=for-the-badge&color=70a5eb" /></a>
 </div>
 
 
