@@ -51,12 +51,12 @@ class Fetch:
                             released_date = req[0]["assets"][0]["created_at"]
                             size = req[0]["assets"][0]["size"]
                     except KeyError:
-                        raise("Rate limited")
+                        raise Exception("Rate limited by github. can't use github api for a while")
         try:
             version = version.strip(app_name).strip("v").strip()
             released_date = ''.join(released_date.split('T')[:-1])
         except AttributeError:
-            raise("Something went wrong, please ask to developer.")
+            raise Exception("Something went wrong, please ask to developer.")
         self.logger(1, f"index: {index}, current: {current_ver}, new: {version}")
         if version > current_ver:
             self.logger(0, f"New version available: {version}, updating...")
@@ -100,7 +100,7 @@ class Fetch:
                     self.logger(0, f"Writed to: {altstore_path} successfully.")
             
             else:
-                raise("Unexpected mode")
+                raise Exception("Unexpected mode")
             
             """
             FIXME: Edit readme
@@ -128,12 +128,12 @@ class Fetch:
                         elif path == "../scarlet_repo.json":
                             self.fetch("scarlet", key["name"], i, item, key["version"], key["down"])
                         else:
-                            raise("Unexpected repo!")
+                            raise Exception("Unexpected repo!")
                     except TypeError as e:
                         if str(e) == "string indices must be integers, not 'str'" or "string indices must be integers":
                             pass
                         else:
-                            raise(e)
+                            raise TypeError(e)
         self.logger(0, f"All done! may take 1~2m(Page build time) to apply.")
 
 
