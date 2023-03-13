@@ -32,6 +32,8 @@ class Fetch:
         released_date = None
         size = None
         download_url = None
+        current_name_no_version = None
+        asset_name_no_version = None
         # FIXME: Handle uYou and rosiecord without any extra code
         if index == 3:
             version = "2.1"
@@ -48,24 +50,31 @@ class Fetch:
                             if not re.match(fr"^{app_name} (\d+)[\s()]+.*$", target_release):
                                 current_filename = re.search(r"(?<=/)[^/]+$", current_download_url)
                                 pattern = re.compile(r"^(.+?)[\-_\.]\d+[\-_\.](.+)\.([^.]+)$")
-                                release_name_match = re.match(r"(.+)\s\(\w+\)$", target_release).group(1)
-                                print(release_name_match)
+                                release_name_match = re.match(r"(.+)\s\(\w+\)$", target_release)
                                 if release_name_match is not None:
                                     self.logger(1, "Detected additonal/modified release.")
+                                    release = req + 1
                                 for asset in release["assets"]:
                                     asset_name_match = pattern.match(asset["name"])
                                     current_name_match = pattern.match(current_filename.group())
-                                    asset_name_no_version = asset_name_match.group(1) + "-" + asset_name_match.group(2) + "." + asset_name_match.group(3)
-                                    current_name_no_version = current_name_match.group(1) + "-" + current_name_match.group(2) + "." + current_name_match.group(3)
+                                    try:
+                                        asset_name_no_version = asset_name_match.group(1) + "-" + asset_name_match.group(2) + "." + asset_name_match.group(3)
+                                        current_name_no_version = current_name_match.group(1) + "-" + current_name_match.group(2) + "." + current_name_match.group(3)
+                                    except AttributeError:
+                                        pass
                                     if asset_name_match and current_name_match:
-                                        if asset_name_no_version == current_name_no_version:
+                                        if asset_name_no_version is not None and current_name_no_version is not None and asset_name_no_version == current_name_no_version:
                                             if version is None: version = release["name"].strip(app_name).strip("v").strip()
                                             if changelog is None: changelog = release["body"]
                                             if released_date is None: released_date = ''.join(asset["created_at"].split('T')[:-1])
                                             if size is None: size = asset["size"]
                                             if download_url is None: download_url = asset["browser_download_url"]
-                            else:
-                                self.logger(3, "Something went wrong. please create a issue.")
+                                    else:
+                                            if version is None: version = release["name"].strip(app_name).strip("v").strip()
+                                            if changelog is None: changelog = release["body"]
+                                            if released_date is None: released_date = ''.join(asset["created_at"].split('T')[:-1])
+                                            if size is None: size = asset["size"]
+                                            if download_url is None: download_url = asset["browser_download_url"]
                 
                     except KeyError:
                         raise Exception("Rate limited")

@@ -69,8 +69,8 @@
   "Sideloaded": [
     {
       "name": "Anime Now!",
-      "version": "1.0.0-beta.2",
-      "down": "https://github.com/AnimeNow-Team/AnimeNow/releases/download/1.0.0-beta.2/Anime.Now.iOS.ipa",
+      "version": "1.0.0-beta.3",
+      "down": "https://github.com/AnimeNow-Team/AnimeNow/releases/download/1.0.0-beta.3/Anime.Now.iOS.ipa",
       "dev": "AnimeNow Team",
       "icon": "https://raw.githubusercontent.com/AnimeNow-Team/AnimeNow/dev/Misc/Media/applogo_readme.png",
       "category": "Sideloaded",
@@ -89,8 +89,8 @@
   "Macdirtycow": [
     {
       "name": "Cowabunga",
-      "version": "8.1.2",
-      "down": "https://github.com/leminlimez/Cowabunga/releases/download/v8.1.2/Cowabunga.ipa",
+      "version": "8.1.3",
+      "down": "https://github.com/leminlimez/Cowabunga/releases/download/v8.1.3/Cowabunga.ipa",
       "dev": "leminlimez",
       "category": "Macdirtycow",
       "description": "IOS 14.0-15.7.1 & 16.0-16.1.2 MacDirtyCow ToolBox",
