@@ -3,6 +3,11 @@ import json
 import sys
 import re
 
+
+class RateLimited(Exception):
+    pass
+
+
 class Fetch:
     def __init__(self):
         self.release_source = ["https://api.github.com/repos/acquitelol/rosiecord/releases",
@@ -26,7 +31,7 @@ class Fetch:
             print(message)
     
 
-    def fetch(self, repo, app_name, index, app_type, current_ver, current_download_url: str):
+    def fetch(self, repo: str, app_name: str, index: int, app_type: str, current_ver, current_download_url: str):
         version = None
         changelog = None
         released_date = None
@@ -34,7 +39,7 @@ class Fetch:
         download_url = None
         current_name_no_version = None
         asset_name_no_version = None
-        # FIXME: Handle uYou and rosiecord without any extra code
+        # FIXME: Handle uYou without any extra code
         if index == 3:
             version = "2.1"
             released_date = "2021-10-28"
@@ -52,8 +57,8 @@ class Fetch:
                                 pattern = re.compile(r"^(.+?)[\-_\.]\d+[\-_\.](.+)\.([^.]+)$")
                                 release_name_match = re.match(r"(.+)\s\(\w+\)$", target_release)
                                 if release_name_match is not None:
-                                    self.logger(1, "Detected additonal/modified release.")
-                                    release = req + 1
+                                    self.logger(1, "Detected additonal/modified release! Switching release to next one...")
+                                    continue
                                 for asset in release["assets"]:
                                     asset_name_match = pattern.match(asset["name"])
                                     current_name_match = pattern.match(current_filename.group())
@@ -77,22 +82,23 @@ class Fetch:
                                             if download_url is None: download_url = asset["browser_download_url"]
                 
                     except KeyError:
-                        raise Exception("Rate limited")
+                        self.logger(2, "Looks like github rate limited this ip.")
+                        raise RateLimited("Rate limited by github")
         self.logger(1, f"index: {index}, current: {current_ver}, new: {version}")
         if version > current_ver:
             self.logger(0, f"New version available: {version}, updating...")
-            self.rw(repo, "../altstore_repo.json", "../scarlet_repo.json", version, download_url, int(index), app_type, current_ver, changelog, released_date, size)
+            self.rw(repo, "../altstore_repo.json", "../scarlet_repo.json", version, download_url, int(index), app_type, changelog, released_date, size)
         else:
             self.logger(0, "Up to date.")
 
     
-    def rw(self, repo_type, altstore_path, scarlet_path, version, download_url: str, index, app_type, current_ver, version_description, release_date, size):
+    def rw(self, repo_type, altstore_path, scarlet_path, version, download_url: str, index, app_type, version_description, release_date, size):
+            self.logger(0, "Loading json manifest... this may take a while")
             if repo_type == "scarlet":
                 with open(scarlet_path, "r") as scarlet_repo:
-                    self.logger(0, "Loading data...")
                     json_data = json.load(scarlet_repo)
                     self.logger(0, "Modifying loaded data...")
-                    json_data[app_type][index]["version"] = version.strip(" " + json_data[app_type][index]["name"])
+                    json_data[app_type][index]["version"] = version
                     json_data[app_type][index]["down"] = download_url
                 with open(scarlet_path, 'w') as scarlet_repo:
                     json.dump(json_data, scarlet_repo, indent=2)
@@ -100,14 +106,13 @@ class Fetch:
             
             elif repo_type == "altstore":
                 with open(altstore_path, "r") as altstore_repo:
-                    self.logger(0, "Loading json manifest... this may take a while")
                     json_data = json.load(altstore_repo)
                     self.logger(0, "Modifying loaded data...")
-                    json_data[app_type][index]["version"] = version.strip(" " + json_data[app_type][index]["name"])
+                    json_data[app_type][index]["version"] = version
                     json_data[app_type][index]["downloadURL"] = download_url
                     json_data[app_type][index]["versionDescription"] = version_description
                     json_data[app_type][index]["versionDate"] = release_date
-                    json_data[app_type][index]["versions"].insert(0, {"version": version.strip(" " + json_data[app_type][index]["name"]),
+                    json_data[app_type][index]["versions"].insert(0, {"version": version,
                                                                       "date": release_date,
                                                                       "localizedDescription": version_description,
                                                                       "downloadURL": download_url,
@@ -150,7 +155,7 @@ class Fetch:
                         if str(e) == "string indices must be integers, not 'str'" or "string indices must be integers":
                             pass
                         else:
-                            raise Exception(e)
+                            raise TypeError(e)
         self.logger(0, f"All done! may take 1~2m(Page build time) to apply.")
 
 
