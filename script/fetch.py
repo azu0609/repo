@@ -48,42 +48,40 @@ class Fetch:
         else:
             for i, releases in enumerate(self.release_source):
                 if releases.replace("api.", "").replace("repos/", "") in current_download_url:
-                    try:
-                        req = requests.get(self.release_source[i]).json()
-                        for release in req:
-                            target_release = release["name"]
-                            if not re.match(fr"^{app_name} (\d+)[\s()]+.*$", target_release):
-                                current_filename = re.search(r"(?<=/)[^/]+$", current_download_url)
-                                pattern = re.compile(r"^(.+?)[\-_\.]\d+[\-_\.](.+)\.([^.]+)$")
-                                release_name_match = re.match(r"(.+)\s\(\w+\)$", target_release)
-                                if release_name_match is not None:
-                                    self.logger(1, "Detected additonal/modified release! Switching release to next one...")
-                                    continue
-                                for asset in release["assets"]:
-                                    asset_name_match = pattern.match(asset["name"])
-                                    current_name_match = pattern.match(current_filename.group())
-                                    try:
-                                        asset_name_no_version = asset_name_match.group(1) + "-" + asset_name_match.group(2) + "." + asset_name_match.group(3)
-                                        current_name_no_version = current_name_match.group(1) + "-" + current_name_match.group(2) + "." + current_name_match.group(3)
-                                    except AttributeError:
-                                        pass
-                                    if asset_name_match and current_name_match:
-                                        if asset_name_no_version is not None and current_name_no_version is not None and asset_name_no_version == current_name_no_version:
-                                            if version is None: version = release["name"].strip(app_name).strip("v").strip()
-                                            if changelog is None: changelog = release["body"]
-                                            if released_date is None: released_date = ''.join(asset["created_at"].split('T')[:-1])
-                                            if size is None: size = asset["size"]
-                                            if download_url is None: download_url = asset["browser_download_url"]
-                                    else:
-                                            if version is None: version = release["name"].strip(app_name).strip("v").strip()
-                                            if changelog is None: changelog = release["body"]
-                                            if released_date is None: released_date = ''.join(asset["created_at"].split('T')[:-1])
-                                            if size is None: size = asset["size"]
-                                            if download_url is None: download_url = asset["browser_download_url"]
-                
-                    except KeyError:
-                        self.logger(2, "Looks like github rate limited this ip.")
-                        raise RateLimited("Rate limited by github")
+                    req = requests.get(self.release_source[i])
+                    if req.status_code == 403:
+                        self.logger(3, "Looks like github limited this ip.")
+                        raise RateLimited("Rate limited")
+                    req = requests.get(self.release_source[i]).json()
+                    for release in req:
+                        target_release = release["name"]
+                        if not re.match(fr"^{app_name} (\d+)[\s()]+.*$", target_release):
+                            current_filename = re.search(r"(?<=/)[^/]+$", current_download_url)
+                            pattern = re.compile(r"^(.+?)[\-_\.]\d+[\-_\.](.+)\.([^.]+)$")
+                            release_name_match = re.match(r"(.+)\s\(\w+\)$", target_release)
+                            if release_name_match is not None:
+                                continue
+                            for asset in release["assets"]:
+                                asset_name_match = pattern.match(asset["name"])
+                                current_name_match = pattern.match(current_filename.group())
+                                try:
+                                    asset_name_no_version = asset_name_match.group(1) + "-" + asset_name_match.group(2) + "." + asset_name_match.group(3)
+                                    current_name_no_version = current_name_match.group(1) + "-" + current_name_match.group(2) + "." + current_name_match.group(3)
+                                except AttributeError:
+                                    pass
+                                if asset_name_match and current_name_match:
+                                    if asset_name_no_version is not None and current_name_no_version is not None and asset_name_no_version == current_name_no_version:
+                                        if version is None: version = release["name"].strip(app_name).strip("v").strip()
+                                        if changelog is None: changelog = release["body"]
+                                        if released_date is None: released_date = ''.join(asset["created_at"].split('T')[:-1])
+                                        if size is None: size = asset["size"]
+                                        if download_url is None: download_url = asset["browser_download_url"]# .replace("%2B", "+")
+                                else:
+                                        if version is None: version = release["name"].strip(app_name).strip("v").strip()
+                                        if changelog is None: changelog = release["body"]
+                                        if released_date is None: released_date = ''.join(asset["created_at"].split('T')[:-1])
+                                        if size is None: size = asset["size"]
+                                        if download_url is None: download_url = asset["browser_download_url"]# .replace("%2B", "+")
         self.logger(1, f"index: {index}, current: {current_ver}, new: {version}")
         if version > current_ver:
             self.logger(0, f"New version available: {version}, updating...")
@@ -112,11 +110,14 @@ class Fetch:
                     json_data[app_type][index]["downloadURL"] = download_url
                     json_data[app_type][index]["versionDescription"] = version_description
                     json_data[app_type][index]["versionDate"] = release_date
-                    json_data[app_type][index]["versions"].insert(0, {"version": version,
-                                                                      "date": release_date,
-                                                                      "localizedDescription": version_description,
-                                                                      "downloadURL": download_url,
-                                                                      "size": size})
+                    try:
+                        json_data[app_type][index]["versions"].insert(0, {"version": version,
+                                                                        "date": release_date,
+                                                                        "localizedDescription": version_description,
+                                                                        "downloadURL": download_url,
+                                                                        "size": size})
+                    except KeyError:
+                        self.logger(2, "Looks like this app doesn't have versions key.")
                 with open(altstore_path, "w") as altstore_repo:
                     json.dump(json_data, altstore_repo, indent=2)
                     self.logger(0, f"Writed to: {altstore_path} successfully.")
