@@ -209,11 +209,18 @@
       "bundleIdentifier": "com.leemin.Cowabunga",
       "developerName": "leminlimez",
       "subtitle": "iOS 14.0-15.7.1 & 16.0-16.1.2 MacDirtyCow ToolBox",
-      "version": "8.1.3",
-      "versionDate": "2023-03-13",
-      "versionDescription": "- Your custom operations author name can now be set from the home screen\r\n- Springboard tools can now be reverted without a reboot and on iOS 14\r\n- Improved update wording notice\r\n- Removed setting System Version\r\n- Fixed renaming a replacing operation causing it to corrupt",
-      "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v8.1.3/Cowabunga.ipa",
+      "version": "8.1.4",
+      "versionDate": "2023-03-15",
+      "versionDescription": "- Added option to generate padding for importing type replacing operations\r\n- Changed Patreon layout on home page\r\n- Fixed error with springboard tools not applying\r\n\r\nSorry for the inconvenience caused by the error",
+      "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v8.1.4/Cowabunga.ipa",
       "versions": [
+        {
+          "version": "8.1.4",
+          "date": "2023-03-15",
+          "localizedDescription": "- Added option to generate padding for importing type replacing operations\r\n- Changed Patreon layout on home page\r\n- Fixed error with springboard tools not applying\r\n\r\nSorry for the inconvenience caused by the error",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v8.1.4/Cowabunga.ipa",
+          "size": 21867855
+        },
         {
           "version": "8.1.3",
           "date": "2023-03-13",
