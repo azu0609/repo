@@ -85,27 +85,21 @@ class Fetch:
         self.logger(1, f"index: {index}, current: {current_ver}, new: {version}")
         if version > current_ver:
             self.logger(0, f"New version available: {version}, updating...")
-            self.rw(repo, "../altstore_repo.json", "../scarlet_repo.json", version, download_url, int(index), app_type, changelog, released_date, size)
+            self.rw(repo, "../altstore_repo.json" if repo == "altstore" else "../scarlet_repo.json", version, download_url, int(index), app_type, changelog, released_date, size)
         else:
             self.logger(0, "Up to date.")
 
     
-    def rw(self, repo_type, altstore_path, scarlet_path, version, download_url: str, index, app_type, version_description, release_date, size):
+    def rw(self, repo_type, path, version, download_url: str, index, app_type, version_description, release_date, size):
             self.logger(0, "Loading json manifest... this may take a while")
-            if repo_type == "scarlet":
-                with open(scarlet_path, "r") as scarlet_repo:
-                    json_data = json.load(scarlet_repo)
-                    self.logger(0, "Modifying loaded data...")
+            with open(path, "r") as repo_path:
+                json_data = json.load(repo_path)
+                self.logger(0, "Modifying loaded data...")
+                if repo_type == "scarlet":
                     json_data[app_type][index]["version"] = version
                     json_data[app_type][index]["down"] = download_url
-                with open(scarlet_path, 'w') as scarlet_repo:
-                    json.dump(json_data, scarlet_repo, indent=2)
-                    self.logger(0, f"Writed to: {scarlet_path} successfully.")
-            
-            elif repo_type == "altstore":
-                with open(altstore_path, "r") as altstore_repo:
-                    json_data = json.load(altstore_repo)
-                    self.logger(0, "Modifying loaded data...")
+                
+                elif repo_type == "altstore":
                     json_data[app_type][index]["version"] = version
                     json_data[app_type][index]["downloadURL"] = download_url
                     json_data[app_type][index]["versionDescription"] = version_description
@@ -117,23 +111,24 @@ class Fetch:
                                                                         "downloadURL": download_url,
                                                                         "size": size})
                     except KeyError:
-                        self.logger(2, "Looks like this app doesn't have versions key.")
-                with open(altstore_path, "w") as altstore_repo:
-                    json.dump(json_data, altstore_repo, indent=2)
-                    self.logger(0, f"Writed to: {altstore_path} successfully.")
-            
-            else:
-                raise Exception("Unexpected mode")
-            
+                        self.logger(2, "Looks like this app doesn't have versions key. Skipping...")
+
+                elif repo_type == "readme":        
+                    with open("../README.md", "r") as file:
+                        self.logger(0, "Loading readme.md data...")
+                        for line in file.readlines():
+                            print(line)
+                            print(json_data[app_type][index]["name"])
+                            if [app_type][index]["name"] in line:
+                                print(line)
+                        data = file.read()
+                else:
+                    raise Exception("Unexpected mode")
+                
+                with open(path, "w") as repo_path:
+                    json.dump(json_data, repo_path, indent=2)
+                    self.logger(0, f"Writed to: {path} successfully.")
             """
-            FIXME: Edit readme
-            with open("../README.md", "r") as file:
-                self.logger(0, "Loading readme.md data...")
-                for line in file.readlines():
-                    print(line)
-                    if [app_type][index]["name"] in line and current_ver in line:
-                        print(line)
-                data = file.read()
             with open("../README.md", "w") as file:
                 self.logger(0, "Writing modified data...")
                 file.write(data.replace(current_ver, version))
@@ -150,6 +145,8 @@ class Fetch:
                             self.fetch("altstore", key["name"], i, item, key["version"], key["downloadURL"])
                         elif path == "../scarlet_repo.json":
                             self.fetch("scarlet", key["name"], i, item, key["version"], key["down"])
+                        elif path == "../README.md":
+                            self.fetch("readme", key["name"], i, item, key["version"], key["downloadURL"])
                         else:
                             raise Exception("Unexpected repo!")
                     except TypeError as e:

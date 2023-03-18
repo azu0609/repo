@@ -23,6 +23,24 @@
             ]
         },
         {
+            "name": "Python: Repo - Test - README",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "/home/azuki/Documents/repo/script/",
+            "args": [
+                "--test",
+                "readme",
+                "Rosiecord",
+                "0",
+                "apps",
+                "163",
+                "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_163/Rosiecord-163_GGSans-Font+Plumpy_Icons.ipa"
+            ]
+        },
+        {
             "name": "Python: Repo - Production debug",
             "type": "python",
             "request": "launch",
