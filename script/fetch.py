@@ -85,27 +85,27 @@ class Fetch:
         self.logger(1, f"index: {index}, current: {current_ver}, new: {version}")
         if version > current_ver:
             self.logger(0, f"New version available: {version}, updating...")
-            self.rw(repo, "../altstore_repo.json" if repo == "altstore" else "../scarlet_repo.json", version, download_url, int(index), app_type, changelog, released_date, size)
+            self.rw(repo, "../altstore_repo.json" if repo == "altstore" else "../scarlet_repo.json", current_ver, version, download_url, int(index), app_type, changelog, released_date, size)
         else:
             self.logger(0, "Up to date.")
 
     
-    def rw(self, repo_type, path, version, download_url: str, index, app_type, version_description, release_date, size):
+    def rw(self, repo_type, path, current_ver, version, download_url: str, index, app_type, version_description, release_date, size):
             self.logger(0, "Loading json manifest... this may take a while")
             with open(path, "r") as repo_path:
-                json_data = json.load(repo_path)
+                self.json_data = json.load(repo_path)
                 self.logger(0, "Modifying loaded data...")
                 if repo_type == "scarlet":
-                    json_data[app_type][index]["version"] = version
-                    json_data[app_type][index]["down"] = download_url
+                    self.json_data[app_type][index]["version"] = version
+                    self.json_data[app_type][index]["down"] = download_url
                 
                 elif repo_type == "altstore":
-                    json_data[app_type][index]["version"] = version
-                    json_data[app_type][index]["downloadURL"] = download_url
-                    json_data[app_type][index]["versionDescription"] = version_description
-                    json_data[app_type][index]["versionDate"] = release_date
+                    self.json_data[app_type][index]["version"] = version
+                    self.json_data[app_type][index]["downloadURL"] = download_url
+                    self.json_data[app_type][index]["versionDescription"] = version_description
+                    self.json_data[app_type][index]["versionDate"] = release_date
                     try:
-                        json_data[app_type][index]["versions"].insert(0, {"version": version,
+                        self.json_data[app_type][index]["versions"].insert(0, {"version": version,
                                                                         "date": release_date,
                                                                         "localizedDescription": version_description,
                                                                         "downloadURL": download_url,
@@ -113,27 +113,19 @@ class Fetch:
                     except KeyError:
                         self.logger(2, "Looks like this app doesn't have versions key. Skipping...")
 
-                elif repo_type == "readme":        
-                    with open("../README.md", "r") as file:
-                        self.logger(0, "Loading readme.md data...")
-                        for line in file.readlines():
-                            print(line)
-                            print(json_data[app_type][index]["name"])
-                            if [app_type][index]["name"] in line:
-                                print(line)
-                        data = file.read()
                 else:
                     raise Exception("Unexpected mode")
+     
+                with open("../README.md", "r") as file, open("../README.md", "w") as out:
+                    self.logger(0, "Loading readme.md data...")
+                    data = file.read()
+                    out.write(data.replace(current_ver, version))
+                    self.logger(0, f"Writed to: {file} successfully.")
                 
                 with open(path, "w") as repo_path:
-                    json.dump(json_data, repo_path, indent=2)
+                    json.dump(self.json_data, repo_path, indent=2)
                     self.logger(0, f"Writed to: {path} successfully.")
-            """
-            with open("../README.md", "w") as file:
-                self.logger(0, "Writing modified data...")
-                file.write(data.replace(current_ver, version))
-            """
-    
+            
 
     def automate(self, path: str):
         with open(path, 'r') as file:
