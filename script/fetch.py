@@ -75,19 +75,19 @@ class Fetch:
                                         if changelog is None: changelog = release["body"]
                                         if released_date is None: released_date = ''.join(asset["created_at"].split('T')[:-1])
                                         if size is None: size = asset["size"]
-                                        if download_url is None: download_url = asset["browser_download_url"]# .replace("%2B", "+")
+                                        if download_url is None: download_url = asset["browser_download_url"]
                                 else:
                                         if version is None: version = release["name"].strip(app_name).strip("v").strip()
                                         if changelog is None: changelog = release["body"]
                                         if released_date is None: released_date = ''.join(asset["created_at"].split('T')[:-1])
                                         if size is None: size = asset["size"]
-                                        if download_url is None: download_url = asset["browser_download_url"]# .replace("%2B", "+")
+                                        if download_url is None: download_url = asset["browser_download_url"]
         self.logger(1, f"index: {index}, current: {current_ver}, new: {version}")
         if version > current_ver:
-            self.logger(0, f"New version available: {version}, updating...")
+            self.logger(0, f"New version available: {version}, Parsing to rw...")
             self.rw(repo, "../altstore_repo.json" if repo == "altstore" else "../scarlet_repo.json", current_ver, version, download_url, int(index), app_type, changelog, released_date, size)
         else:
-            self.logger(0, "Up to date.")
+            self.logger(0, "Up to date. Nothing to do.")
 
     
     def rw(self, repo_type, path, current_ver, version, download_url: str, index, app_type, version_description, release_date, size):
@@ -116,12 +116,14 @@ class Fetch:
                 else:
                     raise Exception("Unexpected mode")
      
-                with open("../README.md", "r") as file, open("../README.md", "w") as out:
+                with open("../README.md", "r") as file:
                     self.logger(0, "Loading readme.md data...")
                     data = file.read()
-                    out.write(data.replace(current_ver, version))
-                    self.logger(0, f"Writed to: {file} successfully.")
                 
+                with open("../README.md", "w") as file:
+                    file.write(data.replace(current_ver, version))
+                    self.logger(0, f"Writed to: {file} successfully.")
+
                 with open(path, "w") as repo_path:
                     json.dump(self.json_data, repo_path, indent=2)
                     self.logger(0, f"Writed to: {path} successfully.")
@@ -151,9 +153,15 @@ class Fetch:
 
 if __name__ == "__main__":
     try:
-        if sys.argv[1] == "--production":
-            Fetch().automate("../scarlet_repo.json")
-            Fetch().automate("../altstore_repo.json")
+        try:
+            if sys.argv[1] == "--production" and sys.argv[2] == "altstore":
+                Fetch().automate("../altstore_repo.json")
+            elif sys.argv[1] == "--production" and sys.argv[2] == "scarlet":
+                Fetch().automate("../scarlet_repo.json")
+        except IndexError:
+            if sys.argv[1] == "--production":
+                Fetch().automate("../altstore_repo.json")
+                Fetch().automate("../scarlet_repo.json")
         if sys.argv[1] == "--test":
             Fetch().fetch(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7])
     except IndexError:
