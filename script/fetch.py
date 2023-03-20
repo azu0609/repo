@@ -91,7 +91,7 @@ class Fetch:
 
     
     def rw(self, repo_type, path, current_ver, version, download_url: str, index, app_type, version_description, release_date, size):
-            self.logger(0, "Loading json manifest... this may take a while")
+            self.logger(0, "Loading repo file... this may take a while")
             with open(path, "r") as repo_path:
                 self.json_data = json.load(repo_path)
                 self.logger(0, "Modifying loaded data...")
@@ -114,7 +114,7 @@ class Fetch:
                         self.logger(2, "Looks like this app doesn't have versions key. Skipping...")
 
                 else:
-                    raise Exception("Unexpected mode")
+                    raise Exception("Unexpected mode! - Try submit issue.")
      
                 with open("../README.md", "r") as file:
                     self.logger(0, "Loading readme.md data...")
@@ -122,7 +122,7 @@ class Fetch:
                 
                 with open("../README.md", "w") as file:
                     file.write(data.replace(current_ver, version))
-                    self.logger(0, f"Writed to: {file} successfully.")
+                    self.logger(0, f"Writed to: ../README.md successfully.")
 
                 with open(path, "w") as repo_path:
                     json.dump(self.json_data, repo_path, indent=2)
