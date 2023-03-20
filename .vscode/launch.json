@@ -85,6 +85,18 @@
             ]
         },
         {
+            "name": "Python: Repo - Production Debug",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "/home/azuki/Documents/repo/script/",
+            "args": [
+                "--production"
+            ]
+        },
+        {
             "name": "Python: Repo - Test - Scarlet",
             "type": "python",
             "request": "launch",
