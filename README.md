@@ -15,7 +15,7 @@
 | Tweaked app | [Enmity](https://enmity.app) | com.hammerandchisel.discord | 158.0 | 2.1.4 | [enmity-mod](https://github.com/enmity-mod) | Yes |
 | Tweaked app | [Rosiecord (Plumpy - GGSans)](https://github.com/acquitelol/rosiecord) | com.hammerandchisel.discord | 2.1.4 | 171 | [acquitelol](https://github.com/acquitelol) | No |
 | Sideloaded | [Anime Now!](https://github.com/AnimeNow-Team/AnimeNow) | com.errorerrorerror.animenow | None | 1.0.0-beta.3 | [errorerrorerror](https://github.com/errorerrorerror) | Yes |
-| Macdirtycow | [Cowabunga](https://github.com/leminlimez/Cowabunga) | com.leemin.Cowabunga | None | 8.1.1 | [leminlimez](https://github.com/leminlimez) | Yes |
+| Macdirtycow | [Cowabunga](https://github.com/leminlimez/Cowabunga) | com.leemin.Cowabunga | None | 8.1.4 | [leminlimez](https://github.com/leminlimez) | Yes |
 | Macdirtycow | [KillMyOTA](https://github.com/haxi0/KillMyOTA) | org.haxi0.KillMyOTA | None | 1.1 | [haxi0](https://github.com/haxi0) | Yes |
 
 ## For contributors
