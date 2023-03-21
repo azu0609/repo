@@ -3,89 +3,115 @@
   <head>
       <title>Repository</title>
       <style>
-        html, .services-container {
-            background-color: #101419;
+        html {
+        background-color: #101419;
         }
+        html,
+        body {
+        height: 100%;
+        }
+
+        .wrapper {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+
+
         .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: stretch;
-            padding: 50px;
-            background-color: #1f2328;
-            border-radius: 12px;
-        }
-
-        .service {
-            flex-basis: 20%;
-            margin: 10px;
-            padding: 20px;
-            background-color: #101419;
-            border-radius: 12px;
-            width: 30%;
-            text-align: center;
-        }
-
-        .service:hover {
-            background-color: #94F7C5;
-            cursor: pointer;
-        }
-
-        .service:hover * {
-            color: #101419
-        }
-
-        .service h2 {
-            margin: 10px 0;
-        }
-
-        .service p {
-            margin: 0;
-        }
-
-        .description {
-            margin-bottom: 10px;
-        }
-
-        .service a {
-            color: #dee1e6;
-            text-decoration: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        background-color: #101419;
+        border-radius: 12px;
         }
 
         .services-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 100px;
-            padding-bottom: 100px;
-            background-color: #101419;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        }
+
+        .service {
+        flex-basis: 30%;
+        margin: 10px;
+        padding: 20px;
+        background-color: #1f2328;
+        border-radius: 12px;
+        text-align: center;
+        }
+
+        .service:hover {
+        background-color: #94F7C5;
+        cursor: pointer;
+        }
+
+        .service:hover * {
+        color: #101419;
+        }
+
+        .service h2 {
+        margin: 10px 0;
+        }
+
+        .service p {
+        margin: 0;
+        }
+
+        .description {
+        margin-bottom: 10px;
+        }
+
+        .service a {
+        color: #dee1e6;
+        text-decoration: none;
         }
 
         h2 {
-            color: #dee1e6;
-            margin-bottom: 40px;
+        color: #dee1e6;
+        text-align: center;
+        margin-bottom: 40px;
+        }
+
+        @media screen and (max-width: 768px) {
+        .services {
+            padding: 20px;
+        }
+        
+        .service {
+            flex-basis: 100%;
+        }
         }
       </style>
   </head>
   <body>
-    <section class="services-container">
+    <div class="wrapper">
         <h2>Which repository?</h2>
-        <div class="services">
-            <div class="service">
-                <a href="https://azu0609.github.io/repo/altstore_repo.json">
-                    <img src="https://azu0609.github.io/assets/projects/repo.logo.png" alt="alt" height="128" width="128">
-                    <h2>Altstore</h2>
-                    <p class="description">Repository for Altstore, with automated update</p>
-                </a>
+        <section class="services" id="services">
+            <div class="services-container">
+                <div class="services">
+                    <div class="service">
+                        <a href="https://azu0609.github.io/repo/altstore_repo.json">
+                            <img src="https://azu0609.github.io/assets/projects/repo.logo.png" alt="alt" height="128" width="128">
+                            <h2>Altstore</h2>
+                            <p class="description">Repository for Altstore, with automated update</p>
+                        </a>
+                    </div>
+                    <div class="service">
+                        <a href="https://azu0609.github.io/repo/scarlet_repo.json">
+                            <img src="https://azu0609.github.io/assets/projects/repo.logo.png" alt="alt" height="128" width="128">
+                            <h2>Scarlet</h2>
+                            <p class="description">Repository for Scarlet, with automated update</p>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="service">
-                <a href="https://azu0609.github.io/repo/scarlet_repo.json">
-                    <img src="https://azu0609.github.io/assets/projects/repo.logo.png" alt="alt" height="128" width="128">
-                    <h2>Scarlet</h2>
-                    <p class="description">Repository for Scarlet, with automated update</p>
-                </a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
   </body>
 </html>
