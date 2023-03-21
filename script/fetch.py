@@ -44,6 +44,8 @@ class Fetch:
             version = "2.1"
             released_date = "2021-10-28"
             changelog = "Unknown - Ask to developer"
+            size = 110100480
+            download_url = "https://miro92.com/repo/depictions/com.miro.uyou/iPA/YouTube_16.42.3_uYou_2.1.ipa",
             self.logger(2, "uYou detected! using 2.1 instead of latest.")
         else:
             for i, releases in enumerate(self.release_source):
