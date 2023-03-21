@@ -150,7 +150,7 @@ class Fetch:
                             pass
                         else:
                             raise TypeError(e)
-        self.logger(0, f"All done! may take 1~2m(Page build time) to apply.")
+        self.logger(0, f"Updating process ended successfully.")
 
 
 if __name__ == "__main__":
@@ -164,6 +164,7 @@ if __name__ == "__main__":
             if sys.argv[1] == "--production":
                 Fetch().automate("../altstore_repo.json")
                 Fetch().automate("../scarlet_repo.json")
+        print('\033[92m' + f"All done! may take 1~2m(Page build time) to apply.")
         if sys.argv[1] == "--test":
             Fetch().fetch(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7])
     except IndexError:
