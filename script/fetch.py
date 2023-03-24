@@ -66,7 +66,7 @@ class Fetch:
         download_url = None
         current_name_no_version = None
         asset_name_no_version = None
-        if index == 3 or "3":
+        if index == 3:
             version = "2.1"
             released_date = "2021-10-28"
             changelog = "Unknown - Ask to developer"
