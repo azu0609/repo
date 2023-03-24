@@ -18,8 +18,17 @@ class Fetch:
                                "https://api.github.com/repos/haxi0/KillMyOTA/releases"]
         
         self.blacklist_release = [
-        {"name": "uYou", "version": "2.1"},
-        {"name": "test123", "version": "0"}]
+            {
+                "name": "uYou",
+                "version": "2.1",
+                "state": "invalid"
+            },
+            {
+                "name": "Cowabunga",
+                "version": "10",
+                "state": "invalid"
+            }
+        ]
 
 
     def logger(self, type: int, message: str):
@@ -34,29 +43,26 @@ class Fetch:
         else:
             print(message)
 
-    def compare_versions(self, v1, v2):
-        v1_parts = v1.split('.')
-        v2_parts = v2.split('.')
-        for i in range(max(len(v1_parts), len(v2_parts))):
-            if i >= len(v1_parts):
+
+    def compare_versions(self, current_ver, new_ver):
+        current_parts = current_ver.split('.')
+        new_parts = new_ver.split('.')
+        for i in range(len(new_parts)):
+            if i >= len(current_parts):
                 return True
-            elif i >= len(v2_parts):
-                return False
+            if new_parts[i] != current_parts[i]:
+                return new_parts[i] > current_parts[i]
+        if len(new_parts) > len(current_parts):
+            return True
+        elif len(new_parts) == len(current_parts):
+            new_suffix = new_ver.split('.')[-1].split('-')[-1]
+            current_suffix = current_ver.split('.')[-1].split('-')[-1]
+            if new_suffix != '' and current_suffix != '':
+                return new_suffix > current_suffix
             else:
-                v1_subparts = v1_parts[i].split('-')
-                v2_subparts = v2_parts[i].split('-')
-                for j in range(max(len(v1_subparts), len(v2_subparts))):
-                    if j >= len(v1_subparts):
-                        return True
-                    elif j >= len(v2_subparts):
-                        return False
-                    elif v1_subparts[j] > v2_subparts[j]:
-                        return True
-                    elif v1_subparts[j] < v2_subparts[j]:
-                        return False
+                return new_ver > current_ver
         return False
 
-    
 
     def fetch(self, repo: str, app_name: str, index: int, app_type: str, current_ver, current_download_url: str):
         version = None
@@ -113,9 +119,10 @@ class Fetch:
         self.logger(1, f"index: {index}, current: {current_ver}, new: {version}")
         if self.compare_versions(current_ver, version):
             self.logger(0, f"New version available: {version}, verifing compatibility...")
-            for block_index, blocked in enumerate(self.blacklist_release):
-                if blocked["name"] == app_name and blocked[block_index]["version"] == version:
-                    self.logger(2, f"NG: {app_name} - In blacklist")
+            for blocked in self.blacklist_release:
+                if blocked["name"] == app_name and blocked["version"] == version and blocked["state"] == "valid":
+                    self.logger(2, f"NG: {app_name}+{version} - In blacklist")
+                    break
                 else:
                     self.logger(0, f"OK - Parsing to rw")
                     self.rw(repo, "../altstore_repo.json" if repo == "altstore" else "../scarlet_repo.json", current_ver, version, download_url, int(index), app_type, changelog, released_date, size)
@@ -125,10 +132,10 @@ class Fetch:
 
     
     def rw(self, repo_type, path, current_ver, version, download_url: str, index, app_type, version_description, release_date, size):
-            self.logger(0, "Loading repo file... this may take a while")
+            self.logger(1, "Fetching repo data...")
             with open(path, "r") as repo_path:
                 self.json_data = json.load(repo_path)
-                self.logger(0, "Modifying loaded data...")
+                self.logger(1, "Modifying loaded data...")
                 if repo_type == "scarlet":
                     self.json_data[app_type][index]["version"] = version
                     self.json_data[app_type][index]["down"] = download_url
