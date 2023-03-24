@@ -41,6 +41,24 @@
             ]
         },
         {
+            "name": "Python: Repo - Test - Altstore - uYou",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "/home/azuki/Documents/repo/script/",
+            "args": [
+                "--test",
+                "altstore",
+                "uYou",
+                "3",
+                "apps",
+                "2.0",
+                "https://miro92.com/repo/depictions/com.miro.uyou/iPA/YouTube_16.42.3_uYou_2.0.ipa"
+            ]
+        },
+        {
             "name": "Python: Repo - Test - README",
             "type": "python",
             "request": "launch",

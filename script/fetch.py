@@ -16,6 +16,10 @@ class Fetch:
                                "https://api.github.com/repos/AnimeNow-Team/AnimeNow/releases",
                                "https://api.github.com/repos/leminlimez/Cowabunga/releases",
                                "https://api.github.com/repos/haxi0/KillMyOTA/releases"]
+        
+        self.blacklist_release = [
+        {"name": "uYou", "version": "2.1"},
+        {"name": "test123", "version": "0"}]
 
 
     def logger(self, type: int, message: str):
@@ -29,6 +33,29 @@ class Fetch:
             print('\033[91m' + "ERROR: " + message)
         else:
             print(message)
+
+    def compare_versions(self, v1, v2):
+        v1_parts = v1.split('.')
+        v2_parts = v2.split('.')
+        for i in range(max(len(v1_parts), len(v2_parts))):
+            if i >= len(v1_parts):
+                return True
+            elif i >= len(v2_parts):
+                return False
+            else:
+                v1_subparts = v1_parts[i].split('-')
+                v2_subparts = v2_parts[i].split('-')
+                for j in range(max(len(v1_subparts), len(v2_subparts))):
+                    if j >= len(v1_subparts):
+                        return True
+                    elif j >= len(v2_subparts):
+                        return False
+                    elif v1_subparts[j] > v2_subparts[j]:
+                        return True
+                    elif v1_subparts[j] < v2_subparts[j]:
+                        return False
+        return False
+
     
 
     def fetch(self, repo: str, app_name: str, index: int, app_type: str, current_ver, current_download_url: str):
@@ -39,8 +66,7 @@ class Fetch:
         download_url = None
         current_name_no_version = None
         asset_name_no_version = None
-        # FIXME: Handle uYou without any extra code
-        if index == 3:
+        if index == 3 or "3":
             version = "2.1"
             released_date = "2021-10-28"
             changelog = "Unknown - Ask to developer"
@@ -52,9 +78,9 @@ class Fetch:
                 if releases.replace("api.", "").replace("repos/", "") in current_download_url:
                     req = requests.get(self.release_source[i])
                     if req.status_code == 403:
-                        self.logger(3, "Looks like github limited this ip.")
-                        raise RateLimited("Rate limited")
-                    req = requests.get(self.release_source[i]).json()
+                        self.logger(3, "Looks like Github limited this ip.")
+                        raise RateLimited("Rate limited by Github")
+                    req = req.json()
                     for release in req:
                         target_release = release["name"]
                         if not re.match(fr"^{app_name} (\d+)[\s()]+.*$", target_release):
@@ -77,17 +103,23 @@ class Fetch:
                                         if changelog is None: changelog = release["body"]
                                         if released_date is None: released_date = ''.join(asset["created_at"].split('T')[:-1])
                                         if size is None: size = asset["size"]
-                                        if download_url is None: download_url = asset["browser_download_url"]
+                                        if download_url is None: download_url = asset["browser_download_url"].replace("%2B", "+")
                                 else:
                                         if version is None: version = release["name"].strip(app_name).strip("v").strip()
                                         if changelog is None: changelog = release["body"]
                                         if released_date is None: released_date = ''.join(asset["created_at"].split('T')[:-1])
                                         if size is None: size = asset["size"]
-                                        if download_url is None: download_url = asset["browser_download_url"]
+                                        if download_url is None: download_url = asset["browser_download_url"].replace("%2B", "+")
         self.logger(1, f"index: {index}, current: {current_ver}, new: {version}")
-        if version > current_ver:
-            self.logger(0, f"New version available: {version}, Parsing to rw...")
-            self.rw(repo, "../altstore_repo.json" if repo == "altstore" else "../scarlet_repo.json", current_ver, version, download_url, int(index), app_type, changelog, released_date, size)
+        if self.compare_versions(current_ver, version):
+            self.logger(0, f"New version available: {version}, verifing compatibility...")
+            for block_index, blocked in enumerate(self.blacklist_release):
+                if blocked["name"] == app_name and blocked[block_index]["version"] == version:
+                    self.logger(2, f"NG: {app_name} - In blacklist")
+                else:
+                    self.logger(0, f"OK - Parsing to rw")
+                    self.rw(repo, "../altstore_repo.json" if repo == "altstore" else "../scarlet_repo.json", current_ver, version, download_url, int(index), app_type, changelog, released_date, size)
+                    break
         else:
             self.logger(0, "Up to date. Nothing to do.")
 
@@ -113,22 +145,31 @@ class Fetch:
                                                                         "downloadURL": download_url,
                                                                         "size": size})
                     except KeyError:
-                        self.logger(2, "Looks like this app doesn't have versions key. Skipping...")
+                        self.logger(2, "Looks like this app doesn't have versions key. adding...")
+                        self.json_data[app_type][index]["versions"] = [
+                            {
+                            "version": version,
+                            "date": release_date,
+                            "localizedDescription": version_description,
+                            "downloadURL": download_url,
+                            "size": size
+                            }
+                        ]
 
                 else:
-                    raise Exception("Unexpected mode! - Try submit issue.")
+                    raise Exception("Unexpected mode!")
      
                 with open("../README.md", "r") as file:
-                    self.logger(0, "Loading readme.md data...")
+                    self.logger(0, "Fetching readme.md data...")
                     data = file.read()
                 
                 with open("../README.md", "w") as file:
                     file.write(data.replace(current_ver, version))
-                    self.logger(0, f"Writed to: ../README.md successfully.")
 
                 with open(path, "w") as repo_path:
                     json.dump(self.json_data, repo_path, indent=2)
-                    self.logger(0, f"Writed to: {path} successfully.")
+                
+                self.logger(0, f"Writing process ended without any error")
             
 
     def automate(self, path: str):
