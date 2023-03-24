@@ -6,9 +6,9 @@
   "Tweaked": [
     {
       "name": "Rosiecord",
-      "version": "171",
+      "version": "172",
       "icon": "https://files.enmity.app/icon-altstore.png",
-      "down": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_171/Rosiecord-171_GGSans-Font+Plumpy_Icons.ipa",
+      "down": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_172/Rosiecord-172_GGSans-Font+Plumpy_Icons.ipa",
       "dev": "acquitelol",
       "category": "Tweaked Apps",
       "description": "Enmity, but with custom icons",
