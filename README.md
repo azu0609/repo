@@ -8,15 +8,19 @@
 
 
 ## Included IPA:
-| Type |Application | Bundle | Base | Version | Author | Working? |
-|:----:|:----------:|:------:|:------------:|:-------:|:------:|:------:
-| Tweaked app | [uYou](https://github.com/MiRO92/uYou-for-YouTube) | com.google.ios.youtube | 16.42.3 | 2.1 | [MIRO92](https://github.com/MiRO92) | Semi |
-| Tweaked app | [uYou+](https://github.com/qnblackcat/uYouPlus) | com.google.ios.youtube | 18.08.1 | 2.3.1 | [qnblackcat](https://github.com/qnblackcat) | Yes |
-| Tweaked app | [Enmity](https://enmity.app) | com.hammerandchisel.discord | 158.0 | 2.1.4 | [enmity-mod](https://github.com/enmity-mod) | Yes |
-| Tweaked app | [Rosiecord (Plumpy - GGSans)](https://github.com/acquitelol/rosiecord) | com.hammerandchisel.discord | 2.1.4 | 2.1 | [acquitelol](https://github.com/acquitelol) | No |
-| Sideloaded | [Anime Now!](https://github.com/AnimeNow-Team/AnimeNow) | com.errorerrorerror.animenow | None | 2.1 | [errorerrorerror](https://github.com/errorerrorerror) | Yes |
-| Macdirtycow | [Cowabunga](https://github.com/leminlimez/Cowabunga) | com.leemin.Cowabunga | None | 10.0.0 | [leminlimez](https://github.com/leminlimez) | Yes |
-| Macdirtycow | [KillMyOTA](https://github.com/haxi0/KillMyOTA) | org.haxi0.KillMyOTA | None | 1.1 | [haxi0](https://github.com/haxi0) | Yes |
 
-## For contributors
+| 
+A = Altstore, S = Scarlet, A/S = All, F = Adding in future
+
+| Type |Application | Bundle | Base | Version | Author | Working? | Availability |
+|:----:|:----------:|:------:|:------------:|:-------:|:------:|:------:|:------:|
+| Tweaked app | [uYou](https://github.com/MiRO92/uYou-for-YouTube) | com.google.ios.youtube | 16.42.3 | 2.1 | [MIRO92](https://github.com/MiRO92) | Semi | A/S |
+| Tweaked app | [uYou+](https://github.com/qnblackcat/uYouPlus) | com.google.ios.youtube | 18.08.1 | 2.3.1 | [qnblackcat](https://github.com/qnblackcat) | Yes | A/S |
+| Tweaked app | [Enmity](https://enmity.app) | com.hammerandchisel.discord | 158.0 | 2.1.4 | [enmity-mod](https://github.com/enmity-mod) | Yes | A/S |
+| Tweaked app | [Rosiecord (Plumpy - GGSans)](https://github.com/acquitelol/rosiecord) | com.hammerandchisel.discord | 2.1.4 | 173 | [acquitelol](https://github.com/acquitelol) | N/A | A/S |
+| Sideloaded | [Anime Now!](https://github.com/AnimeNow-Team/AnimeNow) | com.errorerrorerror.animenow | None | 2.1 | [errorerrorerror](https://github.com/errorerrorerror) | Yes | A/S |
+| Macdirtycow | [Cowabunga](https://github.com/leminlimez/Cowabunga) | com.leemin.Cowabunga | None | 10.0.3 | [leminlimez](https://github.com/leminlimez) | Yes | A/S |
+| Macdirtycow | [KillMyOTA](https://github.com/haxi0/KillMyOTA) | org.haxi0.KillMyOTA | None | 1.1 | [haxi0](https://github.com/haxi0) | Yes | AF/S |
+
+## Add apps to repo
 W.I.P
