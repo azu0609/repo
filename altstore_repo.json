@@ -216,11 +216,18 @@
       "bundleIdentifier": "com.leemin.Cowabunga",
       "developerName": "leminlimez",
       "subtitle": "iOS 14.0-15.7.1 & 16.0-16.1.2 MacDirtyCow ToolBox",
-      "version": "10.0.3",
-      "versionDate": "2023-03-25",
-      "versionDescription": "- Fixed false alarm regarding bootloops while fixing apps",
-      "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.0.3/Cowabunga.ipa",
+      "version": "10.1.0",
+      "versionDate": "2023-03-28",
+      "versionDescription": "- You can now choose to enable v8 and/or v10 theming\r\n- Padding for file path replacing operations\r\n- Added back keyboard buttons audio\r\n- More safety with icon theming: first attempts to revert corrupted files before aborting\r\n- Improved error messages\r\n- Fixed springboard tools view sizing on ipads\r\n- Fixed springboard tools on RTL languages\r\n- Updated backend repo for explore page\r\n\r\nCowabunga now has its own discord server! Join here: [https://discord.gg/MN8JgqSAqT](https://discord.gg/MN8JgqSAqT)",
+      "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.1.0/Cowabunga.ipa",
       "versions": [
+        {
+          "version": "10.1.0",
+          "date": "2023-03-28",
+          "localizedDescription": "- You can now choose to enable v8 and/or v10 theming\r\n- Padding for file path replacing operations\r\n- Added back keyboard buttons audio\r\n- More safety with icon theming: first attempts to revert corrupted files before aborting\r\n- Improved error messages\r\n- Fixed springboard tools view sizing on ipads\r\n- Fixed springboard tools on RTL languages\r\n- Updated backend repo for explore page\r\n\r\nCowabunga now has its own discord server! Join here: [https://discord.gg/MN8JgqSAqT](https://discord.gg/MN8JgqSAqT)",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.1.0/Cowabunga.ipa",
+          "size": 21595880
+        },
         {
           "version": "10.0.3",
           "date": "2023-03-25",
