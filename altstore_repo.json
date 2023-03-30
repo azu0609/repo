@@ -10,48 +10,41 @@
       "version": "173",
       "versionDate": "2023-03-27",
       "versionDescription": "",
-      "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_173/Rosiecord-173_GGSans-Font+Plumpy_Icons.ipa",
+      "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_173/Rosiecord-173_GGSans-Font%2BPlumpy_Icons.ipa",
       "versions": [
         {
           "version": "173",
           "date": "2023-03-27",
           "localizedDescription": "",
-          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_173/Rosiecord-173_GGSans-Font+Plumpy_Icons.ipa",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_173/Rosiecord-173_GGSans-Font%2BPlumpy_Icons.ipa",
           "size": 89297627
         },
         {
-          "version": "172",
-          "date": "2023-03-23",
-          "localizedDescription": "",
-          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_172/Rosiecord-172_GGSans-Font+Plumpy_Icons.ipa",
-          "size": 86040981
-        },
-        {
           "version": "171",
-          "date": "2023-03-13",
-          "localizedDescription": "",
-          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_171/Rosiecord-171_GGSans-Font+Plumpy_Icons.ipa",
-          "size": 80741260
+          "date": "2023-03-14",
+          "localizedDescription": "## Commits\r\n- 3b26c42: [171] New build of 171 ft k2genmity fix (Acquite)",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_171/Rosiecord-171_GGSans-Font%2BPlumpy_Icons.ipa",
+          "size": 80756935
         },
         {
           "version": "170",
           "date": "2023-03-10",
           "localizedDescription": "",
-          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_170/Rosiecord-170_GGSans-Font+Plumpy_Icons.ipa",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_170/Rosiecord-170_GGSans-Font%2BPlumpy_Icons.ipa",
           "size": 80434783
         },
         {
           "version": "164",
           "date": "2023-03-05",
           "localizedDescription": "## Commits\n- 4faa9f9: ensure coreutils are installed (Acquite)",
-          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_164/Rosiecord-164_GGSans-Font+Plumpy_Icons.ipa",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_164/Rosiecord-164_GGSans-Font%2BPlumpy_Icons.ipa",
           "size": 127146248
         },
         {
           "version": "163",
           "date": "2023-01-25",
           "localizedDescription": "## Commits\n- 389b719: (163) Use regular Enmity rather than Dev Enmity (Acquite)",
-          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_163/Rosiecord_GGSans-Font+Plumpy_Icons.ipa",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_163/Rosiecord_GGSans-Font%2BPlumpy_Icons.ipa",
           "size": 125675890
         },
         {
@@ -223,11 +216,25 @@
       "bundleIdentifier": "com.leemin.Cowabunga",
       "developerName": "leminlimez",
       "subtitle": "iOS 14.0-15.7.1 & 16.0-16.1.2 MacDirtyCow ToolBox",
-      "version": "8.1.4",
-      "versionDate": "2023-03-15",
-      "versionDescription": "- Added option to generate padding for importing type replacing operations\r\n- Changed Patreon layout on home page\r\n- Fixed error with springboard tools not applying\r\n\r\nSorry for the inconvenience caused by the error",
-      "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v8.1.4/Cowabunga.ipa",
+      "version": "10.0.3",
+      "versionDate": "2023-03-25",
+      "versionDescription": "- Fixed false alarm regarding bootloops while fixing apps",
+      "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.0.3/Cowabunga.ipa",
       "versions": [
+        {
+          "version": "10.0.3",
+          "date": "2023-03-25",
+          "localizedDescription": "- Fixed false alarm regarding bootloops while fixing apps",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.0.3/Cowabunga.ipa",
+          "size": 21557626
+        },
+        {
+          "version": "10.0.0",
+          "date": "2023-03-23",
+          "localizedDescription": "\u2728What's new:\r\n\ud83d\udd8c\ufe0f Brand new theming system! Provides less compression, more applying consistency, and clock icon can now be themed!\r\n- Added more status bar options:\r\n     - Changing battery detail text\r\n     - Show WiFi/Cellular signal strength\r\n     - Changing battery icon capacity\r\n     - Changing WiFi/Cellular signal strength bars\r\n- Added settings app customizer (custom image, custom footnote, remove icons/labels/previews)\r\n- Added calculator error message changer\r\n- Added changing notification shadow color\r\n- Added changing CC background blur color\r\n- Added hiding low power alerts in extra settings\r\n- Remade springboard tools ui (merged it with springboard colors)\r\n- New background frequency option\r\n- Background frequency options now show how often they apply tweaks\r\n- Rearranged some tabs\r\n- App now hangs for a little while prior to respring in order to give the springboard time to restart. This should help issues of tweaks not applying.\r\n\r\n\u2757\ufe0fNote: Preferences for springboard tools and colors will be reset. Wallet and Calendar do not theme.\r\n\u26a0\ufe0f WARNING: Do NOT ignore abort messages, it is there to prevent a bootloop.",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.0.0/Cowabunga.ipa",
+          "size": 21556671
+        },
         {
           "version": "8.1.4",
           "date": "2023-03-15",

@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Repo - Test - Altstore",
+            "name": "Python: Repo - Test - Altstore - Rosiecord",
             "type": "python",
             "request": "launch",
             "program": "${file}",
@@ -19,11 +19,91 @@
                 "0",
                 "apps",
                 "163",
-                "https://github.com/acquitelol/rosiecord/releases"
+                "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_163/Rosiecord-163_GGSans-Font+Plumpy_Icons.ipa"
             ]
         },
         {
-            "name": "Python: Repo - Production debug",
+            "name": "Python: Repo - Test - Altstore - Anime Now!",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "/home/azuki/Documents/repo/script/",
+            "args": [
+                "--test",
+                "altstore",
+                "Anime Now!",
+                "4",
+                "apps",
+                "1.0.0-beta.2",
+                "https://github.com/AnimeNow-Team/AnimeNow/releases/download/1.0.0-beta.2/Anime.Now.iOS.ipa"
+            ]
+        },
+        {
+            "name": "Python: Repo - Test - Altstore - uYou",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "/home/azuki/Documents/repo/script/",
+            "args": [
+                "--test",
+                "altstore",
+                "uYou",
+                "3",
+                "apps",
+                "2.0",
+                "https://miro92.com/repo/depictions/com.miro.uyou/iPA/YouTube_16.42.3_uYou_2.0.ipa"
+            ]
+        },
+        {
+            "name": "Python: Repo - Test - README",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "/home/azuki/Documents/repo/script/",
+            "args": [
+                "--test",
+                "readme",
+                "Rosiecord",
+                "0",
+                "apps",
+                "163",
+                "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_163/Rosiecord-163_GGSans-Font+Plumpy_Icons.ipa"
+            ]
+        },
+        {
+            "name": "Python: Repo - Production Debug - Altstore",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "/home/azuki/Documents/repo/script/",
+            "args": [
+                "--production",
+                "altstore"
+            ]
+        },
+        {
+            "name": "Python: Repo - Production Debug - Scarlet",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "/home/azuki/Documents/repo/script/",
+            "args": [
+                "--production",
+                "scarlet"
+            ]
+        },
+        {
+            "name": "Python: Repo - Production Debug",
             "type": "python",
             "request": "launch",
             "program": "${file}",
