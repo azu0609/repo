@@ -10,83 +10,83 @@
       "version": "173",
       "versionDate": "2023-03-27",
       "versionDescription": "",
-      "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_173/Rosiecord-173_GGSans-Font+Plumpy_Icons.ipa",
+      "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_173/Rosiecord-173_GGSans-Font%2BPlumpy_Icons.ipa",
       "versions": [
         {
           "version": "173",
           "date": "2023-03-27",
           "localizedDescription": "",
-          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_173/Rosiecord-173_GGSans-Font+Plumpy_Icons.ipa",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_173/Rosiecord-173_GGSans-Font%2BPlumpy_Icons.ipa",
           "size": 89297627
         },
         {
           "version": "171",
           "date": "2023-03-14",
           "localizedDescription": "## Commits\r\n- 3b26c42: [171] New build of 171 ft k2genmity fix (Acquite)",
-          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_171/Rosiecord-171_GGSans-Font+Plumpy_Icons.ipa",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_171/Rosiecord-171_GGSans-Font%2BPlumpy_Icons.ipa",
           "size": 80756935
         },
         {
           "version": "170",
           "date": "2023-03-10",
           "localizedDescription": "",
-          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_170/Rosiecord-170_GGSans-Font+Plumpy_Icons.ipa",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_170/Rosiecord-170_GGSans-Font%2BPlumpy_Icons.ipa",
           "size": 80434783
         },
         {
           "version": "164",
           "date": "2023-03-05",
           "localizedDescription": "## Commits\n- 4faa9f9: ensure coreutils are installed (Acquite)",
-          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_164/Rosiecord-164_GGSans-Font+Plumpy_Icons.ipa",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_164/Rosiecord-164_GGSans-Font%2BPlumpy_Icons.ipa",
           "size": 127146248
         },
         {
           "version": "163",
           "date": "2023-01-25",
           "localizedDescription": "## Commits\n- 389b719: (163) Use regular Enmity rather than Dev Enmity (Acquite)",
-          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_163/Rosiecord_GGSans-Font+Plumpy_Icons.ipa",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_163/Rosiecord_GGSans-Font%2BPlumpy_Icons.ipa",
           "size": 125675890
         },
         {
           "version": "162",
           "date": "2023-01-19",
           "localizedDescription": "rosiecord_162\n\n(162)",
-          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_162/Rosiecord_GGSans-Font+Plumpy_Icons.ipa",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_162/Rosiecord_GGSans-Font%2BPlumpy_Icons.ipa",
           "size": 137395535
         },
         {
           "version": "161",
           "date": "2023-01-12",
           "localizedDescription": "## Commits\n- 6e9586c: (161) Add README :3 (Acquite)\n- 46d5949: (161) Add new line at the end (MD022 violation) (Acquite)",
-          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_161/Rosiecord_GGSans-Font+Plumpy_Icons.ipa",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_161/Rosiecord_GGSans-Font%2BPlumpy_Icons.ipa",
           "size": 132258520
         },
         {
           "version": "160",
           "date": "2023-01-09",
           "localizedDescription": "rosiecord_160\n\n(160) stable, not testflight",
-          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_160/Rosiecord_GGSans-Font+Plumpy_Icons.ipa",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_160/Rosiecord_GGSans-Font%2BPlumpy_Icons.ipa",
           "size": 137196505
         },
         {
           "version": "159",
           "date": "2023-01-09",
           "localizedDescription": "## Commits\n- 6ba84cd: (159) Add new icons (ft rosie ty rosie :3) (Acquite)",
-          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_159/Rosiecord_GGSans-Font+Plumpy_Icons.ipa",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_159/Rosiecord_GGSans-Font%2BPlumpy_Icons.ipa",
           "size": 136945186
         },
         {
           "version": "158",
           "date": "2023-01-04",
           "localizedDescription": "## Commits\n- 884dbd5: (159) add new app icons (Acquite)\n- 2711bf4: (158) force refresh ipas (Acquite)\n- fd8419e: (159) force refresh ipas (Acquite)\n- 169926f: (158) clean up after creating ipas (Acquite)\n- 1886ed9: (158) i forgot to build it :sob: (Acquite)\n- 453b680: (158) revert cleaning of ipas folder (Acquite)",
-          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_158/Rosiecord_GGSans-Font+Plumpy_Icons.ipa",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_158/Rosiecord_GGSans-Font%2BPlumpy_Icons.ipa",
           "size": 136124189
         },
         {
           "version": "157",
           "date": "2022-12-04",
           "localizedDescription": "## Commits\n- 2e1a6cc: fix naming in patch (Acquite)",
-          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_v157/Rosiecord_GGSans-Font+Plumpy_Icons.ipa",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_v157/Rosiecord_GGSans-Font%2BPlumpy_Icons.ipa",
           "size": 83087790
         }
       ],
