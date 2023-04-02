@@ -20,7 +20,7 @@ A = Altstore, S = Scarlet, A/S = All, F = Adding in future
 | Tweaked app | [Rosiecord (Plumpy - GGSans)](https://github.com/acquitelol/rosiecord) | com.hammerandchisel.discord | 2.1.4 | 173 | [acquitelol](https://github.com/acquitelol) | N/A | A/S |
 | Sideloaded | [Anime Now!](https://github.com/AnimeNow-Team/AnimeNow) | com.errorerrorerror.animenow | None | 2.1 | [errorerrorerror](https://github.com/errorerrorerror) | Yes | A/S |
 | Macdirtycow | [Cowabunga](https://github.com/leminlimez/Cowabunga) | com.leemin.Cowabunga | None | 10.1.1 | [leminlimez](https://github.com/leminlimez) | Yes | A/S |
-| Macdirtycow | [KillMyOTA](https://github.com/haxi0/KillMyOTA) | org.haxi0.KillMyOTA | None | 1.1 | [haxi0](https://github.com/haxi0) | Yes | AF/S |
+| Macdirtycow | [KillMyOTA](https://github.com/haxi0/KillMyOTA) | org.haxi0.KillMyOTA | None | 1.1 | [haxi0](https://github.com/haxi0) | Yes | A/S |
 
 ## Add apps to repo
 W.I.P

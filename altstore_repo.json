@@ -488,6 +488,43 @@
       ],
       "size": 21849343,
       "beta": false
+    },
+    {
+      "name": "KillMyOTA",
+      "bundleIdentifier": "org.haxi0.KillMyOTA",
+      "developerName": "haxi0",
+      "subtitle": "OTA Killer for iOS 15.0 - 16.1.2",
+      "version": "1.1",
+      "versionDate": "2023-01-30",
+      "versionDescription": "- The button doesn't appear as 'enable OTA' or 'disable OTA' momentally when you launch the app. This was made to fix some issues.",
+      "downloadURL": "https://github.com/haxi0/KillMyOTA/releases/download/1.1/KillMyOTA-1.1.ipa",
+      "versions": [ 
+        {
+          "version": "1.1",
+          "date": "2023-01-30",
+          "localizedDescription": "- The button doesn't appear as 'enable OTA' or 'disable OTA' momentally when you launch the app. This was made to fix some issues.",
+          "downloadURL": "https://github.com/haxi0/KillMyOTA/releases/download/1.1/KillMyOTA-1.1.ipa",
+          "size": 339440
+        },
+        {
+          "version": "1.0",
+          "date": "2023-01-27",
+          "localizedDescription": "- The Release",
+          "downloadURL": "https://github.com/haxi0/KillMyOTA/releases/download/1.0/KillMyOTA-1.0.ipa",
+          "size": 337706
+        },
+        {
+          "version": "1.0-Patch",
+          "date": "2023-01-27",
+          "localizedDescription": "- UI Patch",
+          "downloadURL": "https://github.com/haxi0/KillMyOTA/releases/download/1.0-Patch/KillMyOTA-1.0-Patch.ipa",
+          "size": 338317
+        }
+      ],
+      "localizedDescription": "OTA Killer for iOS 15.0 - 16.1.2",
+      "iconURL": "https://raw.githubusercontent.com/haxi0/KillMyOTA/master/KillMyOTA-modified.png",
+      "size": 339440,
+      "beta": false
     }
   ],
   "userInfo": {}
