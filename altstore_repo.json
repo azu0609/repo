@@ -7,11 +7,18 @@
       "bundleIdentifier": "com.hammerandchisel.discord",
       "developerName": "acquitelol",
       "subtitle": "Enmity, but with custom icons",
-      "version": "173",
-      "versionDate": "2023-03-27",
+      "version": "174",
+      "versionDate": "2023-04-04",
       "versionDescription": "",
-      "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_173/Rosiecord-173_GGSans-Font+Plumpy_Icons.ipa",
+      "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_174/Rosiecord-174_GGSans-Font+Plumpy_Icons.ipa",
       "versions": [
+        {
+          "version": "174",
+          "date": "2023-04-04",
+          "localizedDescription": "",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_174/Rosiecord-174_GGSans-Font+Plumpy_Icons.ipa",
+          "size": 89726854
+        },
         {
           "version": "173",
           "date": "2023-03-27",
@@ -498,7 +505,7 @@
       "versionDate": "2023-01-30",
       "versionDescription": "- The button doesn't appear as 'enable OTA' or 'disable OTA' momentally when you launch the app. This was made to fix some issues.",
       "downloadURL": "https://github.com/haxi0/KillMyOTA/releases/download/1.1/KillMyOTA-1.1.ipa",
-      "versions": [ 
+      "versions": [
         {
           "version": "1.1",
           "date": "2023-01-30",
