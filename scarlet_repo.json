@@ -1,13 +1,13 @@
 {
   "META": {
     "repoName": "azu0609's repo",
-    "repoIcon": "favicon.png"
+    "repoIcon": "./repo.logo.png"
   },
   "Tweaked": [
     {
       "name": "Rosiecord",
       "version": "174",
-      "icon": "https://files.enmity.app/icon-altstore.png",
+      "icon": "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Icons/EnmityIcon60x60%402x.png",
       "down": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_174/Rosiecord-174_GGSans-Font+Plumpy_Icons.ipa",
       "dev": "acquitelol",
       "category": "Tweaked Apps",
@@ -92,6 +92,7 @@
       "version": "10.1.1",
       "down": "https://github.com/leminlimez/Cowabunga/releases/download/v10.1.1/Cowabunga.ipa",
       "dev": "leminlimez",
+      "icon": "https://user-images.githubusercontent.com/52459150/215552092-9dc1e029-da35-43da-867f-17279e3dc180.png",
       "category": "Macdirtycow",
       "description": "IOS 14.0-15.7.1 & 16.0-16.1.2 MacDirtyCow ToolBox",
       "bundleID": "com.leemin.Cowabunga",
@@ -125,7 +126,7 @@
       "version": "0.1.0",
       "down": "https://github.com/BomberFish/ControlConfig/releases/download/0.1.0/ControlConfig-0.1.0-alpha.ipa",
       "dev": "BomberFish",
-      "icon": "link_of_icon",
+      "icon": "https://raw.githubusercontent.com/BomberFish/ControlConfig/b1c19aa036cf87cf123439a98be0c01c1e3d6c39/ControlConfig/Assets.xcassets/AppIcon.appiconset/Icon%20Template%20512pt.png",
       "category": "Macdirtycow",
       "description": "Tool to change functionality of Control Center tiles. WIP.",
       "bundleID": "com.f1shy-dev.ControlConfig",

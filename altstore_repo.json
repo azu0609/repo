@@ -98,7 +98,7 @@
         }
       ],
       "localizedDescription": "Add plugins and themes to Discord!",
-      "iconURL": "https://files.enmity.app/icon-altstore.png",
+      "iconURL": "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Icons/EnmityIcon60x60%402x.png",
       "tintColor": "6D00FF",
       "screenshotURLs": [
         "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Rosiecord_Mocks/Plumpy.png",
@@ -559,7 +559,7 @@
           }
       ],
       "localizedDescription": "Tool to change functionality of Control Center tiles. WIP.",
-      "iconURL": "link_to_app_icon",
+      "iconURL": "https://raw.githubusercontent.com/BomberFish/ControlConfig/b1c19aa036cf87cf123439a98be0c01c1e3d6c39/ControlConfig/Assets.xcassets/AppIcon.appiconset/Icon%20Template%20512pt.png",
       "size": 7557647,
       "beta": false
   }
