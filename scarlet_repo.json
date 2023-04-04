@@ -119,6 +119,20 @@
         "web": "https://haxi0-dev.com/",
         "twitter": "https://twitter.com/haxi0sm"
       }
+    },
+    {
+      "name": "ControlConfig",
+      "version": "0.1.0",
+      "down": "https://github.com/BomberFish/ControlConfig/releases/download/0.1.0/ControlConfig-0.1.0-alpha.ipa",
+      "dev": "BomberFish",
+      "icon": "link_of_icon",
+      "category": "Macdirtycow",
+      "description": "Tool to change functionality of Control Center tiles. WIP.",
+      "bundleID": "com.f1shy-dev.ControlConfig",
+      "contact": {
+          "web": "https://bomberfish.ca/",
+          "fosstodon": "https://fosstodon.org/@BomberFish"
+      }
     }
   ]
 }

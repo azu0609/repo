@@ -525,7 +525,37 @@
       "iconURL": "https://raw.githubusercontent.com/haxi0/KillMyOTA/master/KillMyOTA-modified.png",
       "size": 339440,
       "beta": false
-    }
+    },
+    {
+      "name": "ControlConfig",
+      "bundleIdentifier": "com.f1shy-dev.ControlConfig",
+      "developerName": "BomberFish",
+      "subtitle": "Tool to change functionality of Control Center tiles. WIP.",
+      "version": "0.1.0",
+      "versionDate": "2023-03-13",
+      "versionDescription": "**ControlConfig v0.1.0 alpha**\r\n- Named all modules, and added icons for all modules\r\n- Default modules now named in settings\r\n- Hidden modules are now enabled (mostly...)\r\n- Backup system for restoration (not 100% done)\r\n- Better logging/application\r\n- Fix other minor issues.\r\n- 🎨 Rebrand with new icon and new first-launch screen\r\n- ✨ Move all modules around in settings!\r\n- :warning: Colors are disabled in this build due to respring-loop issues that have not been fixed.",
+      "downloadURL": "https://github.com/BomberFish/ControlConfig/releases/download/0.1.0/ControlConfig-0.1.0-alpha.ipa",
+      "versions": [
+          {
+              "version": "0.1.0",
+              "date": "2023-03-13",
+              "localizedDescription": "**ControlConfig v0.1.0 alpha**\r\n- Named all modules, and added icons for all modules\r\n- Default modules now named in settings\r\n- Hidden modules are now enabled (mostly...)\r\n- Backup system for restoration (not 100% done)\r\n- Better logging/application\r\n- Fix other minor issues.\r\n- 🎨 Rebrand with new icon and new first-launch screen\r\n- ✨ Move all modules around in settings!\r\n- :warning: Colors are disabled in this build due to respring-loop issues that have not been fixed.",
+              "downloadURL": "https://github.com/BomberFish/ControlConfig/releases/download/0.1.0/ControlConfig-0.1.0-alpha.ipa",
+              "size": 7557647
+          },
+          {
+              "version": "0.0.4",
+              "date": "2023-03-05",
+              "localizedDescription": "## ControlConfig 0.0.4-alpha\r\n\r\n### Changelog\r\n- Bit of a UI rework\r\n- Module colour changer with preview \r\n- App picker for launching apps (beta - enable with experimental features in settings)\r\n- Respring custom actions (make a control center module respring device on click)\r\n- Rework logging a bit more, other backend changes",
+              "downloadURL": "https://github.com/BomberFish/ControlConfig/releases/download/v0.0.4-alpha/ControlConfig-0.0.4-alpha.ipa",
+              "size": 4829701
+          }
+      ],
+      "localizedDescription": "Tool to change functionality of Control Center tiles. WIP.",
+      "iconURL": "link_to_app_icon",
+      "size": 7557647,
+      "beta": false
+  }
   ],
   "userInfo": {}
 }
