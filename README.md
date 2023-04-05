@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="./favicon.png">
+    <img src="https://azu0609.github.io/repo/repo.logo.png">
     <h1>azu0609's repo</h1>
     <p>Personalized repo for me. hosted in github pages</p>
     <hr />
@@ -96,4 +96,4 @@
 
 3. Check if working correctly by running script:  
 `python3 fetch.py --production`  
-Script should show current version, latest version and current json index, then try update if working correctly.
+Script should show current version, latest version and current json index, then try to update if working correctly.
