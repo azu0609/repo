@@ -15,7 +15,8 @@ class Fetch:
                                "https://api.github.com/repos/qnblackcat/uYouPlus/releases",
                                "https://api.github.com/repos/AnimeNow-Team/AnimeNow/releases",
                                "https://api.github.com/repos/leminlimez/Cowabunga/releases",
-                               "https://api.github.com/repos/haxi0/KillMyOTA/releases"]
+                               "https://api.github.com/repos/haxi0/KillMyOTA/releases",
+                               "https://api.github.com/repos/BomberFish/ControlConfig/releases"]
         
         self.blacklist_release = [
             {

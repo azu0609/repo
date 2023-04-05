@@ -123,7 +123,7 @@
     },
     {
       "name": "ControlConfig",
-      "version": "0.1.0",
+      "version": "0.1.0-alpha",
       "down": "https://github.com/BomberFish/ControlConfig/releases/download/0.1.0/ControlConfig-0.1.0-alpha.ipa",
       "dev": "BomberFish",
       "icon": "https://raw.githubusercontent.com/BomberFish/ControlConfig/b1c19aa036cf87cf123439a98be0c01c1e3d6c39/ControlConfig/Assets.xcassets/AppIcon.appiconset/Icon%20Template%20512pt.png",
@@ -131,8 +131,8 @@
       "description": "Tool to change functionality of Control Center tiles. WIP.",
       "bundleID": "com.f1shy-dev.ControlConfig",
       "contact": {
-          "web": "https://bomberfish.ca/",
-          "fosstodon": "https://fosstodon.org/@BomberFish"
+        "web": "https://bomberfish.ca/",
+        "fosstodon": "https://fosstodon.org/@BomberFish"
       }
     }
   ]
