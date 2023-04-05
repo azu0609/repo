@@ -1,7 +1,7 @@
 <div align="center">
     <img src="https://azu0609.github.io/repo/repo.logo.png">
     <h1>azu0609's repo</h1>
-    <p>Personalized repo for me. hosted in github pages</p>
+    <p>Personalized repo for me. hosted in github pages. feel free to send pr!</p>
     <hr />
     <a href="#"><img src="https://img.shields.io/badge/actions-actions.svg?label=Github&logo=github&style=for-the-badge&color=70a5eb" /></a>
 </div>
@@ -20,9 +20,10 @@
 | Tweaked app | [uYou+](https://github.com/qnblackcat/uYouPlus) | com.google.ios.youtube | 18.08.1 | 2.3.1 | [qnblackcat](https://github.com/qnblackcat) | Yes(any) | A/S |
 | Tweaked app | [Enmity](https://enmity.app) | com.hammerandchisel.discord | 158.0 | 2.1.4 | [enmity-mod](https://github.com/enmity-mod) | Yes(any) | A/S |
 | Tweaked app | [Rosiecord (Plumpy - GGSans)](https://github.com/acquitelol/rosiecord) | com.hammerandchisel.discord | 2.1.4 | 174 | [acquitelol](https://github.com/acquitelol) | Semi(S) | A/S |
-| Sideloaded | [Anime Now!](https://github.com/AnimeNow-Team/AnimeNow) | com.errorerrorerror.animenow | None | 2.1 | [errorerrorerror](https://github.com/errorerrorerror) | Yes(any) | A/S |
-| Macdirtycow | [Cowabunga](https://github.com/leminlimez/Cowabunga) | com.leemin.Cowabunga | None | 10.1.1 | [leminlimez](https://github.com/leminlimez) | Yes(any) | A/S |
-| Macdirtycow | [KillMyOTA](https://github.com/haxi0/KillMyOTA) | org.haxi0.KillMyOTA | None | 1.1 | [haxi0](https://github.com/haxi0) | Yes(any) | A/S |
+| Sideloaded | [Anime Now!](https://github.com/AnimeNow-Team/AnimeNow) | com.errorerrorerror.animenow | any | 2.1 | [errorerrorerror](https://github.com/errorerrorerror) | Yes(any) | A/S |
+| Macdirtycow | [Cowabunga](https://github.com/leminlimez/Cowabunga) | com.leemin.Cowabunga | any | 10.1.1 | [leminlimez](https://github.com/leminlimez) | Yes(any) | A/S |
+| Macdirtycow | [KillMyOTA](https://github.com/haxi0/KillMyOTA) | org.haxi0.KillMyOTA | any | 1.1 | [haxi0](https://github.com/haxi0) | Yes(any) | A/S |
+| Macdirtycow | [ControlConfig](https://github.com/BomberFish/ControlConfig) | org.haxi0.KillMyOTA | any | 0.1.0-alpha | [BomberFish](https://github.com/BomberFish) | Yes(any) | A/S |
 
 ## Add apps to repo
 1. Add json data to apps like:  
