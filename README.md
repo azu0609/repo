@@ -23,7 +23,7 @@
 | Sideloaded | [Anime Now!](https://github.com/AnimeNow-Team/AnimeNow) | com.errorerrorerror.animenow | any | 2.1 | [errorerrorerror](https://github.com/errorerrorerror) | Yes(any) | A/S |
 | Macdirtycow | [Cowabunga](https://github.com/leminlimez/Cowabunga) | com.leemin.Cowabunga | any | 10.1.1 | [leminlimez](https://github.com/leminlimez) | Yes(any) | A/S |
 | Macdirtycow | [KillMyOTA](https://github.com/haxi0/KillMyOTA) | org.haxi0.KillMyOTA | any | 1.1 | [haxi0](https://github.com/haxi0) | Yes(any) | A/S |
-| Macdirtycow | [ControlConfig](https://github.com/BomberFish/ControlConfig) | org.haxi0.KillMyOTA | any | 0.1.0-alpha | [BomberFish](https://github.com/BomberFish) | Yes(any) | A/S |
+| Macdirtycow | [ControlConfig](https://github.com/BomberFish/ControlConfig) | com.f1shy-dev.ControlConfig | any | 0.1.0-alpha | [BomberFish](https://github.com/BomberFish) | Yes(any) | A/S |
 
 ## Add apps to repo
 1. Add json data to apps like:  
