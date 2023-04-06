@@ -562,6 +562,39 @@
       "iconURL": "https://raw.githubusercontent.com/BomberFish/ControlConfig/b1c19aa036cf87cf123439a98be0c01c1e3d6c39/ControlConfig/Assets.xcassets/AppIcon.appiconset/Icon%20Template%20512pt.png",
       "size": 7557647,
       "beta": false
+    },
+    {
+      "name": "SantanderEscaped",
+      "bundleIdentifier": "org.haxi0.santander",
+      "developerName": "haxi0",
+      "subtitle": "A new, enhanced File Manager for iOS devices",
+      "version": "0.4",
+      "versionDate": "2023-02-10",
+      "versionDescription": "- Classic MDC overwrite is in the app, that means you can overwrite files in /System (hold a file to see a Replace action)\r\n- Respring action added.",
+      "downloadURL": "https://github.com/haxi0/SantanderEscaped/releases/download/0.4/SantanderEscaped-0.4.ipa",
+      "versions": [
+          {
+              "version": "0.4",
+              "date": "2023-02-10",
+              "localizedDescription": "- Classic MDC overwrite is in the app, that means you can overwrite files in /System (hold a file to see a Replace action)\r\n- Respring action added.",
+              "downloadURL": "https://github.com/haxi0/SantanderEscaped/releases/download/0.4/SantanderEscaped-0.4.ipa",
+              "size": 4793633
+          },
+          {
+              "version": "0.3",
+              "date": "2023-01-28",
+              "localizedDescription": "- The release",
+              "downloadURL": "https://github.com/haxi0/SantanderEscaped/releases/download/0.3/SantanderEscaped-0.3.ipa",
+              "size": 4789631
+          }
+      ],
+      "localizedDescription": "A new, enhanced File Manager for iOS devices with the tccd exploit for full file access.",
+      "iconURL": "https://raw.githubusercontent.com/haxi0/SantanderEscaped/main/Santander/Assets.xcassets/AppIcon.appiconset/256.png",
+      "screenshotURLs": [
+        "https://user-images.githubusercontent.com/48022799/182846725-84790bea-e9ba-45a3-a2c2-ee6f2f7fdd4e.png"
+      ],
+      "size": 4793633,
+      "beta": true
     }
   ],
   "userInfo": {}

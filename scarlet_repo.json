@@ -134,6 +134,23 @@
         "web": "https://bomberfish.ca/",
         "fosstodon": "https://fosstodon.org/@BomberFish"
       }
+    },
+    {
+      "name": "SantanderEscaped",
+      "version": "0.4",
+      "down": "https://github.com/haxi0/SantanderEscaped/releases/download/0.4/SantanderEscaped-0.4.ipa",
+      "dev": "haxi0",
+      "icon": "https://raw.githubusercontent.com/haxi0/SantanderEscaped/main/Santander/Assets.xcassets/AppIcon.appiconset/256.png",
+      "category": "Macdirtycow",
+      "description": "A new, enhanced File Manager for iOS devices with the tccd exploit for full file access.",
+      "bundleID": "org.haxi0.santander",
+      "screenshots": [
+        "https://user-images.githubusercontent.com/48022799/182846725-84790bea-e9ba-45a3-a2c2-ee6f2f7fdd4e.png"
+      ],
+      "contact": {
+        "web": "https://haxi0-dev.com/",
+        "twitter":"https://twitter.com/haxi0sm"
+      }
     }
   ]
 }
