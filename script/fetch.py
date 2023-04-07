@@ -74,14 +74,7 @@ class Fetch:
         download_url = None
         current_name_no_version = None
         asset_name_no_version = None
-        if index == 3 and app_type == "Tweaked" and repo == "scarlet":
-            version = "2.1"
-            released_date = "2021-10-28"
-            changelog = "Unknown"
-            size = 110100480
-            download_url = "https://miro92.com/repo/depictions/com.miro.uyou/iPA/YouTube_16.42.3_uYou_2.1.ipa",
-            self.logger(2, f"uYou detected in following index: {index}! using 2.1 instead of latest.")
-        elif index == 3 and repo == "altstore":
+        if index == 3 and app_type == "Tweaked" and repo == "scarlet" or index == 3 and repo == "altstore":
             version = "2.1"
             released_date = "2021-10-28"
             changelog = "Unknown"

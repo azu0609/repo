@@ -91,8 +91,7 @@
                             "https://api.github.com/repos/app_repository_owner2/repositry_name2/releases",
                             "https://api.github.com/repos/app_repository_owner3/repositry_name3/releases"]
     ```
-    NOTE: You also need to place source same index.  
-    For more infomation about altstore json manifest, see [Sidestore wiki](https://wiki.sidestore.io/references/sources.html).
+    For more infomation about altstore json manifest, see [Make a Source](https://faq.altstore.io/sources/make-a-source).
 
 
 3. Check if working correctly by running script:  
