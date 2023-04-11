@@ -7,11 +7,18 @@
       "bundleIdentifier": "com.hammerandchisel.discord",
       "developerName": "acquitelol",
       "subtitle": "Enmity, but with custom icons",
-      "version": "174",
-      "versionDate": "2023-04-04",
+      "version": "175",
+      "versionDate": "2023-04-10",
       "versionDescription": "",
-      "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_174/Rosiecord-174_GGSans-Font+Plumpy_Icons.ipa",
+      "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_175/Rosiecord-175_GGSans-Font+Plumpy_Icons.ipa",
       "versions": [
+        {
+          "version": "175",
+          "date": "2023-04-10",
+          "localizedDescription": "",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_175/Rosiecord-175_GGSans-Font+Plumpy_Icons.ipa",
+          "size": 90935659
+        },
         {
           "version": "174",
           "date": "2023-04-04",
@@ -573,20 +580,20 @@
       "versionDescription": "- Classic MDC overwrite is in the app, that means you can overwrite files in /System (hold a file to see a Replace action)\r\n- Respring action added.",
       "downloadURL": "https://github.com/haxi0/SantanderEscaped/releases/download/0.4/SantanderEscaped-0.4.ipa",
       "versions": [
-          {
-              "version": "0.4",
-              "date": "2023-02-10",
-              "localizedDescription": "- Classic MDC overwrite is in the app, that means you can overwrite files in /System (hold a file to see a Replace action)\r\n- Respring action added.",
-              "downloadURL": "https://github.com/haxi0/SantanderEscaped/releases/download/0.4/SantanderEscaped-0.4.ipa",
-              "size": 4793633
-          },
-          {
-              "version": "0.3",
-              "date": "2023-01-28",
-              "localizedDescription": "- The release",
-              "downloadURL": "https://github.com/haxi0/SantanderEscaped/releases/download/0.3/SantanderEscaped-0.3.ipa",
-              "size": 4789631
-          }
+        {
+          "version": "0.4",
+          "date": "2023-02-10",
+          "localizedDescription": "- Classic MDC overwrite is in the app, that means you can overwrite files in /System (hold a file to see a Replace action)\r\n- Respring action added.",
+          "downloadURL": "https://github.com/haxi0/SantanderEscaped/releases/download/0.4/SantanderEscaped-0.4.ipa",
+          "size": 4793633
+        },
+        {
+          "version": "0.3",
+          "date": "2023-01-28",
+          "localizedDescription": "- The release",
+          "downloadURL": "https://github.com/haxi0/SantanderEscaped/releases/download/0.3/SantanderEscaped-0.3.ipa",
+          "size": 4789631
+        }
       ],
       "localizedDescription": "A new, enhanced File Manager for iOS devices with the tccd exploit for full file access.",
       "iconURL": "https://raw.githubusercontent.com/haxi0/SantanderEscaped/main/Santander/Assets.xcassets/AppIcon.appiconset/256.png",

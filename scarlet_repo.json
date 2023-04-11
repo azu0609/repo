@@ -6,9 +6,9 @@
   "Tweaked": [
     {
       "name": "Rosiecord",
-      "version": "174",
+      "version": "175",
       "icon": "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Icons/EnmityIcon60x60%402x.png",
-      "down": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_174/Rosiecord-174_GGSans-Font+Plumpy_Icons.ipa",
+      "down": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_175/Rosiecord-175_GGSans-Font+Plumpy_Icons.ipa",
       "dev": "acquitelol",
       "category": "Tweaked Apps",
       "description": "Enmity, but with custom icons",
@@ -149,7 +149,7 @@
       ],
       "contact": {
         "web": "https://haxi0-dev.com/",
-        "twitter":"https://twitter.com/haxi0sm"
+        "twitter": "https://twitter.com/haxi0sm"
       }
     }
   ]
