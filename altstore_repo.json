@@ -119,11 +119,18 @@
       "bundleIdentifier": "com.hammerandchisel.discord",
       "developerName": "Enmity Team",
       "subtitle": "The power of addons, all in your hand.",
-      "version": "2.1.4",
-      "versionDate": "2023-02-10",
-      "versionDescription": "Update Discord to v164.0",
-      "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.1.4/Enmity.ipa",
+      "version": "v2.2.2",
+      "versionDate": "2023-04-12",
+      "versionDescription": "",
+      "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.2/Enmity.deb",
       "versions": [
+        {
+          "version": "v2.2.2",
+          "date": "2023-04-12",
+          "localizedDescription": "",
+          "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.2/Enmity.deb",
+          "size": 77378
+        },
         {
           "version": "2.1.4",
           "date": "2023-02-10",

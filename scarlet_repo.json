@@ -21,8 +21,8 @@
     },
     {
       "name": "Enmity",
-      "version": "2.1.4",
-      "down": "https://github.com/enmity-mod/tweak/releases/download/v2.1.4/Enmity.ipa",
+      "version": "v2.2.2",
+      "down": "https://github.com/enmity-mod/tweak/releases/download/v2.2.2/Enmity.deb",
       "dev": "Enmity Team",
       "icon": "https://files.enmity.app/icon-altstore.png",
       "category": "Tweaked Apps",
