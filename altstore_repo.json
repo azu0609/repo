@@ -122,14 +122,14 @@
       "version": "v2.2.4",
       "versionDate": "2023-04-14",
       "versionDescription": "",
-      "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.4/Enmity.deb",
+      "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.4/Enmity.ipa",
       "versions": [
         {
           "version": "v2.2.4",
           "date": "2023-04-14",
           "localizedDescription": "",
-          "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.4/Enmity.deb",
-          "size": 78152
+          "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.4/Enmity.ipa",
+          "size": 87875765
         },
         {
           "version": "v2.2.2",
