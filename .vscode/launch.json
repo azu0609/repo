@@ -115,7 +115,7 @@
             ]
         },
         {
-            "name": "Python: Repo - Test - Scarlet",
+            "name": "Python: Repo - Test - Scarlet - Enmity",
             "type": "python",
             "request": "launch",
             "program": "${file}",
@@ -125,10 +125,11 @@
             "args": [
                 "--test",
                 "scarlet",
-                "0",
+                "Enmity",
+                "1",
                 "Tweaked",
-                "2.1.3",
-                "https://github.com/enmity-mod/tweak/releases"
+                "2.1.4",
+                "https://github.com/enmity-mod/tweak/releases/download/v2.1.4/Enmity.ipa"
             ]
         }
     ]

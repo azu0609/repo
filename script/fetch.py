@@ -112,12 +112,15 @@ class Fetch:
                                         if released_date is None: released_date = ''.join(asset["created_at"].split('T')[:-1])
                                         if size is None: size = asset["size"]
                                         if download_url is None: download_url = asset["browser_download_url"].replace("%2B", "+")
-                                else:
+                                        break
+                                elif asset["name"] == current_filename.group():
                                         if version is None: version = release["name"].strip(app_name).strip("v").strip()
                                         if changelog is None: changelog = release["body"].replace('"', "'")
                                         if released_date is None: released_date = ''.join(asset["created_at"].split('T')[:-1])
                                         if size is None: size = asset["size"]
                                         if download_url is None: download_url = asset["browser_download_url"].replace("%2B", "+")
+                                        break
+                                
         self.logger(1, f"index: {index}, current: {current_ver}, new: {version}")
         if self.compare_versions(current_ver, version):
             self.logger(0, f"New version available: {version}, verifing compatibility...")
