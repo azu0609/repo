@@ -632,7 +632,30 @@
       ],
       "size": 4793633,
       "beta": true
-    }
+    },
+    {
+      "name": "AppCommander",
+      "bundleIdentifier": "ca.bomberfish.AppCommander.Dev",
+      "developerName": "BomberFish",
+      "subtitle": "A swiss army knife for your iPhone apps.\nMay not work on all devices.",
+      "version": "v0.1 Beta 3",
+      "versionDate": "2023-04-13",
+      "versionDescription": "**Changelog:**\r\n\r\n- French, German, Chinese and Vietnamese translations!\r\n- Improvements to AbsoluteSolver\r\n- Hopefully fix the unsandboxing error. Also added a reboot device button to error dialog just in case things go south.\r\n- Fix an error where getting the container directory of an app results in an error.",
+      "downloadURL": "https://github.com/BomberFish/AppCommander/releases/download/v0.1-beta.3/AppCommander.0.1.Beta.3.ipa",
+      "versions": [
+          {
+              "version": "v0.1 Beta 3",
+              "date": "2023-04-13",
+              "localizedDescription": "**Changelog:**\r\n\r\n- French, German, Chinese and Vietnamese translations!\r\n- Improvements to AbsoluteSolver\r\n- Hopefully fix the unsandboxing error. Also added a reboot device button to error dialog just in case things go south.\r\n- Fix an error where getting the container directory of an app results in an error.",
+              "downloadURL": "https://github.com/BomberFish/AppCommander/releases/download/v0.1-beta.3/AppCommander.0.1.Beta.3.ipa",
+              "size": 5435252
+          }
+      ],
+      "localizedDescription": "A swiss army knife for your iPhone apps. iOS 15.5-16.2.",
+      "iconURL": "https://raw.githubusercontent.com/BomberFish/AppCommander/main/AppCommander/Assets.xcassets/AppIcon.appiconset/app%20commander%20v2.png",
+      "size": 5435252,
+      "beta": true
+  }
   ],
   "userInfo": {}
 }
