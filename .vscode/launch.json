@@ -23,6 +23,24 @@
             ]
         },
         {
+            "name": "Python: Repo - Test - Altstore - uYou+",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "/home/azuki/Documents/repo/script/",
+            "args": [
+                "--test",
+                "altstore",
+                "uYou+",
+                "2",
+                "apps",
+                "18.08.1-2.3.1",
+                "https://github.com/qnblackcat/uYouPlus/releases/download/v18.08.1-2.3.1/uYouPlus_18.08.1_2.3.1.ipa"
+            ]
+        },
+        {
             "name": "Python: Repo - Test - Altstore - Anime Now!",
             "type": "python",
             "request": "launch",

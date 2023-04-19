@@ -106,7 +106,7 @@ class Fetch:
                                 except AttributeError:
                                     pass
                                 if asset_name_match and current_name_match:
-                                    if asset_name_no_version is not None and current_name_no_version is not None and asset_name_no_version == current_name_no_version:
+                                    if asset_name_no_version is not None and current_name_no_version is not None and asset_name_no_version == current_name_no_version or index == 2:
                                         if version is None: version = release["name"].strip(app_name).strip("v").strip()
                                         if changelog is None: changelog = release["body"].replace('"', "'")
                                         if released_date is None: released_date = ''.join(asset["created_at"].split('T')[:-1])
