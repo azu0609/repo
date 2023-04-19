@@ -105,15 +105,8 @@ class Fetch:
                                     current_name_no_version = current_name_match.group(1) + "-" + current_name_match.group(2) + "." + current_name_match.group(3)
                                 except AttributeError:
                                     pass
-                                if asset_name_match and current_name_match:
-                                    if asset_name_no_version is not None and current_name_no_version is not None and asset_name_no_version == current_name_no_version or index == 2:
-                                        if version is None: version = release["name"].strip(app_name).strip("v").strip()
-                                        if changelog is None: changelog = release["body"].replace('"', "'")
-                                        if released_date is None: released_date = ''.join(asset["created_at"].split('T')[:-1])
-                                        if size is None: size = asset["size"]
-                                        if download_url is None: download_url = asset["browser_download_url"].replace("%2B", "+")
-                                        break
-                                elif asset["name"] == current_filename.group():
+                                if asset_name_match and current_name_match or asset["name"] == current_filename.group():
+                                    if asset_name_no_version is not None and current_name_no_version is not None and asset_name_no_version == current_name_no_version or index == 2 or asset["name"] == current_filename.group():
                                         if version is None: version = release["name"].strip(app_name).strip("v").strip()
                                         if changelog is None: changelog = release["body"].replace('"', "'")
                                         if released_date is None: released_date = ''.join(asset["created_at"].split('T')[:-1])
