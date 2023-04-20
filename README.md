@@ -6,6 +6,8 @@
     <a href="#"><img src="https://img.shields.io/badge/actions-actions.svg?label=Github&logo=github&style=for-the-badge&color=70a5eb" /></a>
 </div>
 
+> **Warning**
+> If scarlet is keep crashing after adding this repo, please submit a issue!
 
 ## Included IPA:
 
