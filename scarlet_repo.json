@@ -54,9 +54,7 @@
     {
       "name": "uYou",
       "version": "3.0",
-      "down": [
-        "https://miro92.com/repo/depictions/com.miro.uyou/iPA/YouTube_18.14.1_uYou_3.0.ipa"
-      ],
+      "down": "https://miro92.com/repo/depictions/com.miro.uyou/iPA/YouTube_18.14.1_uYou_3.0.ipa",
       "dev": "MIRO92",
       "category": "Tweaked Apps",
       "description": "The best tweak for the YouTube app",
