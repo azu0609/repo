@@ -16,15 +16,16 @@
 
 | Type | Application | Bundle | Base | Version | Author | Working? | Availability |
 |:----:|:----------:|:------:|:------------:|:-------:|:------:|:------:|:------:|
-| Tweaked app | [uYou](https://github.com/MiRO92/uYou-for-YouTube) | com.google.ios.youtube | 16.42.3 | 2.1 | [MIRO92](https://github.com/MiRO92) | Semi(A/S) | A/S |
-| Tweaked app | [uYou+](https://github.com/qnblackcat/uYouPlus) | com.google.ios.youtube | 18.08.1 | 2.3.1 | [qnblackcat](https://github.com/qnblackcat) | Yes(any) | A/S |
+| Tweaked app | [uYou](https://github.com/MiRO92/uYou-for-YouTube) | com.google.ios.youtube | 18.14.1 | 3.0 | [MIRO92](https://github.com/MiRO92) | Semi(A/S) | A/S |
+| Tweaked app | [uYou+](https://github.com/qnblackcat/uYouPlus) | com.google.ios.youtube | 18.15.1-3.0 | 3.0 | [qnblackcat](https://github.com/qnblackcat) | Yes(any) | A/S |
 | Tweaked app | [Enmity](https://enmity.app) | com.hammerandchisel.discord | 158.0 | v2.2.5 | [enmity-mod](https://github.com/enmity-mod) | Yes(any) | A/S |
-| Tweaked app | [Rosiecord (Plumpy - GGSans)](https://github.com/acquitelol/rosiecord) | com.hammerandchisel.discord | v2.2.5 | 176 | [acquitelol](https://github.com/acquitelol) | Semi(S) | A/S |
-| Sideloaded | [Anime Now!](https://github.com/AnimeNow-Team/AnimeNow) | com.errorerrorerror.animenow | any | 2.1 | [errorerrorerror](https://github.com/errorerrorerror) | Yes(any) | A/S |
-| Macdirtycow | [Cowabunga](https://github.com/leminlimez/Cowabunga) | com.leemin.Cowabunga | any | 10.1.1 | [leminlimez](https://github.com/leminlimez) | Yes(any) | A/S |
-| Macdirtycow | [KillMyOTA](https://github.com/haxi0/KillMyOTA) | org.haxi0.KillMyOTA | any | 1.1 | [haxi0](https://github.com/haxi0) | Yes(any) | A/S |
-| Macdirtycow | [ControlConfig](https://github.com/BomberFish/ControlConfig) | com.f1shy-dev.ControlConfig | any | 0.1.0-alpha | [BomberFish](https://github.com/BomberFish) | Yes(any) | A/S |
-| Macdirtycow | [SantanderEscaped](https://github.com/haxi0/SantanderEscaped) | org.haxi0.santander | any | 0.4 | [SerenaKit](https://github.com/SerenaKit/Santander) / [haxi0](https://github.com/haxi0) | Yes(any) | A/S |
+| Tweaked app | [Rosiecord (Plumpy - GGSans)](https://github.com/acquitelol/rosiecord) | com.hammerandchisel.discord | v2.1.4 | 176 | [acquitelol](https://github.com/acquitelol) | Semi(S) | A/S |
+| Sideloaded | [Anime Now!](https://github.com/AnimeNow-Team/AnimeNow) | com.errorerrorerror.animenow | any | 3.0 | [errorerrorerror](https://github.com/errorerrorerror) | Yes(any) | A/S |
+| MacDirtycow | [Cowabunga](https://github.com/leminlimez/Cowabunga) | com.leemin.Cowabunga | any | 10.1.1 | [leminlimez](https://github.com/leminlimez) | Yes(any) | A/S |
+| MacDirtycow | [KillMyOTA](https://github.com/haxi0/KillMyOTA) | org.haxi0.KillMyOTA | any | 1.1 | [haxi0](https://github.com/haxi0) | Yes(any) | A/S |
+| MacDirtyCow | [ControlConfig](https://github.com/BomberFish/ControlConfig) | com.f1shy-dev.ControlConfig | any | 0.1.0-alpha | [BomberFish](https://github.com/BomberFish) | Yes(any) | A/S |
+| MacDirtycow | [SantanderEscaped](https://github.com/haxi0/SantanderEscaped) | org.haxi0.santander | any | 0.4 | [SerenaKit](https://github.com/SerenaKit/Santander) / [haxi0](https://github.com/haxi0) | Yes(any) | A/S |
+| MacDirtyCow | [AppCommander](https://github.com/BomberFish/AppCommander) | ca.bomberfish.AppCommander.Dev | any | v0.1 Beta 3 | [BomberFish](https://github.com/BomberFish) | Yes(any) | A/S |
 
 ## Add apps to repo
 1. Add json data to apps like:  

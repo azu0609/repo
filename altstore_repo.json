@@ -209,15 +209,28 @@
       "bundleIdentifier": "com.google.ios.youtube",
       "developerName": "MIRO92",
       "subtitle": "The best tweak for the YouTube app",
-      "version": "2.1",
-      "versionDate": "2021-10-28",
-      "versionDescription": "Unknown - Due to custom server",
-      "downloadURL": "https://miro92.com/repo/depictions/com.miro.uyou/iPA/YouTube_16.42.3_uYou_2.1.ipa",
+      "version": "3.0",
+      "versionDate": "2023-04-16",
+      "versionDescription": "Added:\nSupport for rootless jailbreak\nDefault playback speed.\nRemoved ads from search results.\nAuto fullscreen in YT player.\nHide upgrade dialog.\nDisabled captions in the muted player.\nDownload original thumbnails.\nAbility to hide uYou button in Shorts.\nAbility to hide title and channel name in Shorts.\nAbility to hide channel avatar in Shorts.\nAbility to hide like button in Shorts.\nAbility to hide dislike button in Shorts.\nAbility to hide comment button in Shorts.\nAbility to hide remix button in Shorts.\nAbility to hide share button in Shorts.\nAbility to fullscreen in Shorts.\nReserved speed rate when changing it until closing YouTube.\nFixes:\nRewrote downloading class for faster downloads.\nFixed downloading errors in sideloaded versions.\nFixed login issues for sideloaded version.\nFixed cast button not hiding.\nFixed uYou's tab bar button.\nFixed all uYou's player bugs.\nFixed sorting downloaded media.\nFixed uYou player UI in RTL languages.\nFixed downloading Shorts.\nRemoved playlist download.\nRemoved uPIP.",
+      "downloadURL": [
+        "https://miro92.com/repo/depictions/com.miro.uyou/iPA/YouTube_18.14.1_uYou_3.0.ipa"
+      ],
       "localizedDescription": "The best tweak for the YouTube app",
       "iconURL": "https://raw.githubusercontent.com/qnblackcat/My-AltStore-repo/main/ScreenShot/icon_clipped.png",
       "tintColor": "e85567",
       "size": 110100480,
-      "beta": false
+      "beta": false,
+      "versions": [
+        {
+          "version": "3.0",
+          "date": "2023-04-16",
+          "localizedDescription": "Added:\nSupport for rootless jailbreak\nDefault playback speed.\nRemoved ads from search results.\nAuto fullscreen in YT player.\nHide upgrade dialog.\nDisabled captions in the muted player.\nDownload original thumbnails.\nAbility to hide uYou button in Shorts.\nAbility to hide title and channel name in Shorts.\nAbility to hide channel avatar in Shorts.\nAbility to hide like button in Shorts.\nAbility to hide dislike button in Shorts.\nAbility to hide comment button in Shorts.\nAbility to hide remix button in Shorts.\nAbility to hide share button in Shorts.\nAbility to fullscreen in Shorts.\nReserved speed rate when changing it until closing YouTube.\nFixes:\nRewrote downloading class for faster downloads.\nFixed downloading errors in sideloaded versions.\nFixed login issues for sideloaded version.\nFixed cast button not hiding.\nFixed uYou's tab bar button.\nFixed all uYou's player bugs.\nFixed sorting downloaded media.\nFixed uYou player UI in RTL languages.\nFixed downloading Shorts.\nRemoved playlist download.\nRemoved uPIP.",
+          "downloadURL": [
+            "https://miro92.com/repo/depictions/com.miro.uyou/iPA/YouTube_18.14.1_uYou_3.0.ipa"
+          ],
+          "size": 126877696
+        }
+      ]
     },
     {
       "name": "Anime Now!",

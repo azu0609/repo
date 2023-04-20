@@ -76,12 +76,12 @@ class Fetch:
         current_name_no_version = None
         asset_name_no_version = None
         if index == 3 and app_type == "Tweaked" and repo == "scarlet" or index == 3 and repo == "altstore":
-            version = "2.1"
-            released_date = "2021-10-28"
-            changelog = "Unknown"
-            size = 110100480
-            download_url = "https://miro92.com/repo/depictions/com.miro.uyou/iPA/YouTube_16.42.3_uYou_2.1.ipa",
-            self.logger(2, f"uYou detected in following index: {index}! using 2.1 instead of latest.")
+            version = "3.0"
+            released_date = "2023-04-16"
+            changelog = "Added:\nSupport for rootless jailbreak\nDefault playback speed.\nRemoved ads from search results.\nAuto fullscreen in YT player.\nHide upgrade dialog.\nDisabled captions in the muted player.\nDownload original thumbnails.\nAbility to hide uYou button in Shorts.\nAbility to hide title and channel name in Shorts.\nAbility to hide channel avatar in Shorts.\nAbility to hide like button in Shorts.\nAbility to hide dislike button in Shorts.\nAbility to hide comment button in Shorts.\nAbility to hide remix button in Shorts.\nAbility to hide share button in Shorts.\nAbility to fullscreen in Shorts.\nReserved speed rate when changing it until closing YouTube.\nFixes:\nRewrote downloading class for faster downloads.\nFixed downloading errors in sideloaded versions.\nFixed login issues for sideloaded version.\nFixed cast button not hiding.\nFixed uYou's tab bar button.\nFixed all uYou's player bugs.\nFixed sorting downloaded media.\nFixed uYou player UI in RTL languages.\nFixed downloading Shorts.\nRemoved playlist download.\nRemoved uPIP."
+            size = 126877696
+            download_url = "https://miro92.com/repo/depictions/com.miro.uyou/iPA/YouTube_18.14.1_uYou_3.0.ipa",
+            self.logger(2, f"uYou detected in following index: {index}! using 3.0 instead of latest as doesn't have any release system.")
         else:
             for i, releases in enumerate(self.release_source):
                 if releases.replace("api.", "").replace("repos/", "") in current_download_url:
