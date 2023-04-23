@@ -7,7 +7,7 @@
 </div>
 
 > **Warning**
-> If scarlet is keep crashing after adding this repo, please submit a issue!
+> If scarlet is keep crashing after adding this repo, please submit a issue! there is an scarlet-side bug but it caused by bad repo.
 
 ## Included IPA:
 
@@ -100,4 +100,4 @@
 
 3. Check if working correctly by running script:  
 `python3 fetch.py --production`  
-Script should show current version, latest version and current json index, then try to update if working correctly.
+Script should show current version, latest version and current json index then try to update if working correctly.
