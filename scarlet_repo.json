@@ -14,6 +14,7 @@
       "description": "Enmity, but with custom icons",
       "bundleID": "com.hammerandchisel.discord",
       "appstore": "com.hammerandchisel.discord",
+      "enableBackup": true,
       "screenshots": [
         "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Rosiecord_Mocks/Plumpy.png",
         "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Rosiecord_Mocks/Plumpy_Flowercord.png"
@@ -29,6 +30,7 @@
       "description": "The power of addons, all in your hand.",
       "bundleID": "com.hammerandchisel.discord",
       "appstore": "com.hammerandchisel.discord",
+      "enableBackup": true,
       "contact": {
         "web": "https://enmity.app",
         "twitter": "https://twitter.com/enmityapp"
@@ -46,6 +48,7 @@
       "screenshots": [
         "https://user-images.githubusercontent.com/52943116/189822859-8a0952db-9264-4b5b-9cbe-d0a87b2db5a0.PNG"
       ],
+      "enableBackup": true,
       "contact": {
         "web": "https://github.com/qnblackcat",
         "twitter": "https://twitter.com/t70438299"
@@ -60,6 +63,7 @@
       "description": "The best tweak for the YouTube app",
       "bundleID": "com.google.ios.youtube",
       "appstore": "com.google.ios.youtube",
+      "enableBackup": true,
       "contact": {
         "web": "https://miro92.com",
         "twitter": "https://twitter.com/MiRO92"
@@ -96,6 +100,7 @@
       "category": "Macdirtycow",
       "description": "IOS 14.0-15.7.1 & 16.0-16.1.2 MacDirtyCow ToolBox",
       "bundleID": "com.leemin.Cowabunga",
+      "enableBackup": true,
       "screenshots": [
         "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Home.PNG",
         "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Tools.PNG",
@@ -130,6 +135,7 @@
       "category": "Macdirtycow",
       "description": "Tool to change functionality of Control Center tiles. WIP.",
       "bundleID": "com.f1shy-dev.ControlConfig",
+      "enableBackup": true,
       "contact": {
         "web": "https://bomberfish.ca/",
         "fosstodon": "https://fosstodon.org/@BomberFish"
