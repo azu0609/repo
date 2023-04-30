@@ -67,7 +67,7 @@ class Fetch:
         return False
 
 
-    def fetch(self, repo: str, app_name: str, index: int, app_type: str, current_ver, current_download_url: str):
+    def fetch(self, repo: str, app_name: str, index: int, app_type: str, current_ver, current_download_url: str, current_size=None):
         version = None
         changelog = None
         released_date = None
@@ -116,16 +116,15 @@ class Fetch:
                                         break
                                 
         self.logger(1, f"index: {index}, current: {current_ver}, new: {version}")
-        if self.compare_versions(current_ver, version):
+        if self.compare_versions(current_ver, version) or repo == "altstore" and size != current_size:
             self.logger(0, f"New version available: {version}, verifing compatibility...")
             for blocked in self.blacklist_release:
                 if blocked["name"] == app_name and blocked["version"] == version and blocked["state"] == "valid":
                     self.logger(2, f"NG: {app_name}+{version} - In blacklist")
-                    break
                 else:
                     self.logger(0, f"OK - Parsing to rw")
                     self.rw(repo, "../altstore_repo.json" if repo == "altstore" else "../scarlet_repo.json", current_ver, version, download_url, int(index), app_type, changelog, released_date, size)
-                    break
+                break
         else:
             self.logger(0, "Up to date. Nothing to do.")
 
@@ -144,6 +143,7 @@ class Fetch:
                     self.json_data[app_type][index]["downloadURL"] = download_url
                     self.json_data[app_type][index]["versionDescription"] = version_description
                     self.json_data[app_type][index]["versionDate"] = release_date
+                    self.json_data[app_type][index]["size"] = size
                     try:
                         self.json_data[app_type][index]["versions"].insert(0, {"version": version,
                                                                         "date": release_date,
@@ -185,7 +185,7 @@ class Fetch:
                 for i, key in enumerate(json_data[item]):
                     try:
                         if path == "../altstore_repo.json":
-                            self.fetch("altstore", key["name"], i, item, key["version"], key["downloadURL"])
+                            self.fetch("altstore", key["name"], i, item, key["version"], key["downloadURL"], key["size"])
                         elif path == "../scarlet_repo.json":
                             self.fetch("scarlet", key["name"], i, item, key["version"], key["down"])
                         elif path == "../README.md":
