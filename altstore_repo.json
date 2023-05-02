@@ -27,46 +27,46 @@
           "size": 93314416
         },
         {
-          "version": "177",
-          "date": "2023-04-23",
+          "version": "176",
+          "date": "2023-04-22",
           "localizedDescription": "",
           "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_177/Rosiecord-177_GGSans-Font+Plumpy_Icons.ipa",
           "size": 97415240
         },
         {
-          "version": "176",
-          "date": "2023-04-19",
-          "localizedDescription": "## Commits\n- 587b97a: [176] How about not use an older Azule version (Acquite)",
-          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_176/Rosiecord-176_GGSans-Font+Plumpy_Icons.ipa",
-          "size": 96262329
-        },
-        {
           "version": "175",
-          "date": "2023-04-10",
+          "date": "2023-04-16",
           "localizedDescription": "",
           "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_175/Rosiecord-175_GGSans-Font+Plumpy_Icons.ipa",
           "size": 90935659
         },
         {
           "version": "174",
-          "date": "2023-04-04",
+          "date": "2023-04-09",
           "localizedDescription": "",
           "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_174/Rosiecord-174_GGSans-Font+Plumpy_Icons.ipa",
           "size": 89726854
         },
         {
           "version": "173",
-          "date": "2023-03-27",
+          "date": "2023-04-01",
           "localizedDescription": "",
           "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_173/Rosiecord-173_GGSans-Font+Plumpy_Icons.ipa",
           "size": 89297627
         },
         {
+          "version": "172",
+          "date": "2023-03-23",
+          "localizedDescription": "", 
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_172/Rosiecord-172_GGSans-Font+Plumpy_Icons.ipa",
+          "size": 86040981
+        },
+        {
           "version": "171",
-          "date": "2023-03-14",
+          "date": "2023-03-18",
           "localizedDescription": "## Commits\r\n- 3b26c42: [171] New build of 171 ft k2genmity fix (Acquite)",
           "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_171/Rosiecord-171_GGSans-Font+Plumpy_Icons.ipa",
-          "size": 80756935
+          "size": 86469802
         },
         {
           "version": "170",
