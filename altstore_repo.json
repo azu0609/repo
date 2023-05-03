@@ -7,11 +7,18 @@
       "bundleIdentifier": "com.hammerandchisel.discord",
       "developerName": "acquitelol",
       "subtitle": "Enmity, but with custom icons",
-      "version": "177",
-      "versionDate": "2023-04-28",
-      "versionDescription": "",
-      "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_177/Rosiecord-177_GGSans-Font+Plumpy_Icons.ipa",
+      "version": "178",
+      "versionDate": "2023-05-02",
+      "versionDescription": "## Commits\n- 0e54fbe: [178] Properly chdir into the right dir (Acquite)",
+      "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_178/Rosiecord-178_GGSans-Font+Plumpy_Icons.ipa",
       "versions": [
+        {
+          "version": "178",
+          "date": "2023-05-02",
+          "localizedDescription": "## Commits\n- 0e54fbe: [178] Properly chdir into the right dir (Acquite)",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_178/Rosiecord-178_GGSans-Font+Plumpy_Icons.ipa",
+          "size": 93807392
+        },
         {
           "version": "177",
           "date": "2023-04-28",
@@ -57,7 +64,7 @@
         {
           "version": "172",
           "date": "2023-03-23",
-          "localizedDescription": "", 
+          "localizedDescription": "",
           "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_172/Rosiecord-172_GGSans-Font+Plumpy_Icons.ipa",
           "size": 86040981
         },
@@ -139,7 +146,7 @@
         "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Rosiecord_Mocks/Plumpy.png",
         "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Rosiecord_Mocks/Plumpy_Flowercord.png"
       ],
-      "size": 93268263,
+      "size": 93807392,
       "beta": false
     },
     {
