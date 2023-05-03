@@ -27,39 +27,32 @@
           "size": 93268263
         },
         {
-          "version": "17743158",
-          "date": "2023-04-26",
-          "localizedDescription": "",
-          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_17743158/Rosiecord-177_GGSans-Font+Plumpy_Icons.ipa",
-          "size": 93314416
-        },
-        {
           "version": "176",
           "date": "2023-04-22",
           "localizedDescription": "",
           "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_177/Rosiecord-177_GGSans-Font+Plumpy_Icons.ipa",
-          "size": 97415240
+          "size": 97280082
         },
         {
           "version": "175",
           "date": "2023-04-16",
           "localizedDescription": "",
           "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_175/Rosiecord-175_GGSans-Font+Plumpy_Icons.ipa",
-          "size": 90935659
+          "size": 91208370
         },
         {
           "version": "174",
           "date": "2023-04-09",
           "localizedDescription": "",
           "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_174/Rosiecord-174_GGSans-Font+Plumpy_Icons.ipa",
-          "size": 89726854
+          "size": 90900210
         },
         {
           "version": "173",
           "date": "2023-04-01",
           "localizedDescription": "",
           "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_173/Rosiecord-173_GGSans-Font+Plumpy_Icons.ipa",
-          "size": 89297627
+          "size": 89666267
         },
         {
           "version": "172",
@@ -167,13 +160,6 @@
           "size": 92936188
         },
         {
-          "version": "v2.2.5",
-          "date": "2023-04-16",
-          "localizedDescription": "",
-          "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.5/Enmity.ipa",
-          "size": 87875692
-        },
-        {
           "version": "v2.2.4",
           "date": "2023-04-14",
           "localizedDescription": "",
@@ -238,12 +224,6 @@
           "size": 123882320
         },
         {
-          "version": "18.14.1-3.0",
-          "date": "2023-04-27",
-          "localizedDescription": "## Notes:\r\n- YouTube really messed up with OLED dark mode in v18.15.1+. We should stay on the lower version for now.\r\n- For those who're using the pre-release version (v18.15.1-3.0): I strongly recommend you downgrade from v18.15.1-3.0 to v18.14.1-3.0 (this version).\r\n- Guess my journey with uYouPlus will end here. The app will be updated by other developers. **_This is probably the last time I - qnblackcat, update uYouPlus_**. Enjoys!\r\n\r\n## Changelog:\r\n- YouTube v18.14.1.\r\n- uYou v3.0: this is a huge update of uYou, the changelog can be found [**here**](https://www.reddit.com/r/jailbreak/comments/12omp7v/update_uyou_v30_the_best_tweak_for_the_youtube_app/) _(should fixed some existing issues of uYou)_\r\n- uYouPlus:\r\n  - Removed some tweaks/patches as they have been implemented in uYou 3.0 _(YTAutoFullScreen, YTShortsProgressBar, hide Shorts buttons, keychain patching, etc...)_\r\n  - Added [YTStockVolumeHUD](https://github.com/lilacvibes/YTStockVolumeHUD): replaces YouTube's volume HUD with the stock volume HUD (Video Player Options).\r\n  - Added an option to disable Double tap to seek (Video Player Options).\r\n  - Fixed Red Progress bar not working by @dayanch96 (#1082).\r\n\r\n## Note:\r\n- If you like the app, consider [support the developers!](https://github.com/qnblackcat/uYouPlus#support-the-developers) \r\n- YTUHD is not stable atm. You might encounter stuttering, heat, battery drain..., especially when playing at 2160p (4K) quality. However, this should not happen if you use TrollStore.\r\n- Unless you're using TrollStore, deep-link (aka Open in the YouTube App) simply will not work. Fortunately, there are several workarounds [here](https://github.com/qnblackcat/uYouPlus/wiki/FAQ#q-deep-link-aka-open-in-the-youtube-app-doesnt-work).\r\n\r\n## Support the developers:\r\n- [**MiRO92**](https://twitter.com/miro92): https://github.com/MiRO92/uYou-for-YouTube#support\r\n- [**PoomSmart**](https://twitter.com/poomsmart): https://poomsmart.github.io\r\n- [**level3tjg**](https://twitter.com/level3tjg): https://ko-fi.com/level3tjg\r\n- [**BandarHL**](https://twitter.com/bandarhl): https://www.paypal.com/paypalme/BandarHL\r\n- [**julioverne**](https://twitter.com/ijulioverne): https://www.patreon.com/julioverne\r\n- [**Galactic-dev**](https://twitter.com/dev_galactic):   \r\n  - Paypal: https://www.paypal.com/paypalme/DBrett684 \r\n  - Venmo: https://venmo.com/u/DavidBrett\r\n\r\n## Version info:\r\n<details>\r\n  <summary>Expand:</summary>\r\n\r\n| **Tweaks/App** | **Developer** | **Version** | **Open source** |\r\n| - | - | :-: | :-:  |\r\n| **YouTube** | Google Inc | 18.14.1 | \u2716\ufe0e |\r\n| [uYou](https://github.com/MiRO92/uYou-for-YouTube) | [MiRO92](https://twitter.com/miro92) | 3.0 | \u2716\ufe0e |\r\n| **Open in YouTube** | [CokePokes](https://github.com/CokePokes) | 1.2 | [\u2714\ufe0e](https://github.com/CokePokes/YoutubeExtensions) |\r\n| **iSponsorBlock** | [Galactic-Dev](https://github.com/Galactic-Dev) | 1.0-15 | [\u2714\ufe0e](https://github.com/Galactic-Dev/iSponsorBlock) |\r\n| **BigYTMiniPlayer** | [Galactic-Dev](https://github.com/Galactic-Dev) | 1.0-1 | [\u2714\ufe0e](https://github.com/Galactic-Dev/BigYTMiniPlayer) |\r\n| **YTNoHoverCards** | [level3tjg](https://twitter.com/level3tjg) | 0.0.3 | [\u2714\ufe0e](https://github.com/level3tjg/YTNoHoverCards) |\r\n| **YTMiniplayerEnabler** | [level3tjg](https://twitter.com/level3tjg) | 0.0.2 | [\u2714\ufe0e](https://github.com/level3tjg/YTMiniplayerEnabler) |\r\n| **DontEatMyContent** | [therealFoxster](https://github.com/therealFoxster) | 1.0.6 | [\u2714\ufe0e](https://github.com/therealFoxster/DontEatMyContent) |\r\n| **YTSpeed** | [Lyvendia](https://github.com/Lyvendia) | 1.0.1 | [\u2714\ufe0e](https://github.com/Lyvendia/YTSpeed) |\r\n| **YTCastConfirm** | [JamieBerghmans](https://github.com/JamieBerghmans) | 1.0.0 | [\u2714\ufe0e](https://github.com/JamieBerghmans/YTCastConfirm) |\r\n| **Alderis Color Picker** | [HASHBANG Productions](https://github.com/hbang) | 1.2| [\u2714\ufe0e](https://github.com/hbang/Alderis) |\r\n| **YTUHD** | [PoomSmart](https://twitter.com/poomsmart) | 1.3.5-1 | [\u2714\ufe0e](https://github.com/PoomSmart/YTUHD) |\r\n| **YouPiP** | [PoomSmart](https://twitter.com/poomsmart) | 1.7.19-1 | [\u2714\ufe0e](https://github.com/PoomSmart/YouPiP) |\r\n| **IAmYouTube** | [PoomSmart](https://twitter.com/poomsmart) | 1.2.0 | [\u2714\ufe0e](https://github.com/PoomSmart/IAmYouTube) |\r\n| **YTABConfig** | [PoomSmart](https://twitter.com/poomsmart) | 1.5.0-1 | [\u2714\ufe0e](https://github.com/PoomSmart/YTABConfig) |\r\n| **YTReExplore** | [PoomSmart](https://twitter.com/poomsmart) | 1.0.2 | [\u2714\ufe0e](https://github.com/PoomSmart/YTReExplore) |\r\n| **NoYTPremium** | [PoomSmart](https://twitter.com/poomsmart) | 1.0.4 | [\u2714\ufe0e](https://github.com/PoomSmart/NoYTPremium) |\r\n| **YTNoPaidPromo** | [PoomSmart](https://twitter.com/poomsmart) | 1.0.0 | [\u2714\ufe0e](https://github.com/PoomSmart/YTNoPaidPromo) |\r\n| **YouRememberCaption** | [PoomSmart](https://twitter.com/poomsmart) | 1.0.0 | [\u2714\ufe0e](https://poomsmart.github.io/repo/depictions/youremembercaption.html) |\r\n| **Return YouTube Dislike** | [PoomSmart](https://twitter.com/poomsmart) | 1.11.3 | [\u2714\ufe0e](https://github.com/PoomSmart/Return-YouTube-Dislikes) |\r\n\r\n</details>\r\n\r\n## SHA256: \r\n- **SHA256**: f47caf1bbb36a8d3a5eff99c80631efe0b0534936cd797ca20ce13c9ef52f4e8",
-          "downloadURL": "https://github.com/qnblackcat/uYouPlus/releases/download/v18.14.1-3.0/uYouPlus_18.14.1_3.0.ipa"
-        },
-        {
           "version": "18.15.1-3.0",
           "date": "2023-04-17",
           "localizedDescription": "## Changelog:\r\n- YouTube v18.15.1.\r\n- uYou v3.0: this is a huge update of uYou, the changelog can be found [**here**](https://www.reddit.com/r/jailbreak/comments/12omp7v/update_uyou_v30_the_best_tweak_for_the_youtube_app/) _(should fixed #238, #552, #608, #809, #870, #960, #994, #1001, and maybe more?)_\r\n- uYouPlus:\r\n  - Removed some tweaks/patches as they have been implemented in uYou 3.0 _(YTAutoFullScreen, YTShortsProgressBar, hide Shorts buttons, keychain patching, etc...)_\r\n  - Fixed blocking ads not working in some cases (#996).\r\n  - Added [YTStockVolumeHUD](https://github.com/lilacvibes/YTStockVolumeHUD): replaces YouTube's volume HUD with the stock volume HUD (Video Player Options).\r\n  - Added an option to disable Double tap to seek (Video Player Options).\r\n \r\n## Known issue in this release:\r\n- Red progress bar in dark mode not working.\r\n- Oled dark mode not working.\r\n\r\n## Note:\r\n- If you like the app, consider [support the developers!](https://github.com/qnblackcat/uYouPlus#support-the-developers) \r\n- YTUHD is not stable atm. You might encounter stuttering, heat, battery drain..., especially when playing at 2160p (4K) quality. However, this should not happen if you use TrollStore.\r\n- Unless you're using TrollStore, deep-link (aka Open in the YouTube App) simply will not work. Fortunately, there are several workarounds [here](https://github.com/qnblackcat/uYouPlus/wiki/FAQ#q-deep-link-aka-open-in-the-youtube-app-doesnt-work).\r\n\r\n## Support the developers:\r\n- [**MiRO92**](https://twitter.com/miro92): https://github.com/MiRO92/uYou-for-YouTube#support\r\n- [**PoomSmart**](https://twitter.com/poomsmart): https://poomsmart.github.io\r\n- [**level3tjg**](https://twitter.com/level3tjg): https://ko-fi.com/level3tjg\r\n- [**BandarHL**](https://twitter.com/bandarhl): https://www.paypal.com/paypalme/BandarHL\r\n- [**julioverne**](https://twitter.com/ijulioverne): https://www.patreon.com/julioverne\r\n- [**Galactic-dev**](https://twitter.com/dev_galactic):   \r\n  - Paypal: https://www.paypal.com/paypalme/DBrett684 \r\n  - Venmo: https://venmo.com/u/DavidBrett\r\n\r\n## Version info:\r\n<details>\r\n  <summary>Expand:</summary>\r\n\r\n| **Tweaks/App** | **Developer** | **Version** | **Open source** |\r\n| - | - | :-: | :-:  |\r\n| **YouTube** | Google Inc | 18.15.1 | \u2716\ufe0e |\r\n| [uYou](https://github.com/MiRO92/uYou-for-YouTube) | [MiRO92](https://twitter.com/miro92) | 3.0 | \u2716\ufe0e |\r\n| **Open in YouTube** | [CokePokes](https://github.com/CokePokes) | 1.2 | [\u2714\ufe0e](https://github.com/CokePokes/YoutubeExtensions) |\r\n| **iSponsorBlock** | [Galactic-Dev](https://github.com/Galactic-Dev) | 1.0-15 | [\u2714\ufe0e](https://github.com/Galactic-Dev/iSponsorBlock) |\r\n| **BigYTMiniPlayer** | [Galactic-Dev](https://github.com/Galactic-Dev) | 1.0-1 | [\u2714\ufe0e](https://github.com/Galactic-Dev/BigYTMiniPlayer) |\r\n| **YTNoHoverCards** | [level3tjg](https://twitter.com/level3tjg) | 0.0.3 | [\u2714\ufe0e](https://github.com/level3tjg/YTNoHoverCards) |\r\n| **YTMiniplayerEnabler** | [level3tjg](https://twitter.com/level3tjg) | 0.0.2 | [\u2714\ufe0e](https://github.com/level3tjg/YTMiniplayerEnabler) |\r\n| **DontEatMyContent** | [therealFoxster](https://github.com/therealFoxster) | 1.0.6 | [\u2714\ufe0e](https://github.com/therealFoxster/DontEatMyContent) |\r\n| **YTSpeed** | [Lyvendia](https://github.com/Lyvendia) | 1.0.1 | [\u2714\ufe0e](https://github.com/Lyvendia/YTSpeed) |\r\n| **YTCastConfirm** | [JamieBerghmans](https://github.com/JamieBerghmans) | 1.0.0 | [\u2714\ufe0e](https://github.com/JamieBerghmans/YTCastConfirm) |\r\n| **Alderis Color Picker** | [HASHBANG Productions](https://github.com/hbang) | 1.2| [\u2714\ufe0e](https://github.com/hbang/Alderis) |\r\n| **YTUHD** | [PoomSmart](https://twitter.com/poomsmart) | 1.3.5-1 | [\u2714\ufe0e](https://github.com/PoomSmart/YTUHD) |\r\n| **YouPiP** | [PoomSmart](https://twitter.com/poomsmart) | 1.7.19-1 | [\u2714\ufe0e](https://github.com/PoomSmart/YouPiP) |\r\n| **IAmYouTube** | [PoomSmart](https://twitter.com/poomsmart) | 1.2.0 | [\u2714\ufe0e](https://github.com/PoomSmart/IAmYouTube) |\r\n| **YTABConfig** | [PoomSmart](https://twitter.com/poomsmart) | 1.5.0-1 | [\u2714\ufe0e](https://github.com/PoomSmart/YTABConfig) |\r\n| **YTReExplore** | [PoomSmart](https://twitter.com/poomsmart) | 1.0.2 | [\u2714\ufe0e](https://github.com/PoomSmart/YTReExplore) |\r\n| **NoYTPremium** | [PoomSmart](https://twitter.com/poomsmart) | 1.0.4 | [\u2714\ufe0e](https://github.com/PoomSmart/NoYTPremium) |\r\n| **YTNoPaidPromo** | [PoomSmart](https://twitter.com/poomsmart) | 1.0.0 | [\u2714\ufe0e](https://github.com/PoomSmart/YTNoPaidPromo) |\r\n| **YouRememberCaption** | [PoomSmart](https://twitter.com/poomsmart) | 1.0.0 | [\u2714\ufe0e](https://poomsmart.github.io/repo/depictions/youremembercaption.html) |\r\n| **Return YouTube Dislike** | [PoomSmart](https://twitter.com/poomsmart) | 1.11.3 | [\u2714\ufe0e](https://github.com/PoomSmart/Return-YouTube-Dislikes) |\r\n\r\n</details>\r\n\r\n## SHA256: \r\n- **SHA256**: 61165f9af22a1b311a830419088b2fd9395f6064ec15de32f716cfd9ddbd4e74",
@@ -273,18 +253,7 @@
           "version": "3.0",
           "date": "2023-04-16",
           "localizedDescription": "Added:\nSupport for rootless jailbreak\nDefault playback speed.\nRemoved ads from search results.\nAuto fullscreen in YT player.\nHide upgrade dialog.\nDisabled captions in the muted player.\nDownload original thumbnails.\nAbility to hide uYou button in Shorts.\nAbility to hide title and channel name in Shorts.\nAbility to hide channel avatar in Shorts.\nAbility to hide like button in Shorts.\nAbility to hide dislike button in Shorts.\nAbility to hide comment button in Shorts.\nAbility to hide remix button in Shorts.\nAbility to hide share button in Shorts.\nAbility to fullscreen in Shorts.\nReserved speed rate when changing it until closing YouTube.\nFixes:\nRewrote downloading class for faster downloads.\nFixed downloading errors in sideloaded versions.\nFixed login issues for sideloaded version.\nFixed cast button not hiding.\nFixed uYou's tab bar button.\nFixed all uYou's player bugs.\nFixed sorting downloaded media.\nFixed uYou player UI in RTL languages.\nFixed downloading Shorts.\nRemoved playlist download.\nRemoved uPIP.",
-          "downloadURL": [
-            "https://miro92.com/repo/depictions/com.miro.uyou/iPA/YouTube_18.14.1_uYou_3.0.ipa"
-          ],
-          "size": 126877696
-        },
-        {
-          "version": "3.0",
-          "date": "2023-04-16",
-          "localizedDescription": "Added:\nSupport for rootless jailbreak\nDefault playback speed.\nRemoved ads from search results.\nAuto fullscreen in YT player.\nHide upgrade dialog.\nDisabled captions in the muted player.\nDownload original thumbnails.\nAbility to hide uYou button in Shorts.\nAbility to hide title and channel name in Shorts.\nAbility to hide channel avatar in Shorts.\nAbility to hide like button in Shorts.\nAbility to hide dislike button in Shorts.\nAbility to hide comment button in Shorts.\nAbility to hide remix button in Shorts.\nAbility to hide share button in Shorts.\nAbility to fullscreen in Shorts.\nReserved speed rate when changing it until closing YouTube.\nFixes:\nRewrote downloading class for faster downloads.\nFixed downloading errors in sideloaded versions.\nFixed login issues for sideloaded version.\nFixed cast button not hiding.\nFixed uYou's tab bar button.\nFixed all uYou's player bugs.\nFixed sorting downloaded media.\nFixed uYou player UI in RTL languages.\nFixed downloading Shorts.\nRemoved playlist download.\nRemoved uPIP.",
-          "downloadURL": [
-            "https://miro92.com/repo/depictions/com.miro.uyou/iPA/YouTube_18.14.1_uYou_3.0.ipa"
-          ],
+          "downloadURL": "https://miro92.com/repo/depictions/com.miro.uyou/iPA/YouTube_18.14.1_uYou_3.0.ipa",
           "size": 126877696
         }
       ]
@@ -299,13 +268,6 @@
       "versionDescription": "# Changelog\n\n---\n## [1.0.0-beta.3](https://github.com/AnimeNow-Team/AnimeNow/releases/tag/1.0.0-beta.3) - (2023-03-12)\n\n### Features\n\n**Multisync**\n- Add multi-sync support ([#88](https://github.com/AnimeNow-Team/AnimeNow/issues/88)) [`70a1620`](https://github.com/AnimeNow-Team/AnimeNow/commit/70a162099c435284122673db84eff2e2bb88f966)\n\n<!-- generated by git-cliff -->",
       "downloadURL": "https://github.com/AnimeNow-Team/AnimeNow/releases/download/1.0.0-beta.3/Anime.Now.iOS.ipa",
       "versions": [
-        {
-          "version": "1.0.0-beta.3",
-          "date": "2023-03-12",
-          "localizedDescription": "# Changelog\n\n---\n## [1.0.0-beta.3](https://github.com/AnimeNow-Team/AnimeNow/releases/tag/1.0.0-beta.3) - (2023-03-12)\n\n### Features\n\n**Multisync**\n- Add multi-sync support ([#88](https://github.com/AnimeNow-Team/AnimeNow/issues/88)) [`70a1620`](https://github.com/AnimeNow-Team/AnimeNow/commit/70a162099c435284122673db84eff2e2bb88f966)\n\n<!-- generated by git-cliff -->",
-          "downloadURL": "https://github.com/AnimeNow-Team/AnimeNow/releases/download/1.0.0-beta.3/Anime.Now.iOS.ipa",
-          "size": 7208416
-        },
         {
           "version": "1.0.0-beta.3",
           "date": "2023-03-12",
@@ -349,13 +311,6 @@
       "versionDescription": "- Added remove 3 app limit\r\n- Added ability to edit secondary carrier name separately\r\n- Importing operations no longer includes the backup file for changes in /var for safety reasons (Model Name Changer and other operations that edit the mobilegestalt plist should no longer brick devices/cause activation locks)\r\n- Fixed generate padding button not showing up on file path operations",
       "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.1.1/Cowabunga.ipa",
       "versions": [
-        {
-          "version": "10.1.1",
-          "date": "2023-03-30",
-          "localizedDescription": "- Added remove 3 app limit\r\n- Added ability to edit secondary carrier name separately\r\n- Importing operations no longer includes the backup file for changes in /var for safety reasons (Model Name Changer and other operations that edit the mobilegestalt plist should no longer brick devices/cause activation locks)\r\n- Fixed generate padding button not showing up on file path operations",
-          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.1.1/Cowabunga.ipa",
-          "size": 21605355
-        },
         {
           "version": "10.1.1",
           "date": "2023-03-30",
