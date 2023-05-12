@@ -311,11 +311,18 @@
       "bundleIdentifier": "com.leemin.Cowabunga",
       "developerName": "leminlimez",
       "subtitle": "iOS 14.0-15.7.1 & 16.0-16.1.2 MacDirtyCow ToolBox",
-      "version": "10.1.1",
-      "versionDate": "2023-03-30",
-      "versionDescription": "- Added remove 3 app limit\r\n- Added ability to edit secondary carrier name separately\r\n- Importing operations no longer includes the backup file for changes in /var for safety reasons (Model Name Changer and other operations that edit the mobilegestalt plist should no longer brick devices/cause activation locks)\r\n- Fixed generate padding button not showing up on file path operations",
-      "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.1.1/Cowabunga.ipa",
+      "version": "10.2.0",
+      "versionDate": "2023-05-12",
+      "versionDescription": "- Added JIT\r\n- Added date in status bar through breadcrumb\r\n\t- Can be automated through shortcuts using the url `cowabunga://dateset`\r\n\t- See below for how to set up automation\r\n\t- Can also be updated using the button on the home page\r\n- Added service badge customization in status bar\r\n- Added ability to set the data network type\r\n- Added changing the date string on ipads\r\n- Added ability to reset the status bar through a url scheme (cowabunga://statusbar:reset)\r\n- Added ability to choose respring type (frontboard or backboard)\r\n- Fixed issue with forcing mdc\r\n\r\n**How to automate date in breadcrumb**\r\n__Required:__ Shortcuts app from App Store\r\n1. Go to `Automation`\r\n2. Create a new personal automation\r\n3. Choose `Time of Day`\r\n4. Set it to change at `12:00 AM` or whatever time you want it to update\r\n5. Set it to repeat `Daily`\r\n6. Tap `Add Action` and choose `Open URLs`\r\n7. In the text field, input `cowabunga://dateset`\r\n8. Choose done",
+      "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.2.0/Cowabunga.ipa",
       "versions": [
+        {
+          "version": "10.2.0",
+          "date": "2023-05-12",
+          "localizedDescription": "- Added JIT\r\n- Added date in status bar through breadcrumb\r\n\t- Can be automated through shortcuts using the url `cowabunga://dateset`\r\n\t- See below for how to set up automation\r\n\t- Can also be updated using the button on the home page\r\n- Added service badge customization in status bar\r\n- Added ability to set the data network type\r\n- Added changing the date string on ipads\r\n- Added ability to reset the status bar through a url scheme (cowabunga://statusbar:reset)\r\n- Added ability to choose respring type (frontboard or backboard)\r\n- Fixed issue with forcing mdc\r\n\r\n**How to automate date in breadcrumb**\r\n__Required:__ Shortcuts app from App Store\r\n1. Go to `Automation`\r\n2. Create a new personal automation\r\n3. Choose `Time of Day`\r\n4. Set it to change at `12:00 AM` or whatever time you want it to update\r\n5. Set it to repeat `Daily`\r\n6. Tap `Add Action` and choose `Open URLs`\r\n7. In the text field, input `cowabunga://dateset`\r\n8. Choose done",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.2.0/Cowabunga.ipa",
+          "size": 16280833
+        },
         {
           "version": "10.1.1",
           "date": "2023-03-30",
@@ -581,7 +588,7 @@
         "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Misc.PNG",
         "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Extra_Tools.PNG"
       ],
-      "size": 21605355,
+      "size": 16280833,
       "beta": false
     },
     {
