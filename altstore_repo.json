@@ -7,11 +7,18 @@
       "bundleIdentifier": "com.hammerandchisel.discord",
       "developerName": "acquitelol",
       "subtitle": "Enmity, but with custom icons",
-      "version": "178",
-      "versionDate": "2023-05-03",
-      "versionDescription": "## Commits\n- c41e0c0: [178] New build with pomelo changes (Acquite)",
-      "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_178/Rosiecord-178_GGSans-Font+Plumpy_Icons.ipa",
+      "version": "179",
+      "versionDate": "2023-05-13",
+      "versionDescription": "## Commits\n- 558cf8e: [179] Update K2Genmity to have fixes too (Acquite)",
+      "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_179/Rosiecord-179_GGSans-Font+Plumpy_Icons.ipa",
       "versions": [
+        {
+          "version": "179",
+          "date": "2023-05-13",
+          "localizedDescription": "## Commits\n- 558cf8e: [179] Update K2Genmity to have fixes too (Acquite)",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_179/Rosiecord-179_GGSans-Font+Plumpy_Icons.ipa",
+          "size": 100918829
+        },
         {
           "version": "178",
           "date": "2023-05-03",
@@ -146,7 +153,7 @@
         "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Rosiecord_Mocks/Plumpy.png",
         "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Rosiecord_Mocks/Plumpy_Flowercord.png"
       ],
-      "size": 98662432,
+      "size": 100918829,
       "beta": false
     },
     {
@@ -154,11 +161,18 @@
       "bundleIdentifier": "com.hammerandchisel.discord",
       "developerName": "Enmity Team",
       "subtitle": "The power of addons, all in your hand.",
-      "version": "v2.2.5",
-      "versionDate": "2023-04-25",
+      "version": "v2.2.6",
+      "versionDate": "2023-05-13",
       "versionDescription": "",
-      "downloadURL": "https://github.com/enmity-mod/loader-ios/releases/download/v2.2.5/Enmity.ipa",
+      "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
       "versions": [
+        {
+          "version": "v2.2.6",
+          "date": "2023-05-13",
+          "localizedDescription": "",
+          "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
+          "size": 94911970
+        },
         {
           "version": "v2.2.5",
           "date": "2023-04-25",
@@ -205,7 +219,7 @@
       "localizedDescription": "Add plugins and themes to Discord!",
       "iconURL": "https://files.enmity.app/icon-altstore.png",
       "tintColor": "6D00FF",
-      "size": 92936188,
+      "size": 94911970,
       "beta": false
     },
     {
