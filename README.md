@@ -1,33 +1,34 @@
 <div align="center">
     <img src="https://azu0609.github.io/repo/repo.logo.png">
     <h1>azu0609's repo</h1>
-    <p>Personalized repo for me. hosted in github pages. feel free to send pr!</p>
+    <p>Personalized repo for me. hosted in github pages. feel free to send PR!</p>
     <hr />
-    <a href="#"><img src="https://img.shields.io/badge/actions-actions.svg?label=Github&logo=github&style=for-the-badge&color=70a5eb" /></a>
+    <a href="altstore://source?URL=https://raw.githubusercontent.com/azu0609/repo/main/altstore_repo.json"><img src="https://img.shields.io/badge/Altstore-Altstore.svg?label=Add&logo=&style=for-the-badge&color=1B8085"></a>
 </div>
 
 > **Warning**
-> If scarlet is keep crashing after adding this repo, please submit a issue! there is an scarlet-side bug but it caused by bad repo.
+> This repository uses self-made update script, which is unstable and may cause issue like can't load repository.
+> Most issues are resolved in ~24h
 
 ## Included IPA:
 
 | String | Description |
 |:------:|:-----------:|
-| A | Altstore |
+| A/E | Altstore/E-Sign |
 | S | Scarlet |
 
 | Type | Application | Bundle | Base | Version | Author | Working? | Availability |
 |:----:|:----------:|:------:|:------------:|:-------:|:------:|:------:|:------:|
-| Tweaked app | [uYou](https://github.com/MiRO92/uYou-for-YouTube) | com.google.ios.youtube | 18.14.1 | 3.0 | [MIRO92](https://github.com/MiRO92) | Semi(A/S) | A/S |
-| Tweaked app | [uYou+](https://github.com/qnblackcat/uYouPlus) | com.google.ios.youtube | 18.14.1-3.0 | 3.0 | [qnblackcat](https://github.com/qnblackcat) | Yes(any) | A/S |
-| Tweaked app | [Enmity](https://enmity.app) | com.hammerandchisel.discord | 158.0 | v2.2.5 | [enmity-mod](https://github.com/enmity-mod) | Yes(any) | A/S |
-| Tweaked app | [Rosiecord (Plumpy - GGSans)](https://github.com/acquitelol/rosiecord) | com.hammerandchisel.discord | v2.1.4 | 17843158 | [acquitelol](https://github.com/acquitelol) | Semi(S) | A/S |
-| Sideloaded | [Anime Now!](https://github.com/AnimeNow-Team/AnimeNow) | com.errorerrorerror.animenow | any | 3.0 | [errorerrorerror](https://github.com/errorerrorerror) | Yes(any) | A/S |
-| MacDirtycow | [Cowabunga](https://github.com/leminlimez/Cowabunga) | com.leemin.Cowabunga | any | 10.1.1 | [leminlimez](https://github.com/leminlimez) | Yes(any) | A/S |
-| MacDirtycow | [KillMyOTA](https://github.com/haxi0/KillMyOTA) | org.haxi0.KillMyOTA | any | 1.1 | [haxi0](https://github.com/haxi0) | Yes(any) | A/S |
-| MacDirtyCow | [ControlConfig](https://github.com/BomberFish/ControlConfig) | com.f1shy-dev.ControlConfig | any | 0.1.0-alpha | [BomberFish](https://github.com/BomberFish) | Yes(any) | A/S |
-| MacDirtycow | [SantanderEscaped](https://github.com/haxi0/SantanderEscaped) | org.haxi0.santander | any | 0.4 | [SerenaKit](https://github.com/SerenaKit/Santander) / [haxi0](https://github.com/haxi0) | Yes(any) | A/S |
-| MacDirtyCow | [AppCommander](https://github.com/BomberFish/AppCommander) | ca.bomberfish.AppCommander.Dev | any | v0.1 Beta 3 | [BomberFish](https://github.com/BomberFish) | Yes(any) | A/S |
+| Tweaked app | [uYou](https://github.com/MiRO92/uYou-for-YouTube) | com.google.ios.youtube | 18.14.1 | 3.0 | [MIRO92](https://github.com/MiRO92) | Semi(A/S) | A/E/S |
+| Tweaked app | [uYou+](https://github.com/qnblackcat/uYouPlus) | com.google.ios.youtube | 18.14.1-3.0 | 3.0 | [qnblackcat](https://github.com/qnblackcat) | Yes(any) | A/E/S |
+| Tweaked app | [Enmity](https://enmity.app) | com.hammerandchisel.discord | 158.0 | v2.2.5 | [enmity-mod](https://github.com/enmity-mod) | Yes(any) | A/E/S |
+| Tweaked app | [Rosiecord (Plumpy - GGSans)](https://github.com/acquitelol/rosiecord) | com.hammerandchisel.discord | v2.1.4 | 178 | [acquitelol](https://github.com/acquitelol) | Semi(S) | A/E/S |
+| Sideloaded | [Anime Now!](https://github.com/AnimeNow-Team/AnimeNow) | com.errorerrorerror.animenow | any | 3.0 | [errorerrorerror](https://github.com/errorerrorerror) | Yes(any) | A/E/S |
+| MacDirtycow | [Cowabunga](https://github.com/leminlimez/Cowabunga) | com.leemin.Cowabunga | any | 10.1.1 | [leminlimez](https://github.com/leminlimez) | Yes(any) | A/E/S |
+| MacDirtycow | [KillMyOTA](https://github.com/haxi0/KillMyOTA) | org.haxi0.KillMyOTA | any | 1.1 | [haxi0](https://github.com/haxi0) | Yes(any) | A/E/S |
+| MacDirtyCow | [ControlConfig](https://github.com/BomberFish/ControlConfig) | com.f1shy-dev.ControlConfig | any | 0.1.0-alpha | [BomberFish](https://github.com/BomberFish) | Yes(any) | A/E/S |
+| MacDirtycow | [SantanderEscaped](https://github.com/haxi0/SantanderEscaped) | org.haxi0.santander | any | 0.4 | [SerenaKit](https://github.com/SerenaKit/Santander) / [haxi0](https://github.com/haxi0) | Yes(any) | A/E/S |
+| MacDirtyCow | [AppCommander](https://github.com/BomberFish/AppCommander) | ca.bomberfish.AppCommander.Dev | any | v0.1 Beta 3 | [BomberFish](https://github.com/BomberFish) | Yes(any) | A/E/S |
 
 ## Add apps to repo
 1. Add json data to apps like:  
@@ -95,7 +96,7 @@
                             "https://api.github.com/repos/app_repository_owner2/repositry_name2/releases",
                             "https://api.github.com/repos/app_repository_owner3/repositry_name3/releases"]
     ```
-    For more infomation about altstore json manifest, see [Make a Source](https://faq.altstore.io/sources/make-a-source).
+    For more infomation about altstore json manifest, see [Make a Source (Altstore FAQ)](https://faq.altstore.io/sources/make-a-source).
 
 
 3. Check if working correctly by running script:  
