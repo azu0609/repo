@@ -11,7 +11,7 @@ class RateLimited(Exception):
 class Fetch:
     def __init__(self):
         self.release_source = ["https://api.github.com/repos/acquitelol/rosiecord/releases",
-                               "https://api.github.com/repos/enmity-mod/loader-ios/releases",
+                               "https://api.github.com/repos/enmity-mod/tweak/releases",
                                "https://api.github.com/repos/qnblackcat/uYouPlus/releases",
                                "https://api.github.com/repos/AnimeNow-Team/AnimeNow/releases",
                                "https://api.github.com/repos/leminlimez/Cowabunga/releases",
