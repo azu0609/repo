@@ -6,9 +6,9 @@
   "Tweaked": [
     {
       "name": "Rosiecord",
-      "version": "178",
+      "version": "179",
       "icon": "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Icons/EnmityIcon60x60%402x.png",
-      "down": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_178/Rosiecord-178_GGSans-Font+Plumpy_Icons.ipa",
+      "down": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_179/Rosiecord-179_GGSans-Font+Plumpy_Icons.ipa",
       "dev": "acquitelol",
       "category": "Tweaked Apps",
       "description": "Enmity, but with custom icons",
@@ -22,8 +22,8 @@
     },
     {
       "name": "Enmity",
-      "version": "v2.2.5",
-      "down": "https://github.com/enmity-mod/tweak/releases/download/v2.2.5/Enmity.ipa",
+      "version": "v2.2.6",
+      "down": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
       "dev": "Enmity Team",
       "icon": "https://files.enmity.app/icon-altstore.png",
       "category": "Tweaked Apps",
@@ -93,8 +93,8 @@
   "Macdirtycow": [
     {
       "name": "Cowabunga",
-      "version": "10.1.1",
-      "down": "https://github.com/leminlimez/Cowabunga/releases/download/v10.1.1/Cowabunga.ipa",
+      "version": "10.2.0",
+      "down": "https://github.com/leminlimez/Cowabunga/releases/download/v10.2.0/Cowabunga.ipa",
       "dev": "leminlimez",
       "icon": "https://user-images.githubusercontent.com/52459150/215552092-9dc1e029-da35-43da-867f-17279e3dc180.png",
       "category": "Macdirtycow",
