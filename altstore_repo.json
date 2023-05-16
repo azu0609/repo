@@ -7,11 +7,18 @@
       "bundleIdentifier": "com.hammerandchisel.discord",
       "developerName": "acquitelol",
       "subtitle": "Enmity, but with custom icons",
-      "version": "179",
-      "versionDate": "2023-05-13",
-      "versionDescription": "## Commits\n- 558cf8e: [179] Update K2Genmity to have fixes too (Acquite)",
-      "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_179/Rosiecord-179_GGSans-Font+Plumpy_Icons.ipa",
+      "version": "180",
+      "versionDate": "2023-05-15",
+      "versionDescription": "",
+      "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_180/Rosiecord-180_GGSans-Font+Plumpy_Icons.ipa",
       "versions": [
+        {
+          "version": "180",
+          "date": "2023-05-15",
+          "localizedDescription": "",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_180/Rosiecord-180_GGSans-Font+Plumpy_Icons.ipa",
+          "size": 97029768
+        },
         {
           "version": "179",
           "date": "2023-05-13",
@@ -153,7 +160,7 @@
         "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Rosiecord_Mocks/Plumpy.png",
         "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Rosiecord_Mocks/Plumpy_Flowercord.png"
       ],
-      "size": 100918829,
+      "size": 97029768,
       "beta": false
     },
     {
