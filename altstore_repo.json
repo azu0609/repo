@@ -8,10 +8,17 @@
       "developerName": "acquitelol",
       "subtitle": "Enmity, but with custom icons",
       "version": "180",
-      "versionDate": "2023-05-15",
-      "versionDescription": "",
+      "versionDate": "2023-05-16",
+      "versionDescription": "## Commits\n- f2814b7: [180] Mark the staging deb as such (Acquite)\n- 34ed91b: [180] Force push to allow IPAs to rebuild (Acquite)",
       "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_180/Rosiecord-180_GGSans-Font+Plumpy_Icons.ipa",
       "versions": [
+        {
+          "version": "180",
+          "date": "2023-05-16",
+          "localizedDescription": "## Commits\n- f2814b7: [180] Mark the staging deb as such (Acquite)\n- 34ed91b: [180] Force push to allow IPAs to rebuild (Acquite)",
+          "downloadURL": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_180/Rosiecord-180_GGSans-Font+Plumpy_Icons.ipa",
+          "size": 98035887
+        },
         {
           "version": "180",
           "date": "2023-05-15",
@@ -160,7 +167,7 @@
         "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Rosiecord_Mocks/Plumpy.png",
         "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Rosiecord_Mocks/Plumpy_Flowercord.png"
       ],
-      "size": 97029768,
+      "size": 98035887,
       "beta": false
     },
     {
