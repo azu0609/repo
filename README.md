@@ -3,7 +3,7 @@
     <h1>azu0609's repo</h1>
     <p>Personalized repo for me. hosted in github pages. feel free to send PR!</p>
     <hr />
-    <a href="altstore://source?URL=https://raw.githubusercontent.com/azu0609/repo/main/altstore_repo.json"><img src="https://img.shields.io/badge/Altstore-Altstore.svg?label=Add&logo=&style=for-the-badge&color=1B8085"></a>
+    <a href="altstore://source?URL=https://raw.githubusercontent.com/azu0609/repo/main/altstore_repo.json"><img src="https://img.shields.io/badge/Altstore-Altstore.svg?label=Add%20To&logo=&style=for-the-badge&color=1B8085"></a>
 </div>
 
 > **Warning**
@@ -14,7 +14,7 @@
 
 | String | Description |
 |:------:|:-----------:|
-| A/E | Altstore/E-Sign |
+| A | Altstore/E-sign |
 | S | Scarlet |
 
 | Type | Application | Bundle | Base | Version | Author | Working? | Availability |
@@ -22,7 +22,7 @@
 | Tweaked app | [uYou](https://github.com/MiRO92/uYou-for-YouTube) | com.google.ios.youtube | 18.14.1 | 3.0 | [MIRO92](https://github.com/MiRO92) | Semi(A/S) | A/S |
 | Tweaked app | [uYou+](https://github.com/qnblackcat/uYouPlus) | com.google.ios.youtube | 18.14.1-3.0 | 3.0 | [qnblackcat](https://github.com/qnblackcat) | Yes(any) | A/S |
 | Tweaked app | [Enmity](https://enmity.app) | com.hammerandchisel.discord | 158.0 | v2.2.6 | [enmity-mod](https://github.com/enmity-mod) | Yes(any) | A/S |
-| Tweaked app | [Rosiecord (Plumpy - GGSans)](https://github.com/acquitelol/rosiecord) | com.hammerandchisel.discord | v2.1.4 | 18043158 | [acquitelol](https://github.com/acquitelol) | Semi(S) | A/S |
+| Tweaked app | [Rosiecord (Plumpy - GGSans)](https://github.com/acquitelol/rosiecord) | com.hammerandchisel.discord | v2.1.4 | 180 | [acquitelol](https://github.com/acquitelol) | Semi(S) | A/S |
 | Sideloaded | [Anime Now!](https://github.com/AnimeNow-Team/AnimeNow) | com.errorerrorerror.animenow | any | 3.0 | [errorerrorerror](https://github.com/errorerrorerror) | Yes(any) | A/S |
 | MacDirtycow | [Cowabunga](https://github.com/leminlimez/Cowabunga) | com.leemin.Cowabunga | any | 10.2.0 | [leminlimez](https://github.com/leminlimez) | Yes(any) | A/S |
 | MacDirtycow | [KillMyOTA](https://github.com/haxi0/KillMyOTA) | org.haxi0.KillMyOTA | any | 1.1 | [haxi0](https://github.com/haxi0) | Yes(any) | A/S |
