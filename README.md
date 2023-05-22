@@ -3,8 +3,9 @@
     <h1>azu0609's repo</h1>
     <p>Personalized repo for me. hosted in github pages. feel free to send PR!</p>
     <hr />
-    <a href="altstore://source?URL=https://raw.githubusercontent.com/azu0609/repo/main/altstore_repo.json"><img src="https://img.shields.io/badge/Altstore-Altstore.svg?label=Add%20To&logo=&style=for-the-badge&color=1B8085"></a>
 </div>
+
+[![Altstore](https://img.shields.io/badge/Altstore-Altstore.svg?label=Add%20To&logo=&style=for-the-badge&color=1B8085)](altstore://source?URL=https://raw.githubusercontent.com/azu0609/repo/main/altstore_repo.json)
 
 > **Warning**
 > This repository uses self-made update script, which is unstable and may cause issue like can't load repository.
