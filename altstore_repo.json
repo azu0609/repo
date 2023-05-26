@@ -567,7 +567,7 @@
       "tintColor": "#ff9696",
       "imageurl": "https://github.com/azu0609/repo/assets/91050580/48243317-d82e-4f06-a3cf-5b88f18fe388",
       "url": "https://github.com/azu0609/repo/assets/91050580/48243317-d82e-4f06-a3cf-5b88f18fe388",
-      "notify": "true"
+      "notify": true
     }
   ]
 }
