@@ -16,7 +16,7 @@
 
 | String | Description |
 |:------:|:-----------:|
-| A | Altstore/E-sign |
+| A | Altstore |
 | S | Scarlet |
 
 | Type | Application | Bundle | Base | Version | Author | Working? | Availability |
@@ -24,12 +24,12 @@
 | Tweaked app | [uYou](https://github.com/MiRO92/uYou-for-YouTube) | com.google.ios.youtube | 18.14.1 | 3.0 | [MIRO92](https://github.com/MiRO92) | Semi(A/S) | A/S |
 | Tweaked app | [uYou+](https://github.com/qnblackcat/uYouPlus) | com.google.ios.youtube | 18.14.1-3.0 | 3.0 | [qnblackcat](https://github.com/qnblackcat) | Yes(any) | A/S |
 | Tweaked app | [Enmity](https://enmity.app) | com.hammerandchisel.discord | 158.0 | v2.2.6 | [enmity-mod](https://github.com/enmity-mod) | Yes(any) | A/S |
-| Tweaked app | [Rosiecord (Plumpy - GGSans)](https://github.com/acquitelol/rosiecord) | com.hammerandchisel.discord | v2.1.4 | 181 | [acquitelol](https://github.com/acquitelol) | Semi(S) | A/S |
+| Tweaked app | [Rosiecord (Plumpy - GGSans)](https://github.com/acquitelol/rosiecord) | com.hammerandchisel.discord | v2.1.4 | 181 | [acquitelol](https://github.com/acquitelol) | Semi(S) | S |
 | Sideloaded | [Anime Now!](https://github.com/AnimeNow-Team/AnimeNow) | com.errorerrorerror.animenow | any | 3.0 | [errorerrorerror](https://github.com/errorerrorerror) | Yes(any) | A/S |
 | MacDirtycow | [Cowabunga](https://github.com/leminlimez/Cowabunga) | com.leemin.Cowabunga | any | 10.2.0 | [leminlimez](https://github.com/leminlimez) | Yes(any) | A/S |
 | MacDirtycow | [KillMyOTA](https://github.com/haxi0/KillMyOTA) | org.haxi0.KillMyOTA | any | 1.1 | [haxi0](https://github.com/haxi0) | Yes(any) | A/S |
 | MacDirtyCow | [ControlConfig](https://github.com/BomberFish/ControlConfig) | com.f1shy-dev.ControlConfig | any | 0.1.0-alpha | [BomberFish](https://github.com/BomberFish) | Yes(any) | A/S |
-| MacDirtycow | [SantanderEscaped](https://github.com/haxi0/SantanderEscaped) | org.haxi0.santander | any | 0.4 | [SerenaKit](https://github.com/SerenaKit/Santander) / [haxi0](https://github.com/haxi0) | Yes(any) | A/S |
+| MacDirtycow | [SantanderEscaped](https://github.com/haxi0/SantanderEscaped) | org.haxi0.santanderescaped | any | 0.4 | [SerenaKit](https://github.com/SerenaKit/Santander) / [haxi0](https://github.com/haxi0) | Yes(any) | A/S |
 | MacDirtyCow | [AppCommander](https://github.com/BomberFish/AppCommander) | ca.bomberfish.AppCommander.Dev | any | v0.1 Beta 3 | [BomberFish](https://github.com/BomberFish) | Yes(any) | A/S |
 
 ## Add apps to repo
