@@ -143,13 +143,13 @@
     },
     {
       "name": "SantanderEscaped",
-      "version": "0.4",
-      "down": "https://github.com/haxi0/SantanderEscaped/releases/download/0.4/SantanderEscaped-0.4.ipa",
+      "version": "1.0",
+      "down": "https://github.com/haxi0/SantanderEscaped/releases/download/1.0/SantanderEscaped_1.0.ipa",
       "dev": "haxi0",
       "icon": "https://raw.githubusercontent.com/haxi0/SantanderEscaped/main/Santander/Assets.xcassets/AppIcon.appiconset/256.png",
       "category": "Macdirtycow",
-      "description": "A new, enhanced File Manager for iOS devices with the tccd exploit for full file access.",
-      "bundleID": "org.haxi0.santander",
+      "description": "A new, enhanced File Manager for iOS devices with MDC support",
+      "bundleID": "org.haxi0.santanderescaped",
       "screenshots": [
         "https://user-images.githubusercontent.com/48022799/182846725-84790bea-e9ba-45a3-a2c2-ee6f2f7fdd4e.png"
       ],
