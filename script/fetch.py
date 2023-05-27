@@ -197,6 +197,8 @@ class Fetch:
                             pass
                         else:
                             raise TypeError(e)
+                    except KeyError:
+                        pass
         self.logger(0, f"Updating process ended successfully.")
 
 
