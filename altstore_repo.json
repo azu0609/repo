@@ -8,10 +8,17 @@
       "developerName": "Enmity Team",
       "subtitle": "The power of addons, all in your hand.",
       "version": "v2.2.6",
-      "versionDate": "2023-05-13",
-      "versionDescription": "",
+      "versionDate": "2023-05-28",
+      "versionDescription": "## Commits\n- b8712c3: Update stable.yml (#26) (mafu) [#26](https://github.com/enmity-mod/tweak/pull/26)",
       "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
       "versions": [
+        {
+          "version": "v2.2.6",
+          "date": "2023-05-28",
+          "localizedDescription": "## Commits\n- b8712c3: Update stable.yml (#26) (mafu) [#26](https://github.com/enmity-mod/tweak/pull/26)",
+          "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
+          "size": 94911967
+        },
         {
           "version": "v2.2.6",
           "date": "2023-05-13",
@@ -65,7 +72,7 @@
       "localizedDescription": "Add plugins and themes to Discord!",
       "iconURL": "https://files.enmity.app/icon-altstore.png",
       "tintColor": "6D00FF",
-      "size": 94911970,
+      "size": 94911967,
       "beta": false
     },
     {
@@ -501,13 +508,13 @@
       "subtitle": "A new, enhanced File Manager for iOS devices",
       "version": "1.0",
       "versionDate": "2023-05-24",
-      "versionDescription": "- Re-made the repo\r\n- Big fixes\r\n- Improved exploit, now supports all devices\r\n\r\n**Please, don't use this with TrollStore! It won’t just work. Use the regular version instead.**",
+      "versionDescription": "- Re-made the repo\r\n- Big fixes\r\n- Improved exploit, now supports all devices\r\n\r\n**Please, don't use this with TrollStore! It won\u2019t just work. Use the regular version instead.**",
       "downloadURL": "https://github.com/haxi0/SantanderEscaped/releases/download/1.0/SantanderEscaped_1.0.ipa",
       "versions": [
         {
           "version": "1.0",
           "date": "2023-05-24",
-          "localizedDescription": "- Re-made the repo\r\n- Big fixes\r\n- Improved exploit, now supports all devices\r\n\r\n**Please, don't use this with TrollStore! It won’t just work. Use the regular version instead.**",
+          "localizedDescription": "- Re-made the repo\r\n- Big fixes\r\n- Improved exploit, now supports all devices\r\n\r\n**Please, don't use this with TrollStore! It won\u2019t just work. Use the regular version instead.**",
           "downloadURL": "https://github.com/haxi0/SantanderEscaped/releases/download/1.0/SantanderEscaped_1.0.ipa",
           "size": 5564344
         },
