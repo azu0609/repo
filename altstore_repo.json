@@ -154,11 +154,18 @@
       "bundleIdentifier": "com.leemin.Cowabunga",
       "developerName": "leminlimez",
       "subtitle": "iOS 14.0-15.7.1 & 16.0-16.1.2 MacDirtyCow ToolBox",
-      "version": "10.3.0",
+      "version": "10.3.2",
       "versionDate": "2023-05-29",
-      "versionDescription": "- Ability to show/hide second carrier (even if you do not have one)\r\n- Minor reorganization of status bar tweaks to be more readable\r\n- Fixed issues relating to JIT\r\n- Fixed respring type not displaying correctly",
-      "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.3.0/Cowabunga.ipa",
+      "versionDescription": "- Changing carrier bar strength now works when you do not have a sim card (or dual sim for secondary carrier)",
+      "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.3.2/Cowabunga.ipa",
       "versions": [
+        {
+          "version": "10.3.2",
+          "date": "2023-05-29",
+          "localizedDescription": "- Changing carrier bar strength now works when you do not have a sim card (or dual sim for secondary carrier)",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.3.2/Cowabunga.ipa",
+          "size": 16288960
+        },
         {
           "version": "10.3.0",
           "date": "2023-05-29",
@@ -438,7 +445,7 @@
         "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Misc.PNG",
         "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Extra_Tools.PNG"
       ],
-      "size": 16285936,
+      "size": 16288960,
       "beta": false
     },
     {
