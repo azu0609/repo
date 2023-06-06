@@ -13,14 +13,14 @@
       "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
       "versions": [
         {
-          "version": "v2.2.6",
+          "version": "v2.2.6-b3",
           "date": "2023-06-02",
           "localizedDescription": "## Commits\n- 2f603c6: Update Discord.ipa to 180.0 Stable (Acquite)",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
           "size": 98676455
         },
         {
-          "version": "v2.2.6",
+          "version": "v2.2.6-b2",
           "date": "2023-05-28",
           "localizedDescription": "## Commits\n- b8712c3: Update stable.yml (#26) (mafu) [#26](https://github.com/enmity-mod/tweak/pull/26)",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",

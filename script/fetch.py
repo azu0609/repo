@@ -134,6 +134,11 @@ class Fetch:
             with open(path, "r") as repo_path:
                 self.json_data = json.load(repo_path)
                 self.logger(1, "Modifying loaded data...")
+                if version == current_ver:
+                    match = re.match(r"^(.*?)(-b(\d+))?$", current_ver)
+                    sub_version = int(match.group(3) or 0) + 1
+                    version = f"{match.group(1)}-b{sub_version}" if match.group(3) else f"{version}-b2"
+
                 if repo_type == "scarlet":
                     self.json_data[app_type][index]["version"] = version
                     self.json_data[app_type][index]["down"] = download_url
@@ -146,10 +151,10 @@ class Fetch:
                     self.json_data[app_type][index]["size"] = size
                     try:
                         self.json_data[app_type][index]["versions"].insert(0, {"version": version,
-                                                                        "date": release_date,
-                                                                        "localizedDescription": version_description,
-                                                                        "downloadURL": download_url,
-                                                                        "size": size})
+                                                                            "date": release_date,
+                                                                            "localizedDescription": version_description,
+                                                                            "downloadURL": download_url,
+                                                                            "size": size})
                     except KeyError:
                         self.logger(2, "Looks like this app doesn't have versions key. adding...")
                         self.json_data[app_type][index]["versions"] = [
