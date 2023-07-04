@@ -7,11 +7,18 @@
       "bundleIdentifier": "com.hammerandchisel.discord",
       "developerName": "Enmity Team",
       "subtitle": "The power of addons, all in your hand.",
-      "version": "v2.2.6",
-      "versionDate": "2023-06-02",
-      "versionDescription": "## Commits\n- 2f603c6: Update Discord.ipa to 180.0 Stable (Acquite)",
+      "version": "v2.2.6-b2",
+      "versionDate": "2023-07-03",
+      "versionDescription": "## Commits\n- 511f23f: Fixed the crash when Enmity is sideloaded on 184+ & Update IPA to 184(stable) (#29) (mafu) [#29](https://github.com/enmity-mod/tweak/pull/29)",
       "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
       "versions": [
+        {
+          "version": "v2.2.6-b2",
+          "date": "2023-07-03",
+          "localizedDescription": "## Commits\n- 511f23f: Fixed the crash when Enmity is sideloaded on 184+ & Update IPA to 184(stable) (#29) (mafu) [#29](https://github.com/enmity-mod/tweak/pull/29)",
+          "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
+          "size": 99992444
+        },
         {
           "version": "v2.2.6-b3",
           "date": "2023-06-02",
@@ -79,7 +86,7 @@
       "localizedDescription": "Add plugins and themes to Discord!",
       "iconURL": "https://files.enmity.app/icon-altstore.png",
       "tintColor": "6D00FF",
-      "size": 98676455,
+      "size": 99992444,
       "beta": false
     },
     {
