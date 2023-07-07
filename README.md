@@ -31,6 +31,7 @@
 | MacDirtyCow | [ControlConfig](https://github.com/BomberFish/ControlConfig) | com.f1shy-dev.ControlConfig | any | 0.1.0-alpha | [BomberFish](https://github.com/BomberFish) | Yes(any) | A/S |
 | MacDirtycow | [SantanderEscaped](https://github.com/haxi0/SantanderEscaped) | org.haxi0.santanderescaped | any | 0.4 | [SerenaKit](https://github.com/SerenaKit/Santander) / [haxi0](https://github.com/haxi0) | Yes(any) | A/S |
 | MacDirtyCow | [AppCommander](https://github.com/BomberFish/AppCommander) | ca.bomberfish.AppCommander.Dev | any | v0.1 Beta 3 | [BomberFish](https://github.com/BomberFish) | Yes(any) | A/S |
+| MacDirtyCow | [Whitelist](https://github.com/BomberFish/Whitelist) | ca.bomberfish.Whitelist | any | 1.1.0 | [BomberFish](https://github.com/BomberFish) | Yes(any) | A/S |
 
 ## Add apps to repo
 1. Add json data to apps like:  

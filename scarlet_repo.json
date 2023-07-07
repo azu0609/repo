@@ -171,6 +171,20 @@
         "web": "https://bomberfish.ca/",
         "fosstodon": "https://fosstodon.org/@BomberFish"
       }
+    },
+    {
+      "name": "Whitelist",
+      "version": "1.1.0",
+      "down": "https://github.com/BomberFish/Whitelist/releases/download/1.1.0/Whitelist.ipa",
+      "dev": "BomberFish",
+      "icon": "https://raw.githubusercontent.com/BomberFish/Whitelist/main/img/icon.png",
+      "category": "Macdirtycow",
+      "description": "Jailed iOS app to un-blacklist all enterprise-signed apps",
+      "bundleID": "ca.bomberfish.Whitelist",
+      "contact": {
+        "web": "https://bomberfish.ca/",
+        "fosstodon": "https://fosstodon.org/@BomberFish"
+      }
     }
   ]
 }

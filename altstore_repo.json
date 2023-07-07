@@ -591,6 +591,43 @@
       "iconURL": "https://raw.githubusercontent.com/BomberFish/AppCommander/main/AppCommander/Assets.xcassets/AppIcon.appiconset/app%20commander%20v2.png",
       "size": 5435252,
       "beta": true
+    },
+    {
+      "name": "Whitelist",
+      "bundleIdentifier": "ca.bomberfish.Whitelist",
+      "developerName": "BomberFish",
+      "subtitle": "Jailed iOS app to un-blacklist all enterprise-signed apps",
+      "version": "1.1.0",
+      "versionDate": "2023-02-04",
+      "versionDescription": "- Fix icon (again)\r\n- Check for app updates on start (thanks leminlimez!)",
+      "downloadURL": "https://github.com/BomberFish/Whitelist/releases/download/1.1.0/Whitelist.ipa",
+      "versions": [
+        {
+          "version": "1.1.0",
+          "date": "2023-02-04",
+          "localizedDescription": "- Fix icon (again)\r\n- Check for app updates on start (thanks leminlimez!)",
+          "downloadURL": "https://github.com/BomberFish/Whitelist/releases/download/1.1.0/Whitelist.ipa",
+          "size": 599193
+        },
+        {
+          "version": "1.0.1",
+          "date": "2023-02-04",
+          "localizedDescription": "- Fix icon",
+          "downloadURL": "https://github.com/BomberFish/Whitelist/releases/download/1.0.1/Whitelist.ipa",
+          "size": 606490
+        },
+        {
+          "version": "1.0",
+          "date": "2023-02-04",
+          "localizedDescription": "- First Release!\r\n",
+          "downloadURL": "https://github.com/BomberFish/Whitelist/releases/download/1.0/Whitelist.ipa",
+          "size": 613149
+        }
+      ],
+      "localizedDescription": "Jailed iOS app to un-blacklist all enterprise-signed apps",
+      "iconURL": "https://raw.githubusercontent.com/BomberFish/Whitelist/main/img/icon.png",
+      "size": 599193,
+      "beta": false
     }
   ],
   "news": [
