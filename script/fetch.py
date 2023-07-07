@@ -137,7 +137,7 @@ class Fetch:
                 if version == current_ver:
                     match = re.match(r"^(.*?)(-b(\d+))?$", current_ver)
                     sub_version = int(match.group(3) or 0) + 1
-                    version = f"{match.group(1)}-b{sub_version}" if match.group(3) else f"{version}-b2"
+                    version = f"{match.group(1)}-b{sub_version}" if match.group(3) else f"{version}-{sub_version + 1}"
 
                 if repo_type == "scarlet":
                     self.json_data[app_type][index]["version"] = version

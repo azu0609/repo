@@ -7,13 +7,13 @@
       "bundleIdentifier": "com.hammerandchisel.discord",
       "developerName": "Enmity Team",
       "subtitle": "The power of addons, all in your hand.",
-      "version": "v2.2.6-b2",
+      "version": "v2.2.6-b4",
       "versionDate": "2023-07-03",
       "versionDescription": "## Commits\n- 511f23f: Fixed the crash when Enmity is sideloaded on 184+ & Update IPA to 184(stable) (#29) (mafu) [#29](https://github.com/enmity-mod/tweak/pull/29)",
       "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
       "versions": [
         {
-          "version": "v2.2.6-b2",
+          "version": "v2.2.6-b4",
           "date": "2023-07-03",
           "localizedDescription": "## Commits\n- 511f23f: Fixed the crash when Enmity is sideloaded on 184+ & Update IPA to 184(stable) (#29) (mafu) [#29](https://github.com/enmity-mod/tweak/pull/29)",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
