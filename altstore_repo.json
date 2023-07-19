@@ -571,14 +571,28 @@
     },
     {
       "name": "AppCommander",
-      "bundleIdentifier": "ca.bomberfish.AppCommander.Dev",
+      "bundleIdentifier": "ca.bomberfish.AppCommander",
       "developerName": "BomberFish",
-      "subtitle": "A swiss army knife for your iPhone apps.\nMay not work on all devices.",
-      "version": "v0.1 Beta 3",
-      "versionDate": "2023-04-13",
-      "versionDescription": "**Changelog:**\r\n\r\n- French, German, Chinese and Vietnamese translations!\r\n- Improvements to AbsoluteSolver\r\n- Hopefully fix the unsandboxing error. Also added a reboot device button to error dialog just in case things go south.\r\n- Fix an error where getting the container directory of an app results in an error.",
-      "downloadURL": "https://github.com/BomberFish/AppCommander/releases/download/v0.1-beta.3/AppCommander.0.1.Beta.3.ipa",
+      "subtitle": "A swiss army knife for your iPhone apps.",
+      "version": "v1.0.0",
+      "versionDate": "2023-07-12",
+      "versionDescription": "AppCommander: A swiss army knife for your iPhone Apps. \r\n\r\n- iOS 15.0-15.4.1: **Not officially supported.**\r\n- iOS 15.5-15.7.1: **Supported.**\r\n- iOS **15**.7.2+: **Not supported.**\r\n- iOS 16.0-16.1.2: **Supported.**\r\n- iOS 16.2+: **Not supported.**\r\n\r\n**Full Changelog from Public Beta 1**: https://github.com/BomberFish/AppCommander/compare/v1.0.0_publicbeta1...v1.0.0",
+      "downloadURL": "https://github.com/BomberFish/AppCommander/releases/download/v1.0.0/AppCommander_v1.0.0.ipa",
       "versions": [
+        {
+          "version": "v1.0.0",
+          "date": "2023-07-12",
+          "localizedDescription": "AppCommander: A swiss army knife for your iPhone Apps. \r\n\r\n- iOS 15.0-15.4.1: **Not officially supported.**\r\n- iOS 15.5-15.7.1: **Supported.**\r\n- iOS **15**.7.2+: **Not supported.**\r\n- iOS 16.0-16.1.2: **Supported.**\r\n- iOS 16.2+: **Not supported.**\r\n\r\n**Full Changelog from Public Beta 1**: https://github.com/BomberFish/AppCommander/compare/v1.0.0_publicbeta1...v1.0.0",
+          "downloadURL": "https://github.com/BomberFish/AppCommander/releases/download/v1.0.0/AppCommander_v1.0.0.ipa",
+          "size": 16030736
+        },
+        {
+          "version": "1.0 Public Beta1",
+          "date": "2023-07-01",
+          "localizedDescription": "Changes:\r\n\r\n- UI redesigned from the ground-up\r\n- Grid view on apps page\r\n- **Added JIT!** Make sure to perform the steps outlined in `Settings > Set up JIT` before using JIT.\r\n- Updated App Icon(s)\r\n- Major performance improvements, with less hangs\r\n- Bug fixes",
+          "downloadURL": "https://github.com/BomberFish/AppCommander/releases/download/v1.0.0_publicbeta1/AppCommander-v1.0.0_publicbeta1.ipa",
+          "size": 15941020
+        },
         {
           "version": "v0.1 Beta 3",
           "date": "2023-04-13",
@@ -589,7 +603,7 @@
       ],
       "localizedDescription": "A swiss army knife for your iPhone apps. iOS 15.5-16.2.",
       "iconURL": "https://raw.githubusercontent.com/BomberFish/AppCommander/main/AppCommander/Assets.xcassets/AppIcon.appiconset/app%20commander%20v2.png",
-      "size": 5435252,
+      "size": 16030736,
       "beta": true
     },
     {

@@ -160,13 +160,13 @@
     },
     {
       "name": "AppCommander",
-      "version": "v0.1 Beta 3",
-      "down": "https://github.com/BomberFish/AppCommander/releases/download/v0.1-beta.3/AppCommander.0.1.Beta.3.ipa",
+      "version": "v1.0.0",
+      "down": "https://github.com/BomberFish/AppCommander/releases/download/v1.0.0/AppCommander_v1.0.0.ipa",
       "dev": "BomberFish",
       "icon": "https://raw.githubusercontent.com/BomberFish/AppCommander/main/AppCommander/Assets.xcassets/AppIcon.appiconset/app%20commander%20v2.png",
       "category": "Macdirtycow",
-      "description": "A swiss army knife for your iPhone apps. iOS 15.5-16.2.\nMay not work on all devices.",
-      "bundleID": "ca.bomberfish.AppCommander.Dev",
+      "description": "A swiss army knife for your iPhone apps. iOS 15.5-16.2.",
+      "bundleID": "ca.bomberfish.AppCommander",
       "contact": {
         "web": "https://bomberfish.ca/",
         "fosstodon": "https://fosstodon.org/@BomberFish"
