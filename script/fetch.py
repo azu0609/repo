@@ -18,7 +18,8 @@ class Fetch:
                                "https://api.github.com/repos/haxi0/KillMyOTA/releases",
                                "https://api.github.com/repos/BomberFish/ControlConfig/releases",
                                "https://api.github.com/repos/haxi0/SantanderEscaped/releases",
-                               "https://api.github.com/repos/BomberFish/AppCommander/releases"]
+                               "https://api.github.com/repos/BomberFish/AppCommander/releases",
+                               "https://api.github.com/repos/BomberFish/Whitelist/releases"]
         
         self.blacklist_release = [
             {
