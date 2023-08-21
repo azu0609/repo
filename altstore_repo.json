@@ -7,11 +7,18 @@
       "bundleIdentifier": "com.hammerandchisel.discord",
       "developerName": "Enmity Team",
       "subtitle": "The power of addons, all in your hand.",
-      "version": "v2.2.6",
-      "versionDate": "2023-08-11",
-      "versionDescription": "Update Discord to v190.0\r\n\r\n## Commits\r\n- a697c8a: Replace Discord.ipa with URL input for release workflow (#32) (Colin) [#32](https://github.com/enmity-mod/tweak/pull/32)\r\n- 3b66fb0: Make patcher use the input URL for Discord.ipa (Colin)",
+      "version": "v2.2.6-2",
+      "versionDate": "2023-08-20",
+      "versionDescription": "Update Discord to v191.0",
       "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
       "versions": [
+        {
+          "version": "v2.2.6-2",
+          "date": "2023-08-20",
+          "localizedDescription": "Update Discord to v191.0",
+          "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
+          "size": 97972296
+        },
         {
           "version": "v2.2.6",
           "date": "2023-08-11",
@@ -93,7 +100,7 @@
       "localizedDescription": "Add plugins and themes to Discord!",
       "iconURL": "https://files.enmity.app/icon-altstore.png",
       "tintColor": "6D00FF",
-      "size": 96341212,
+      "size": 97972296,
       "beta": false
     },
     {
