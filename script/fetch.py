@@ -3,6 +3,8 @@ import json
 import sys
 import re
 
+updated = 0
+latest = 0
 
 class RateLimited(Exception):
     pass
@@ -68,7 +70,8 @@ class Fetch:
         return False
 
 
-    def fetch(self, repo: str, app_name: str, index: int, app_type: str, current_ver, current_download_url: str, current_size=None):
+    def fetch(self, repo: str, app_name: str, index: int, app_type: str, current_ver, current_download_url: str, current_size):
+        global latest, updated
         version = None
         changelog = None
         released_date = None
@@ -125,9 +128,11 @@ class Fetch:
                 else:
                     self.logger(0, f"OK - Parsing to rw")
                     self.rw(repo, "../altstore_repo.json" if repo == "altstore" else "../scarlet_repo.json", current_ver, version, download_url, int(index), app_type, changelog, released_date, size)
+                    updated += 1
                 break
         else:
             self.logger(0, "Up to date. Nothing to do.")
+            latest += 1
 
     
     def rw(self, repo_type, path, current_ver, version, download_url: str, index, app_type, version_description, release_date, size):
@@ -135,10 +140,14 @@ class Fetch:
             with open(path, "r") as repo_path:
                 self.json_data = json.load(repo_path)
                 self.logger(1, "Modifying loaded data...")
-                if version == current_ver:
-                    match = re.match(r"^(.*?)(-b(\d+))?$", current_ver)
-                    sub_version = int(match.group(3) or 0) + 1
-                    version = f"{match.group(1)}-b{sub_version}" if match.group(3) else f"{version}-{sub_version + 1}"
+                if version == re.sub(r'-b\d+$', '', current_ver):
+                    print("File update found")
+                    matches = re.search(r'(?<=-b)\d+$', current_ver)
+                    if matches:
+                        version = re.sub(r'-b\d+$', '', current_ver) + "-b" + str(int(matches.group(0)) + 1)
+                    else:
+                        version = version + "-b1"
+
 
                 if repo_type == "scarlet":
                     self.json_data[app_type][index]["version"] = version
@@ -219,8 +228,9 @@ if __name__ == "__main__":
             if sys.argv[1] == "--production":
                 Fetch().automate("../altstore_repo.json")
                 Fetch().automate("../scarlet_repo.json")
-        print('\033[92m' + f"All done! may take 1~2m(Page build time) to apply.")
+
+        print('\033[92m' + f"Done! Might take a while to apply.\nUpdated: {updated}\n" '\033[93m' + f"Up to date: {latest}")
         if sys.argv[1] == "--test":
-            Fetch().fetch(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7])
+            Fetch().fetch(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7], sys.argv[8])
     except IndexError:
         print("ERROR: Needed argument not found. example: --production")
