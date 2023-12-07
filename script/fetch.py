@@ -12,16 +12,6 @@ class RateLimited(Exception):
 
 class Fetch:
     def __init__(self):
-        self.release_source = ["https://api.github.com/repos/acquitelol/rosiecord/releases",
-                               "https://api.github.com/repos/enmity-mod/tweak/releases",
-                               "https://api.github.com/repos/qnblackcat/uYouPlus/releases",
-                               "https://api.github.com/repos/AnimeNow-Team/AnimeNow/releases",
-                               "https://api.github.com/repos/leminlimez/Cowabunga/releases",
-                               "https://api.github.com/repos/haxi0/KillMyOTA/releases",
-                               "https://api.github.com/repos/BomberFish/ControlConfig/releases",
-                               "https://api.github.com/repos/haxi0/SantanderEscaped/releases",
-                               "https://api.github.com/repos/BomberFish/AppCommander/releases",
-                               "https://api.github.com/repos/BomberFish/Whitelist/releases"]
         
         self.blacklist_release = [
             {
@@ -68,9 +58,18 @@ class Fetch:
             else:
                 return new_ver > current_ver
         return False
+    
+    
+    def source_extracter(self, rs_url):
+        match = re.match(r'https://github.com/([^/]+)/([^/]+)/releases/download/[^/]+', rs_url)
+        if match:
+            return f"https://api.github.com/repos/{match.group(1)}/{match.group(2)}/releases"
+        else:
+            raise ValueError("Invalid release source url")
 
 
-    def fetch(self, repo: str, app_name: str, index: int, app_type: str, current_ver, current_download_url: str, current_size):
+    def fetch(self, repo: str, app_name: str, index: int, app_type: str, current_ver, current_download_url: str, current_size=None):
+        print("run")
         global latest, updated
         version = None
         changelog = None
@@ -87,44 +86,44 @@ class Fetch:
             download_url = "https://miro92.com/repo/depictions/com.miro.uyou/iPA/YouTube_18.14.1_uYou_3.0.ipa",
             self.logger(2, f"uYou detected in following index: {index}! using 3.0 instead of latest as doesn't have any release system.")
         else:
-            for i, releases in enumerate(self.release_source):
-                if releases.replace("api.", "").replace("repos/", "") in current_download_url:
-                    req = requests.get(self.release_source[i])
-                    if req.status_code == 403:
-                        self.logger(3, "Looks like Github limited this ip.")
-                        raise RateLimited("Rate limited by Github")
-                    req = req.json()
-                    for release in req:
-                        target_release = release["name"]
-                        if not re.match(fr"^{app_name} (\d+)[\s()]+.*$", target_release):
-                            current_filename = re.search(r"(?<=/)[^/]+$", current_download_url)
-                            pattern = re.compile(r"^(.+?)[\-_\.]\d+[\-_\.](.+)\.([^.]+)$")
-                            release_name_match = re.match(r"(.+)\s\(\w+\)$", target_release)
-                            if release_name_match is not None:
-                                continue
-                            for asset in release["assets"]:
-                                asset_name_match = pattern.match(asset["name"])
-                                current_name_match = pattern.match(current_filename.group())
-                                try:
-                                    asset_name_no_version = asset_name_match.group(1) + "-" + asset_name_match.group(2) + "." + asset_name_match.group(3)
-                                    current_name_no_version = current_name_match.group(1) + "-" + current_name_match.group(2) + "." + current_name_match.group(3)
-                                except AttributeError:
-                                    pass
-                                if asset_name_match and current_name_match or asset["name"] == current_filename.group():
-                                    if asset_name_no_version is not None and current_name_no_version is not None and asset_name_no_version == current_name_no_version or index == 2 or asset["name"] == current_filename.group():
-                                        if version is None: version = release["name"].strip(app_name).strip("v").strip()
-                                        if changelog is None: changelog = release["body"].replace('"', "'")
-                                        if released_date is None: released_date = ''.join(asset["created_at"].split('T')[:-1])
-                                        if size is None: size = asset["size"]
-                                        if download_url is None: download_url = asset["browser_download_url"].replace("%2B", "+")
-                                        break
+            release_source = self.source_extracter(current_download_url)
+            if release_source.replace("api.", "").replace("repos/", "") in current_download_url:
+                req = requests.get(release_source)
+                if req.status_code == 403:
+                    self.logger(3, "Looks like there's too many requests")
+                    raise RateLimited("Rate limit")
+                req = req.json()
+                for release in req:
+                    target_release = release["name"]
+                    if not re.match(fr"^{app_name} (\d+)[\s()]+.*$", target_release):
+                        current_filename = re.search(r"(?<=/)[^/]+$", current_download_url)
+                        pattern = re.compile(r"^(.+?)[\-_\.]\d+[\-_\.](.+)\.([^.]+)$")
+                        release_name_match = re.match(r"(.+)\s\(\w+\)$", target_release)
+                        if release_name_match is not None:
+                            continue
+                        for asset in release["assets"]:
+                            asset_name_match = pattern.match(asset["name"])
+                            current_name_match = pattern.match(current_filename.group())
+                            try:
+                                asset_name_no_version = asset_name_match.group(1) + "-" + asset_name_match.group(2) + "." + asset_name_match.group(3)
+                                current_name_no_version = current_name_match.group(1) + "-" + current_name_match.group(2) + "." + current_name_match.group(3)
+                            except AttributeError:
+                                pass
+                            if asset_name_match and current_name_match or asset["name"] == current_filename.group():
+                                if asset_name_no_version is not None and current_name_no_version is not None and asset_name_no_version == current_name_no_version or index == 2 or asset["name"] == current_filename.group():
+                                    if version is None: version = release["name"].strip(app_name).strip("v").strip()
+                                    if changelog is None: changelog = release["body"].replace('"', "'")
+                                    if released_date is None: released_date = ''.join(asset["created_at"].split('T')[:-1])
+                                    if size is None: size = asset["size"]
+                                    if download_url is None: download_url = asset["browser_download_url"].replace("%2B", "+")
+                                    break
                                 
         self.logger(1, f"index: {index}, current: {current_ver}, new: {version}")
         if self.compare_versions(current_ver, version) or repo == "altstore" and size != current_size:
             self.logger(0, f"New version available: {version}, verifing compatibility...")
             for blocked in self.blacklist_release:
                 if blocked["name"] == app_name and blocked["version"] == version and blocked["state"] == "valid":
-                    self.logger(2, f"NG: {app_name}+{version} - In blacklist")
+                    self.logger(2, f"{app_name}+{version} - In blacklist")
                 else:
                     self.logger(0, f"OK - Parsing to rw")
                     self.rw(repo, "../altstore_repo.json" if repo == "altstore" else "../scarlet_repo.json", current_ver, version, download_url, int(index), app_type, changelog, released_date, size)
@@ -141,7 +140,7 @@ class Fetch:
                 self.json_data = json.load(repo_path)
                 self.logger(1, "Modifying loaded data...")
                 if version == re.sub(r'-b\d+$', '', current_ver):
-                    print("File update found")
+                    self.logger(1, "Assets update found")
                     matches = re.search(r'(?<=-b)\d+$', current_ver)
                     if matches:
                         version = re.sub(r'-b\d+$', '', current_ver) + "-b" + str(int(matches.group(0)) + 1)
@@ -190,7 +189,7 @@ class Fetch:
                 with open(path, "w") as repo_path:
                     json.dump(self.json_data, repo_path, indent=2)
                 
-                self.logger(0, f"Writing process ended without any error")
+                self.logger(0, f"File update success")
             
 
     def automate(self, path: str):
@@ -206,7 +205,7 @@ class Fetch:
                         elif path == "../README.md":
                             self.fetch("readme", key["name"], i, item, key["version"], key["downloadURL"])
                         else:
-                            raise Exception("Unexpected repo!")
+                            raise Exception("Unexpected type of file")
                     except TypeError as e:
                         if str(e) == "string indices must be integers, not 'str'" or "string indices must be integers":
                             pass
@@ -214,7 +213,7 @@ class Fetch:
                             raise TypeError(e)
                     except KeyError:
                         pass
-        self.logger(0, f"Updating process ended successfully.")
+        self.logger(0, f"Update success for: {path}")
 
 
 if __name__ == "__main__":
@@ -233,4 +232,4 @@ if __name__ == "__main__":
         if sys.argv[1] == "--test":
             Fetch().fetch(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7], sys.argv[8])
     except IndexError:
-        print("ERROR: Needed argument not found. example: --production")
+        print("ERROR: Arguments not found. example: --production")
