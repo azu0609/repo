@@ -69,7 +69,6 @@ class Fetch:
 
 
     def fetch(self, repo: str, app_name: str, index: int, app_type: str, current_ver, current_download_url: str, current_size=None):
-        print("run")
         global latest, updated
         version = None
         changelog = None
