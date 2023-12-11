@@ -65,7 +65,7 @@ class Fetch:
         if match:
             return f"https://api.github.com/repos/{match.group(1)}/{match.group(2)}/releases"
         else:
-            raise ValueError("Invalid release source url")
+            return False
 
 
     def fetch(self, repo: str, app_name: str, index: int, app_type: str, current_ver, current_download_url: str, current_size=None):
@@ -77,8 +77,8 @@ class Fetch:
         download_url = None
         current_name_no_version = None
         asset_name_no_version = None
-        if re.match(r'https://github.com/([^/]+)/([^/]+)/releases/download/[^/]+', current_download_url):
-            release_source = self.source_extracter(current_download_url)
+        release_source = self.source_extracter(current_download_url)
+        if release_source != False:
             if release_source.replace("api.", "").replace("repos/", "") in current_download_url:
                 req = requests.get(release_source)
                 if req.status_code == 403:
