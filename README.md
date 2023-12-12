@@ -24,7 +24,7 @@
 | Tweaked app | [uYou](https://github.com/MiRO92/uYou-for-YouTube) | com.google.ios.youtube | 18.14.1 | 3.0 | [MIRO92](https://github.com/MiRO92) | Semi(A/S) | A/S |
 | Tweaked app | [uYou+](https://github.com/qnblackcat/uYouPlus) | com.google.ios.youtube | 18.14.1-3.0 | 3.0 | [qnblackcat](https://github.com/qnblackcat) | Yes(any) | A/S |
 | Tweaked app | [Enmity](https://enmity.app) | com.hammerandchisel.discord | 202.0 | v2.2.6-b4 | [enmity-mod](https://github.com/enmity-mod) | Yes(any) | A/S |
-| Tweaked app | [Rosiecord (Plumpy - GGSans)](https://github.com/acquitelol/rosiecord) | com.hammerandchisel.discord | v2.1.4 | 208 | [acquitelol](https://github.com/acquitelol) | Semi(S) | S |
+| Tweaked app | [Rosiecord (Plumpy - GGSans)](https://github.com/acquitelol/rosiecord) | com.hammerandchisel.discord | v2.1.4 | 209 | [acquitelol](https://github.com/acquitelol) | Semi(S) | S |
 | Sideloaded | [Anime Now!](https://github.com/AnimeNow-Team/AnimeNow) | com.errorerrorerror.animenow | N/A | 3.0 | [errorerrorerror](https://github.com/errorerrorerror) | Yes(any) | A/S |
 | MacDirtycow | [Cowabunga](https://github.com/leminlimez/Cowabunga) | com.leemin.Cowabunga | N/A | 10.3.2 | [leminlimez](https://github.com/leminlimez) | Yes(any) | A/S |
 | MacDirtycow | [KillMyOTA](https://github.com/haxi0/KillMyOTA) | org.haxi0.KillMyOTA | N/A | 1.1 | [haxi0](https://github.com/haxi0) | Yes(any) | A/S |
