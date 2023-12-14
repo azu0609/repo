@@ -8,8 +8,9 @@
     </a>
 </div>
 
-> **Warning**
-> This repository uses self-made update script, which is unstable and may cause issue like can't load repository.
+
+> [!WARNING]
+> This repository uses self-made update script, which is unstable and might cause some issues such as can't load repository.
 > Most issues are resolved in ~24h
 
 ## Included IPA:
