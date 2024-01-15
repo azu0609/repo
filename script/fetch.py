@@ -139,13 +139,13 @@ class Fetch:
             with open(path, "r") as repo_path:
                 self.json_data = json.load(repo_path)
                 self.logger(1, "Modifying loaded data...")
-                if version == re.sub(r'-b\d+$', '', current_ver):
-                    self.logger(1, "Assets update found")
-                    matches = re.search(r'(?<=-b)\d+$', current_ver)
-                    if matches:
-                        version = re.sub(r'-b\d+$', '', current_ver) + "-b" + str(int(matches.group(0)) + 1)
+                if version == re.sub(r'\.\d{4}-\d{2}-\d{2}$', '', current_ver):
+                    self.logger(1, "Found assets update. Adding date...")
+                    match = re.search(r'\d{4}-\d{2}-\d{2}$', version)
+                    if match:
+                        version = re.sub(r'\d{4}-\d{2}-\d{2}$', release_date, version)
                     else:
-                        version = version + "-b1"
+                        version = f"{version}.{release_date}"
 
 
                 if repo_type == "scarlet":

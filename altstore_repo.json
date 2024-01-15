@@ -7,139 +7,139 @@
       "bundleIdentifier": "com.hammerandchisel.discord",
       "developerName": "Enmity Team",
       "subtitle": "The power of addons, all in your hand.",
-      "version": "v2.2.6-b6",
+      "version": "v2.2.6.2024-01-04",
       "versionDate": "2024-01-04",
       "versionDescription": "",
       "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
       "versions": [
         {
-          "version": "v2.2.6-b6",
+          "version": "v2.2.6.2024-01-04",
           "date": "2024-01-04",
           "localizedDescription": "",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
           "size": 95148065
         },
         {
-          "version": "v2.2.6-b5",
+          "version": "v2.2.6.2023-12-20",
           "date": "2023-12-20",
           "localizedDescription": "",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
           "size": 94971519
         },
         {
-          "version": "v2.2.6-b4",
+          "version": "v2.2.6.2023-12-08",
           "date": "2023-12-08",
           "localizedDescription": "",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
           "size": 94194608
         },
         {
-          "version": "v2.2.6-b3",
+          "version": "v2.2.6.2023-12-02",
           "date": "2023-12-02",
           "localizedDescription": "Update Discord to v206.0",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
           "size": 97983202
         },
         {
-          "version": "v2.2.6-b2",
+          "version": "v2.2.6.2023-10-31",
           "date": "2023-10-31",
           "localizedDescription": "",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
           "size": 100528562
         },
         {
-          "version": "v2.2.6",
+          "version": "v2.2.6.2023-10-14",
           "date": "2023-10-14",
           "localizedDescription": "",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
           "size": 132865222
         },
         {
-          "version": "v2.2.6-2",
+          "version": "v2.2.6.2023-10-06",
           "date": "2023-10-06",
           "localizedDescription": "",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
           "size": 132617779
         },
         {
-          "version": "v2.2.6",
+          "version": "v2.2.6.2023-10-04",
           "date": "2023-10-04",
           "localizedDescription": "",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
           "size": 132607690
         },
         {
-          "version": "v2.2.6-2",
+          "version": "v2.2.6.2023-09-28",
           "date": "2023-09-28",
           "localizedDescription": "Update Discord to v197.0",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
           "size": 134045064
         },
         {
-          "version": "v2.2.6",
+          "version": "v2.2.6.2023-09-20",
           "date": "2023-09-20",
           "localizedDescription": "Update Discord to v196.0",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
           "size": 131473848
         },
         {
-          "version": "v2.2.6-2",
+          "version": "v2.2.6.2023-09-14",
           "date": "2023-09-14",
           "localizedDescription": "Update Discord to v195.0",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
           "size": 109762278
         },
         {
-          "version": "v2.2.6",
+          "version": "v2.2.6.2023-09-06",
           "date": "2023-09-06",
           "localizedDescription": "Update Discord to v194.0",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
           "size": 103897880
         },
         {
-          "version": "v2.2.6-2",
+          "version": "v2.2.6.2023-08-31",
           "date": "2023-08-31",
           "localizedDescription": "Update Discord to v193.1",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
           "size": 100201232
         },
         {
-          "version": "v2.2.6",
+          "version": "v2.2.6.2023-08-24",
           "date": "2023-08-24",
           "localizedDescription": "",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
           "size": 99136016
         },
         {
-          "version": "v2.2.6-2",
+          "version": "v2.2.6.2023-08-20",
           "date": "2023-08-20",
           "localizedDescription": "Update Discord to v191.0",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
           "size": 97972296
         },
         {
-          "version": "v2.2.6",
+          "version": "v2.2.6.2023-08-11",
           "date": "2023-08-11",
           "localizedDescription": "Update Discord to v190.0\r\n\r\n## Commits\r\n- a697c8a: Replace Discord.ipa with URL input for release workflow (#32) (Colin) [#32](https://github.com/enmity-mod/tweak/pull/32)\r\n- 3b66fb0: Make patcher use the input URL for Discord.ipa (Colin)",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
           "size": 96341212
         },
         {
-          "version": "v2.2.6-b4",
+          "version": "v2.2.6-2023-07-03",
           "date": "2023-07-03",
           "localizedDescription": "## Commits\n- 511f23f: Fixed the crash when Enmity is sideloaded on 184+ & Update IPA to 184(stable) (#29) (mafu) [#29](https://github.com/enmity-mod/tweak/pull/29)",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
           "size": 99992444
         },
         {
-          "version": "v2.2.6-b3",
+          "version": "v2.2.6.2023-06-02",
           "date": "2023-06-02",
           "localizedDescription": "## Commits\n- 2f603c6: Update Discord.ipa to 180.0 Stable (Acquite)",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
           "size": 98676455
         },
         {
-          "version": "v2.2.6-b2",
+          "version": "v2.2.6.2023-05-28",
           "date": "2023-05-28",
           "localizedDescription": "## Commits\n- b8712c3: Update stable.yml (#26) (mafu) [#26](https://github.com/enmity-mod/tweak/pull/26)",
           "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
