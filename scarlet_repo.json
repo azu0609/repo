@@ -6,9 +6,9 @@
   "Tweaked": [
     {
       "name": "Rosiecord",
-      "version": "211",
+      "version": "212",
       "icon": "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Icons/EnmityIcon60x60%402x.png",
-      "down": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_211/Rosiecord-211_GGSans-Font+Plumpy_Icons.ipa",
+      "down": "https://github.com/acquitelol/rosiecord/releases/download/rosiecord_212/Rosiecord-212_GGSans-Font+Plumpy_Icons.ipa",
       "dev": "acquitelol",
       "category": "Tweaked Apps",
       "description": "Enmity, but with custom icons",
@@ -19,22 +19,6 @@
         "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Rosiecord_Mocks/Plumpy.png",
         "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Rosiecord_Mocks/Plumpy_Flowercord.png"
       ]
-    },
-    {
-      "name": "Enmity",
-      "version": "v2.2.6",
-      "down": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
-      "dev": "Enmity Team",
-      "icon": "https://files.enmity.app/icon-altstore.png",
-      "category": "Tweaked Apps",
-      "description": "The power of addons, all in your hand.",
-      "bundleID": "com.hammerandchisel.discord",
-      "appstore": "com.hammerandchisel.discord",
-      "enableBackup": true,
-      "contact": {
-        "web": "https://enmity.app",
-        "twitter": "https://twitter.com/enmityapp"
-      }
     },
     {
       "name": "uYou+",
@@ -67,26 +51,6 @@
       "contact": {
         "web": "https://miro92.com",
         "twitter": "https://twitter.com/MiRO92"
-      }
-    }
-  ],
-  "Sideloaded": [
-    {
-      "name": "Anime Now!",
-      "version": "1.0.0-beta.3",
-      "down": "https://github.com/AnimeNow-Team/AnimeNow/releases/download/1.0.0-beta.3/Anime.Now.iOS.ipa",
-      "dev": "AnimeNow Team",
-      "icon": "https://raw.githubusercontent.com/AnimeNow-Team/AnimeNow/dev/Misc/Media/applogo_readme.png",
-      "category": "Sideloaded",
-      "description": "Watch your favorite anime shows anytime, anywhere.",
-      "bundleID": "com.errorerrorerror.animenow",
-      "screenshots": [
-        "https://raw.githubusercontent.com/AnimeNow-Team/AnimeNow/dev/Misc/Media/iphone_home_screenshot.png",
-        "https://raw.githubusercontent.com/AnimeNow-Team/AnimeNow/dev/Misc/Media/iphone_search_screenshot.png",
-        "https://raw.githubusercontent.com/AnimeNow-Team/AnimeNow/dev/Misc/Media/iphone_anime_details_screenshot.png"
-      ],
-      "contact": {
-        "web": "https://madebyerikb.com"
       }
     }
   ],
