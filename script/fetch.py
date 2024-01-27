@@ -110,7 +110,7 @@ class Fetch:
                                     if download_url is None: download_url = asset["browser_download_url"].replace("%2B", "+")
                                     break
         else:
-            self.logger(2, f"Found non-github release in following index: {index}. Using current value instead")
+            self.logger(2, f"Found non-github release in following index: {index} ({app_name}). Using current value instead")
             version = current_ver
             released_date = ""
             changelog = ""
