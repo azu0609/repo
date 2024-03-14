@@ -19,39 +19,6 @@
         "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Rosiecord_Mocks/Plumpy.png",
         "https://raw.githubusercontent.com/acquitelol/rosiecord/master/Rosiecord_Mocks/Plumpy_Flowercord.png"
       ]
-    },
-    {
-      "name": "uYou+",
-      "version": "18.14.1-3.0",
-      "down": "https://github.com/qnblackcat/uYouPlus/releases/download/v18.14.1-3.0/uYouPlus_18.14.1_3.0.ipa",
-      "dev": "qnblackcat",
-      "category": "Tweaked Apps",
-      "description": "uYou+ is a modified version of uYou (made by @MiRO92) with additional features and mainly made for non jailbroken users!",
-      "bundleID": "com.google.ios.youtube",
-      "appstore": "com.google.ios.youtube",
-      "screenshots": [
-        "https://user-images.githubusercontent.com/52943116/189822859-8a0952db-9264-4b5b-9cbe-d0a87b2db5a0.PNG"
-      ],
-      "enableBackup": true,
-      "contact": {
-        "web": "https://github.com/qnblackcat",
-        "twitter": "https://twitter.com/t70438299"
-      }
-    },
-    {
-      "name": "uYou",
-      "version": "3.0",
-      "down": "https://miro92.com/repo/depictions/com.miro.uyou/iPA/YouTube_18.14.1_uYou_3.0.ipa",
-      "dev": "MIRO92",
-      "category": "Tweaked Apps",
-      "description": "The best tweak for the YouTube app",
-      "bundleID": "com.google.ios.youtube",
-      "appstore": "com.google.ios.youtube",
-      "enableBackup": true,
-      "contact": {
-        "web": "https://miro92.com",
-        "twitter": "https://twitter.com/MiRO92"
-      }
     }
   ],
   "Macdirtycow": [
