@@ -23,7 +23,7 @@
 | Type | Application | Bundle | Base | Version | Author | Working? | Availability |
 |:----:|:----------:|:------:|:------------:|:-------:|:------:|:------:|:------:|
 | Tweaked app | [Enmity](https://enmity.app) | com.hammerandchisel.discord | 202.0 | v2.2.6.2024-03-08 | [enmity-mod](https://github.com/enmity-mod) | Yes(any) | A |
-| Tweaked app | [Rosiecord (Plumpy - GGSans)](https://github.com/acquitelol/rosiecord) | com.hammerandchisel.discord | v2.1.4 | 221 | [acquitelol](https://github.com/acquitelol) | Semi(S) | S |
+| Tweaked app | [Rosiecord (Plumpy - GGSans)](https://github.com/acquitelol/rosiecord) | com.hammerandchisel.discord | v2.1.4 | 223 | [acquitelol](https://github.com/acquitelol) | Semi(S) | S |
 | MacDirtycow | [Cowabunga](https://github.com/leminlimez/Cowabunga) | com.leemin.Cowabunga | N/A | 10.3.2 | [leminlimez](https://github.com/leminlimez) | Yes(any) | A/S |
 | MacDirtycow | [KillMyOTA](https://github.com/haxi0/KillMyOTA) | org.haxi0.KillMyOTA | N/A | 1.1 | [haxi0](https://github.com/haxi0) | Yes(any) | A/S |
 | MacDirtyCow | [ControlConfig](https://github.com/BomberFish/ControlConfig) | com.f1shy-dev.ControlConfig | N/A | 0.1.0-alpha | [BomberFish](https://github.com/BomberFish) | Yes(any) | A/S |
