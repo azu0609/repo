@@ -7,11 +7,18 @@
       "bundleIdentifier": "com.hammerandchisel.discord",
       "developerName": "Enmity Team",
       "subtitle": "The power of addons, all in your hand.",
-      "version": "v2.2.6.2024-09-03",
-      "versionDate": "2024-09-03",
+      "version": "v2.2.6.2024-09-14",
+      "versionDate": "2024-09-14",
       "versionDescription": "",
       "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
       "versions": [
+        {
+          "version": "v2.2.6.2024-09-14",
+          "date": "2024-09-14",
+          "localizedDescription": "",
+          "downloadURL": "https://github.com/enmity-mod/tweak/releases/download/v2.2.6/Enmity.ipa",
+          "size": 106254705
+        },
         {
           "version": "v2.2.6.2024-09-03",
           "date": "2024-09-03",
@@ -303,7 +310,7 @@
       "localizedDescription": "Add plugins and themes to Discord!",
       "iconURL": "https://files.enmity.app/icon-altstore.png",
       "tintColor": "6D00FF",
-      "size": 117068980,
+      "size": 106254705,
       "beta": false
     },
     {
